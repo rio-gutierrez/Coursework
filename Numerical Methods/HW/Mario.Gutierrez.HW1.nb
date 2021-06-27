@@ -1,0 +1,529 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     17675,        520]
+NotebookOptionsPosition[     15713,        452]
+NotebookOutlinePosition[     16094,        469]
+CellTagsIndexPosition[     16051,        466]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Math 385 HW # 1", "Title",
+ CellChangeTimes->{{3.599856649847012*^9, 3.599856688169238*^9}}],
+
+Cell["Mario L. Gutierrez Abed", "Subtitle",
+ CellChangeTimes->{{3.599856693521677*^9, 3.599856699530511*^9}, {
+  3.6171440108723288`*^9, 3.617144012717712*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"myfunction", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", " ", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "+", "y"}], ")"}], "2"], "-", " ", 
+     RowBox[{"2", "x", " ", "y"}], " ", "-", " ", 
+     SuperscriptBox["y", "2"]}], 
+    SuperscriptBox["x", "2"]]}], ";"}]], "Input",
+ CellChangeTimes->{{3.599856764829092*^9, 3.599856838368273*^9}}],
+
+Cell["\<\
+The long way to approach this would be to plug in each of the given values \
+into our function one by one. For instance:\
+\>", "Text",
+ CellChangeTimes->{{3.599856997774538*^9, 3.599857053509831*^9}},
+ FontFamily->"American Typewriter"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"myfunction", "[", 
+  RowBox[{
+   SuperscriptBox["10.0", 
+    RowBox[{"-", "1"}]], ",", 
+   SuperscriptBox["10.0", "3"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.599857058209505*^9, 3.5998570882784233`*^9}}],
+
+Cell[BoxData["1.0000000009313224`"], "Output",
+ CellChangeTimes->{3.599857096427122*^9, 3.599857769092836*^9, 
+  3.5998582626801987`*^9, 3.599995770784089*^9, 3.599996151443815*^9}]
+}, Open  ]],
+
+Cell["\<\
+...and keep plugging in all the different given values.... Another approach \
+(much less tedious) is to define x and y as lists so that \
+I\[CloseCurlyQuote]ll only have to call in the function once:\
+\>", "Text",
+ CellChangeTimes->{{3.599857111650991*^9, 3.5998571818200493`*^9}, {
+  3.599858337321342*^9, 3.5998583376954937`*^9}, {3.6003373784758244`*^9, 
+  3.600337379377646*^9}},
+ FontFamily->"American Typewriter"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["10.0", 
+      RowBox[{"-", "n"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "8"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["10.0", "3"], ",", 
+     RowBox[{"{", "8", "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.599857198583302*^9, 3.5998572363770933`*^9}, {
+  3.5998572677078743`*^9, 3.599857349921555*^9}, {3.59985747761318*^9, 
+  3.599857487211646*^9}, {3.599857551195932*^9, 3.5998576286097937`*^9}, {
+  3.599857669577673*^9, 3.599857675008296*^9}, {3.599858356692107*^9, 
+  3.599858358738056*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"myfunction", "[", 
+  RowBox[{"x", ",", "y"}], "]"}]], "Input",
+ CellChangeTimes->{{3.599857324454485*^9, 3.599857328993891*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1.0000000009313224`", ",", "0.9999994654208422`", ",", "1.00000761449337`",
+    ",", "1.0011717677116394`", ",", "0.`", ",", "0.`", ",", 
+   RowBox[{"-", "11641.532182693483`"}], ",", "0.`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.5998573296785727`*^9, 3.5998573528046103`*^9}, 
+   3.5998577794849653`*^9, 3.599858270094644*^9, 3.599858370988356*^9, 
+   3.599995776918776*^9, 3.5999961728163147`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+Now let\[CloseCurlyQuote]s calculate the absolute relative error associated \
+with these calculations:\
+\>", "Text",
+ CellChangeTimes->{{3.599996083832294*^9, 3.5999961140894957`*^9}},
+ FontFamily->"American Typewriter"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Abs", "[", 
+  FractionBox[
+   RowBox[{"1", "-", 
+    RowBox[{"myfunction", "[", 
+     RowBox[{"x", ",", "y"}], "]"}]}], "1"], "]"}]], "Input",
+ CellChangeTimes->{{3.5999958027777843`*^9, 3.599995812130953*^9}, {
+  3.599995842247789*^9, 3.599995864916482*^9}, {3.599995896058083*^9, 
+  3.599995921283513*^9}, {3.599996016799642*^9, 3.5999960237292347`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "9.313223525708736`*^-10", ",", "5.345791578292847`*^-7", ",", 
+   "7.614493370056152`*^-6", ",", "0.0011717677116394043`", ",", "1.`", ",", 
+   "1.`", ",", "11642.532182693483`", ",", "1.`"}], "}"}]], "Output",
+ CellChangeTimes->{3.599995922012569*^9, 3.5999960263767357`*^9, 
+  3.599996181291614*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+Some of these calculations are way off from what we are expecting (have a \
+high relative error). Now let\[CloseCurlyQuote]s see what happens when we don\
+\[CloseCurlyQuote]t use the decimal point. I\[CloseCurlyQuote]ll use s and t \
+to replace x and y:\
+\>", "Text",
+ CellChangeTimes->{{3.599857861385778*^9, 3.599857937386921*^9}, {
+  3.599858425300222*^9, 3.59985844180046*^9}, {3.599996205344002*^9, 
+  3.5999962184963093`*^9}},
+ FontFamily->"American Typewriter"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"s", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["10", 
+      RowBox[{"-", "n"}]], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "8"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     SuperscriptBox["10", "3"], ",", 
+     RowBox[{"{", "8", "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.599857947749362*^9, 3.599857966987102*^9}, {
+  3.5998584539378777`*^9, 3.599858455569264*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"myfunction", "[", 
+  RowBox[{"s", ",", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.599857973802083*^9, 3.59985797809826*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1"}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.599857979007615*^9, 3.5998582848091507`*^9, 
+  3.5998584620199623`*^9, 3.599995965543936*^9, 3.599996257468154*^9},
+ Background->RGBColor[0.9, 1, 1]]
+}, Open  ]],
+
+Cell["\<\
+We notice that this time we do get 1 (as we were expecting!) but that wasn\
+\[CloseCurlyQuote]t the case when we used decimal points when defining our \
+variables. Let\[CloseCurlyQuote]s find the absolute relative error to see why:\
+\>", "Text",
+ CellChangeTimes->{{3.599996264362455*^9, 3.599996354960513*^9}},
+ FontFamily->"American Typewriter"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Abs", "[", 
+  FractionBox[
+   RowBox[{"1", "-", 
+    RowBox[{"myfunction", "[", 
+     RowBox[{"s", ",", "t"}], "]"}]}], "1"], "]"}]], "Input",
+ CellChangeTimes->{{3.5999959690296717`*^9, 3.599995982088182*^9}, {
+  3.5999960449608107`*^9, 3.599996050266354*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.599995982760623*^9, 3.599996070570011*^9, 
+  3.599996310038262*^9, 3.599996371169215*^9},
+ Background->RGBColor[0.9, 1, 1]]
+}, Open  ]],
+
+Cell["Yet another method we could\[CloseCurlyQuote]ve used is a For loop:", \
+"Text",
+ CellChangeTimes->{{3.6003413390883627`*^9, 3.600341375246141*^9}, {
+  3.600341407085155*^9, 3.600341430644759*^9}},
+ FontFamily->"American Typewriter"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "<", "9"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"x", "=", 
+      SuperscriptBox["10.0", 
+       RowBox[{"-", "i"}]]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"y", "=", 
+      SuperscriptBox["10.0", "3"]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"s", "=", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "i"}]]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"t", "=", 
+      SuperscriptBox["10", "3"]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<using floating point numbers, myfunction = \>\"", ",", 
+       RowBox[{"myfunction", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<using integers, myfunction = \>\"", ",", 
+       RowBox[{"myfunction", "[", 
+        RowBox[{"s", ",", "t"}], "]"}]}], "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBmIQrRMmNk/y8ivHgFC5ZSB6z94vb0D0pJfLP4LobfZ7
+voPoG3KbfoHoV1mL/oPoDdtb2aWAdMTqWEsQ/S2IzQpEH9J96Aii9/63dgbR
+awqs/EA0h+gOMM2YsykIRHcxF2WCaG3l040g+pWvZguIFnxo3gGiOVeYTQTR
+tRunzgfRJUq+y0H0qq76hyC6QmX6SxCd8L/iI4g+9lKcWRpIS/hECINon457
+0iA68V2lDli84gWY/pfQ5A+mO9cGgmiL0P4OdSB94NU1MF209HIviHZI1JkA
+omdlpUwF0e/814BpAB+hnZ8=
+  "]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "1.0000000009313224`"}],
+  SequenceForm[
+  "using floating point numbers, myfunction = ", 1.0000000009313224`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766603262*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.6003667666041727`*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "0.9999994654208422`"}],
+  SequenceForm[
+  "using floating point numbers, myfunction = ", 0.9999994654208422],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766605185*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.6003667666058292`*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "1.00000761449337`"}],
+  SequenceForm[
+  "using floating point numbers, myfunction = ", 1.00000761449337],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766606411*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.6003667666070023`*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "1.0011717677116394`"}],
+  SequenceForm[
+  "using floating point numbers, myfunction = ", 1.0011717677116394`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.6003667666075783`*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766608164*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "0.`"}],
+  SequenceForm["using floating point numbers, myfunction = ", 0.],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766608767*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766609352*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "0.`"}],
+  SequenceForm["using floating point numbers, myfunction = ", 0.],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.6003667666099253`*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766610652*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "11641.532182693483`"}]}],
+  SequenceForm[
+  "using floating point numbers, myfunction = ", -11641.532182693483`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.600366766611467*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.60036676661236*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using floating point numbers, myfunction = \"\>", 
+   "\[InvisibleSpace]", "0.`"}],
+  SequenceForm["using floating point numbers, myfunction = ", 0.],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.60036676661327*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"using integers, myfunction = \"\>", "\[InvisibleSpace]", "1"}],
+  
+  SequenceForm["using integers, myfunction = ", 1],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6003413548612328`*^9, 3.6003416466803703`*^9, 
+  3.600366727232457*^9, 3.6003667666138887`*^9},
+ FontColor->RGBColor[0., 0., 0.],
+ Background->RGBColor[1, 0.9, 1]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{740, 609},
+WindowMargins->{{Automatic, 200}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 98, 1, 92, "Title"],
+Cell[680, 25, 160, 2, 51, "Subtitle"],
+Cell[843, 29, 442, 13, 51, "Input"],
+Cell[1288, 44, 246, 5, 51, "Text"],
+Cell[CellGroupData[{
+Cell[1559, 53, 230, 6, 35, "Input"],
+Cell[1792, 61, 181, 2, 28, "Output"]
+}, Open  ]],
+Cell[1988, 66, 429, 8, 51, "Text"],
+Cell[2420, 76, 747, 19, 57, "Input"],
+Cell[CellGroupData[{
+Cell[3192, 99, 152, 3, 28, "Input"],
+Cell[3347, 104, 483, 9, 44, "Output"]
+}, Open  ]],
+Cell[3845, 116, 230, 5, 31, "Text"],
+Cell[CellGroupData[{
+Cell[4100, 125, 380, 8, 48, "Input"],
+Cell[4483, 135, 382, 8, 51, "Output"]
+}, Open  ]],
+Cell[4880, 146, 478, 9, 71, "Text"],
+Cell[5361, 157, 547, 16, 57, "Input"],
+Cell[CellGroupData[{
+Cell[5933, 177, 151, 3, 28, "Input"],
+Cell[6087, 182, 310, 7, 44, "Output"]
+}, Open  ]],
+Cell[6412, 192, 357, 6, 71, "Text"],
+Cell[CellGroupData[{
+Cell[6794, 202, 285, 7, 48, "Input"],
+Cell[7082, 211, 284, 7, 44, "Output"]
+}, Open  ]],
+Cell[7381, 221, 238, 4, 31, "Text"],
+Cell[CellGroupData[{
+Cell[7644, 229, 1419, 34, 172, "Input"],
+Cell[CellGroupData[{
+Cell[9088, 267, 448, 10, 38, "Print"],
+Cell[9539, 279, 382, 9, 38, "Print"],
+Cell[9924, 290, 447, 10, 38, "Print"],
+Cell[10374, 302, 382, 9, 38, "Print"],
+Cell[10759, 313, 443, 10, 38, "Print"],
+Cell[11205, 325, 382, 9, 38, "Print"],
+Cell[11590, 336, 450, 10, 38, "Print"],
+Cell[12043, 348, 380, 9, 38, "Print"],
+Cell[12426, 359, 412, 9, 38, "Print"],
+Cell[12841, 370, 380, 9, 38, "Print"],
+Cell[13224, 381, 414, 9, 38, "Print"],
+Cell[13641, 392, 380, 9, 38, "Print"],
+Cell[14024, 403, 468, 11, 38, "Print"],
+Cell[14495, 416, 379, 9, 38, "Print"],
+Cell[14877, 427, 411, 9, 38, "Print"],
+Cell[15291, 438, 382, 9, 38, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

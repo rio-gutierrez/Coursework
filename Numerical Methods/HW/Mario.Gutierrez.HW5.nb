@@ -1,0 +1,1164 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     35868,       1155]
+NotebookOptionsPosition[     34775,       1114]
+NotebookOutlinePosition[     35129,       1130]
+CellTagsIndexPosition[     35086,       1127]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Math 385 HW # 5", "Title",
+ CellChangeTimes->{{3.603207283873536*^9, 3.603207291392139*^9}}],
+
+Cell["Mario L Gutierrez Abed", "Subtitle",
+ CellChangeTimes->{{3.603207296071371*^9, 3.6032072996712103`*^9}, {
+  3.617144646166017*^9, 3.617144647995565*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Section 2.3", "Section",
+ CellChangeTimes->{{3.603207328965406*^9, 3.603207332125183*^9}}],
+
+Cell[TextData[{
+ StyleBox["(1)",
+  FontColor->RGBColor[1., 0.14912642099641413`, 0.]],
+ " Apply LUDecomposition to the following matrices. Write out ",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", ",
+ Cell[BoxData[
+  FormBox["U", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", and ",
+ Cell[BoxData[
+  FormBox["P", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". Which matrices are ill-conditioned?\n\n",
+ StyleBox["b)",
+  FontColor->RGBColor[0.016083009079118027`, 0.20454718852521553`, 1.]],
+ StyleBox[" ",
+  FontWeight->"Bold",
+  FontColor->RGBColor[0.016083009079118027`, 0.20454718852521553`, 1.]]
+}], "Text",
+ CellChangeTimes->{{3.602869812906413*^9, 3.60286985358107*^9}, {
+  3.60286996445078*^9, 3.60286997135086*^9}, {3.602873620349416*^9, 
+  3.60287371297784*^9}, {3.603207312597888*^9, 3.6032073139658337`*^9}, {
+  3.603207357611067*^9, 3.603207459008356*^9}, {3.603208546058124*^9, 
+  3.603208546328681*^9}, {3.6171446786833878`*^9, 3.617144683208643*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"b", "=", " ", 
+   RowBox[{"(", GridBox[{
+      {"1.", "2.", "1.", "7."},
+      {"2.", "0", "1.", "4."},
+      {"1.", "0", "2.", "5."},
+      {"1.", "2.", "3.", "11."}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"LUDecomposition", "[", "b", "]"}]}], "Input",
+ CellChangeTimes->{{3.603207481302739*^9, 3.603207590450531*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LUDecomposition", "::", "sing"}], "MessageName"], ":", 
+  " ", "\<\"Matrix \[NoBreak]\\!\\({\\(\\({1.`, 2.`, 1.`, 7.`}\\)\\), \
+\\(\\({2.`, 0.`, 1.`, 4.`}\\)\\), \\(\\({1.`, 0.`, 2.`, 5.`}\\)\\), \
+\\(\\({1.`, 2.`, 3.`, 11.`}\\)\\)}\\)\[NoBreak] is singular. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/sing\\\", \
+ButtonNote -> \\\"LUDecomposition::sing\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.603207592564025*^9, 3.603209076510263*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2.`", ",", "0.`", ",", "1.`", ",", "4.`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.5`", ",", "2.`", ",", "0.5`", ",", "5.`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.5`", ",", "1.`", ",", "2.`", ",", "4.`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.5`", ",", "0.`", ",", "0.75`", ",", "0.`"}], "}"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1", ",", "4", ",", "3"}], "}"}], ",", "\[Infinity]"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.6032075925829372`*^9, 3.6032090765118113`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", "0", "0", "0"},
+      {"0.5", "1", "0", "0"},
+      {"0.5", "1", "1", "0"},
+      {"0.5", "0.", "0.75", "1"}
+     }], ")"}], TraditionalForm]]],
+ "      ,     ",
+ Cell[BoxData[
+  FormBox["U", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"2.", "0.", "1.", "4."},
+      {"0", "2.", "0.5", "5."},
+      {"0", "0", "2.", "4."},
+      {"0", "0", "0", "0."}
+     }], ")"}], TraditionalForm]]],
+ " ,    ",
+ Cell[BoxData[
+  FormBox["P", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"0", "1", "0", "0"},
+      {"1", "0", "0", "0"},
+      {"0", "0", "0", "1"},
+      {"0", "0", "1", "0"}
+     }], ")"}], TraditionalForm]]],
+ "\n\nMatrix ",
+ StyleBox["\[ScriptB]",
+  FontSlant->"Italic"],
+ "  is ill-conditioned.      \[Checkmark]\n\n",
+ StyleBox["c)",
+  FontColor->RGBColor[0.015259021896696421`, 0.2114747844663157, 1.]]
+}], "Text",
+ CellChangeTimes->{{3.603207630661343*^9, 3.603207631045175*^9}, {
+   3.6032078597831793`*^9, 3.603207991774528*^9}, {3.603208043049967*^9, 
+   3.603208119713728*^9}, {3.6032081648395157`*^9, 3.6032081788773203`*^9}, 
+   3.603208443842349*^9, {3.603208493405854*^9, 3.60320849613269*^9}, {
+   3.603208593678854*^9, 3.603208594389333*^9}, {3.60320942477173*^9, 
+   3.603209427954665*^9}, {3.6171447212644463`*^9, 3.617144726881029*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"c", " ", "=", " ", 
+   RowBox[{"(", GridBox[{
+      {"1.", "2.", "3."},
+      {"1.", "1.", "1."},
+      {"5.", "7.", "9."}
+     }], ")"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"LUDecomposition", "[", "c", "]"}]}], "Input",
+ CellChangeTimes->{{3.603207635308856*^9, 3.603207679746829*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LUDecomposition", "::", "luc"}], "MessageName"], ":", 
+  " ", "\<\"Result for \[NoBreak]\\!\\(LUDecomposition\\)\[NoBreak] of badly \
+conditioned matrix \[NoBreak]\\!\\({\\(\\({1.`, 2.`, 3.`}\\)\\), \\(\\({1.`, \
+1.`, 1.`}\\)\\), \\(\\({5.`, 7.`, 9.`}\\)\\)}\\)\[NoBreak] may contain \
+significant numerical errors. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/luc\\\", ButtonNote -> \
+\\\"LUDecomposition::luc\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.603207680522249*^9, 3.6032082108399*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"5.`", ",", "7.`", ",", "9.`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.2`", ",", "0.5999999999999999`", ",", "1.2`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.2`", ",", 
+       RowBox[{"-", "0.666666666666667`"}], ",", "3.3306690738754696`*^-16"}],
+       "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1", ",", "2"}], "}"}], ",", 
+   "2.5220157913274784`*^17"}], "}"}]], "Output",
+ CellChangeTimes->{3.603208210871642*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"1", "0", "0"},
+      {"0.2", "1", "0"},
+      {"0.2", 
+       RowBox[{"-", "0.667"}], "1"}
+     }], ")"}], TraditionalForm]]],
+ "  ,     ",
+ Cell[BoxData[
+  FormBox["U", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", GridBox[{
+       {"5.", "7.", "9."},
+       {"0", "0.6", "1.2"},
+       {"0", "0", 
+        RowBox[{"3.33", "\[Times]", 
+         SuperscriptBox["10", 
+          RowBox[{"-", "16"}]]}]}
+      }], ")"}], "  "}], TraditionalForm]]],
+ ",     ",
+ Cell[BoxData[
+  FormBox["P", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " = ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", GridBox[{
+      {"0", "0", "1"},
+      {"1", "0", "0"},
+      {"0", "1", "0"}
+     }], ")"}], TraditionalForm]]],
+ "\n\nMatrix \[ScriptC]  is ill-conditioned.     \[Checkmark]"
+}], "Text",
+ CellChangeTimes->{{3.603208242123457*^9, 3.6032084396259403`*^9}, {
+   3.603208482215295*^9, 3.6032084905178413`*^9}, {3.603208575865181*^9, 
+   3.6032085763345623`*^9}, {3.6032086472800913`*^9, 3.6032089214931087`*^9}, 
+   3.603209007680325*^9, {3.603209684600528*^9, 3.603209686772476*^9}, {
+   3.617144746257658*^9, 3.61714475886322*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[TextData[{
+ StyleBox["\n",
+  FontFamily->"Baskerville SemiBold",
+  FontWeight->"Bold",
+  FontColor->RGBColor[1., 0.15892271305409322`, 0.]],
+ StyleBox["(2)",
+  FontColor->RGBColor[1., 0.15892271305409322`, 0.]],
+ " The ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " statement ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"Eigensystem", "[", "A", "]"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " returns ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "+", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " vectors for any ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "\[Times]", "n"}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " matrix ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". The entries of the first vector are the eigenvalues of ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". The remaining vectors are the corresponding eigenvectors. Apply ",
+ Cell[BoxData[
+  FormBox["Eigensystem", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " to the matrices listed on problems ",
+ StyleBox["(1)",
+  FontColor->RGBColor[1., 0.149233234149691, 0.]],
+ " ",
+ StyleBox["b)",
+  FontColor->RGBColor[0.0626688029297322, 0.2728160524910353, 1.]],
+ ",",
+ StyleBox["c)",
+  FontColor->RGBColor[0.0076752880140383, 0.26666666666666666`, 1.]],
+ " . Recall that a matrix is singular if it has zero as an eigenvalue. When \
+looking at computer output, a number close to zero should be considered zero. \
+Which of the matrices in ",
+ StyleBox["(1)",
+  FontColor->RGBColor[1., 0.15214770733196, 0.]],
+ " ",
+ StyleBox["b)",
+  FontColor->RGBColor[0.1104142824444953, 0.19897764553292133`, 1.]],
+ StyleBox[",",
+  FontColor->RGBColor[0., 0., 0.]],
+ StyleBox["c)",
+  FontColor->RGBColor[0.1104142824444953, 0.19897764553292133`, 1.]],
+ " are singular ? "
+}], "Text",
+ CellChangeTimes->{
+  3.603209691470797*^9, 3.603370163838936*^9, {3.6171447759271097`*^9, 
+   3.617144799726302*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Eigensystem", "[", "b", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Eigensystem", "[", "c", "]"}]}], "Input",
+ CellChangeTimes->{{3.603209177405137*^9, 3.6032091895292597`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"13.896432534331414`", ",", "1.252575077907021`", ",", 
+     RowBox[{"-", "1.1490076122384254`"}], ",", 
+     RowBox[{"-", "1.2044624365039844`*^-15"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0.4783807217298164`", ",", "0.3080728836486169`", ",", 
+       "0.3524774846258977`", ",", "0.7429687787986019`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.729416794542358`", ",", "0.595222510343191`", ",", 
+       RowBox[{"-", "0.322686293274817`"}], ",", 
+       RowBox[{"-", "0.09764660338619123`"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.2484864920623568`", ",", 
+       RowBox[{"-", "0.8354791452933654`"}], ",", 
+       RowBox[{"-", "0.43561443821282975`"}], ",", "0.22465333797416173`"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", "0.31622776601683716`"}], ",", 
+       RowBox[{"-", "0.6324555320336761`"}], ",", 
+       RowBox[{"-", "0.6324555320336762`"}], ",", "0.3162277660168379`"}], 
+      "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.603209190359334*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"11.437171043518969`", ",", 
+     RowBox[{"-", "0.43717104351895936`"}], ",", "9.240096678580993`*^-16"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0.29529893327040774`", ",", "0.119117443262681`", ",", 
+       "0.9479501963288582`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.8281954984825982`", ",", 
+       RowBox[{"-", "0.5599483254261377`"}], ",", 
+       RowBox[{"-", "0.023453979313221573`"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0.40824829046386235`", ",", 
+       RowBox[{"-", "0.8164965809277261`"}], ",", "0.40824829046386363`"}], 
+      "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.603209190360106*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "It appears that both matrices are singular since both of them have \
+eigenvalues that are very close to zero, namely ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", "1.2"}], "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "15"}]]}], TraditionalForm]]],
+ " for ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]]],
+ " and  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"-", "9.2"}], "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "16"}]]}], TraditionalForm]]],
+ "  for ",
+ Cell[BoxData[
+  FormBox["c", TraditionalForm]]],
+ ".  However when I computed the LU decomposition of  both matrices on the \
+previous exercise, ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " only recognized matrix ",
+ Cell[BoxData[
+  FormBox["b", TraditionalForm]]],
+ " as singular whereas for ",
+ Cell[BoxData[
+  FormBox["c", TraditionalForm]]],
+ " it simply pointed out that it was badly conditioned but not quite \
+singular. "
+}], "Text",
+ CellChangeTimes->{{3.603209275014145*^9, 3.603209282987661*^9}, {
+  3.6032093190220346`*^9, 3.6032094059959*^9}, {3.603209494356966*^9, 
+  3.603209617801244*^9}, {3.605199176506442*^9, 3.605199218560656*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[TextData[{
+ StyleBox["\n",
+  FontFamily->"Baskerville SemiBold",
+  FontWeight->"Bold",
+  FontColor->RGBColor[1., 0.17257953765163653`, 0.]],
+ StyleBox["(3)",
+  FontColor->RGBColor[1., 0.17257953765163653`, 0.]],
+ " The following exercises lead to an estimator for the condition number of a \
+nonsingular matrix ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]]],
+ ". \n\n",
+ StyleBox["a)",
+  FontColor->RGBColor[0.012802319371328297`, 0.23102159151598384`, 1.]],
+ " Let ",
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]]],
+ " be an eigenvector for ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]]],
+ " with eigenvalue \[Alpha]. Prove that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"||", 
+     RowBox[{"A", " ", "v"}], "||"}], "=", 
+    RowBox[{
+     RowBox[{"\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}], 
+     " ", "||", "v", "||"}]}], TraditionalForm]]],
+ ". Prove that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}], 
+     "\[LessEqual]"}], "||", "A", "||"}], TraditionalForm]]],
+ ". \n\n",
+ StyleBox["Proof:",
+  FontVariations->{"Underline"->True}],
+ "\nWe know that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"A", " ", "v"}], "=", 
+    RowBox[{"\[Alpha]", " ", "v"}]}], TraditionalForm]]],
+ ", hence ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"||", 
+     RowBox[{"A", " ", "v"}], "||"}], "=", 
+    RowBox[{
+     RowBox[{"||", 
+      RowBox[{"\[Alpha]", " ", "v"}], "||"}], "=", 
+     RowBox[{
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox["\[Alpha]", "2"], 
+        RowBox[{
+         UnderscriptBox["\[Sum]", 
+          RowBox[{" ", "i"}]], 
+         SubsuperscriptBox["v", "i", "2"]}]}]], "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}], 
+        SqrtBox[
+         RowBox[{
+          UnderscriptBox["\[Sum]", 
+           RowBox[{" ", "i"}]], " ", 
+          SubsuperscriptBox["v", "i", "2"]}]]}], "=", 
+       RowBox[{
+        RowBox[{"\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}],
+         "||", "v", "||"}]}]}]}]}], TraditionalForm]]],
+ " .\nBy taking the absolute value of the equality above and then using the \
+triangle inequality we have that\n              ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"||", 
+     RowBox[{"A", " ", "v"}], "||"}], "=", 
+    RowBox[{
+     RowBox[{"||", 
+      RowBox[{"\[Alpha]", " ", "v"}], "||"}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}], 
+       "||", "v", "||"}], "=", 
+      RowBox[{
+       RowBox[{"||", 
+        RowBox[{"A", " ", "v"}], "||"}], "=", 
+       RowBox[{"||", "v", "||", "||", 
+        RowBox[{"A", " ", "v", " ", 
+         StyleBox[
+          FractionBox["1", 
+           RowBox[{"||", "v", "||"}]],
+          FontSize->24]}], 
+        StyleBox["||",
+         FontSize->18], 
+        RowBox[{
+         StyleBox["\[LessEqual]",
+          FontSize->18], 
+         RowBox[{"||", "A", "||", "||", "v", "||"}]}]}]}]}]}]}], 
+   TraditionalForm]]],
+ " .\nHence we have proven that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}], "||",
+     "v", "||", 
+    RowBox[{"\[LessEqual]", 
+     RowBox[{"||", "A", "||", "||", "v", "||", 
+      RowBox[{
+       RowBox[{"\[DoubleLongRightArrow]", 
+        RowBox[{
+        "\[LeftBracketingBar]", "\[Alpha]", "\[RightBracketingBar]"}]}], 
+       "\[LessEqual]"}], "||", "A", "||"}]}]}], TraditionalForm]]],
+ ".                         \[FilledSquare]\n\n",
+ StyleBox["b)",
+  FontColor->RGBColor[0., 0.315556572823682, 1.]],
+ " Prove that \[Alpha] is an eigenvalue for ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]]],
+ "  iff  ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox["1", "\[Alpha]"],
+    FontSize->18], TraditionalForm]]],
+ " is an eigenvalue for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ ". (Hint: consider ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"v", "=", 
+    RowBox[{
+     SuperscriptBox["A", 
+      RowBox[{"-", "1"}]], "A"}]}], TraditionalForm]]],
+ ")\n\n",
+ StyleBox["Proof:",
+  FontVariations->{"Underline"->True}],
+ "\n(\[Implies])\nWe let \[Alpha] be eigenvalue for ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]]],
+ ", then we need to show that ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox["1", 
+     StyleBox["\[Alpha]",
+      FontSize->14]],
+    FontSize->18], TraditionalForm]]],
+ " is an eigenvalue for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ ".\nLet ",
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]]],
+ " be an eigenvector for ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]]],
+ ", then we have \n           ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"A", " ", "v"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"\[Alpha]", " ", 
+      RowBox[{"v", " ", "\[DoubleLongRightArrow]", " ", 
+       SuperscriptBox["A", 
+        RowBox[{"-", "1"}]]}], "A", " ", "v"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{
+       SuperscriptBox["A", 
+        RowBox[{"-", "1"}]], "\[Alpha]", " ", 
+       RowBox[{"v", " ", "\[DoubleLongRightArrow]", " ", "v"}]}], " ", "=", 
+      " ", 
+      RowBox[{
+       RowBox[{
+        SuperscriptBox["A", 
+         RowBox[{"-", "1"}]], "\[Alpha]", " ", 
+        RowBox[{"v", " ", "\[DoubleLongRightArrow]", " ", 
+         StyleBox[
+          FractionBox["1", "\[Alpha]"],
+          FontSize->18]}], 
+        StyleBox["v",
+         FontSize->18]}], 
+       StyleBox["=",
+        FontSize->18], 
+       RowBox[{
+        SuperscriptBox[
+         StyleBox["A",
+          FontSize->18], 
+         RowBox[{"-", "1"}]], "v", " "}]}]}]}]}], TraditionalForm]]],
+ ".\n(\[DoubleLeftArrow]) \nIf ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox["1", "\[Alpha]"],
+    FontSize->18], TraditionalForm]]],
+ " is an eigenvalue for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ ", then we need to show that \[Alpha] is an eigenvalue for ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". \nNow we let ",
+ Cell[BoxData[
+  FormBox["v", TraditionalForm]]],
+ " be an eigenvector for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["A", 
+    RowBox[{"-", "1"}]], TraditionalForm]]],
+ ", then\n                 ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     RowBox[{
+      FractionBox["1", "\[Alpha]"], "v"}],
+     FontSize->18], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["A", 
+       RowBox[{"-", "1"}]], 
+      RowBox[{"v", " ", "\[DoubleLongRightArrow]", " ", "\[Alpha]"}], 
+      StyleBox[
+       FractionBox["1", 
+        StyleBox["\[Alpha]",
+         FontSize->14]],
+       FontSize->18], 
+      StyleBox["v",
+       FontSize->18]}], "=", " ", 
+     RowBox[{
+      RowBox[{"\[Alpha]", " ", 
+       SuperscriptBox["A", 
+        RowBox[{"-", "1"}]], 
+       RowBox[{"v", " ", "\[DoubleLongRightArrow]", " ", 
+        StyleBox["v",
+         FontSize->18]}]}], "=", " ", 
+      RowBox[{"\[Alpha]", " ", 
+       SuperscriptBox["A", 
+        RowBox[{"-", "1"}]], "v", " "}]}]}]}], TraditionalForm]]],
+ "   \n                                     ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[DoubleLongRightArrow]", " ", "A"}], " ", 
+     StyleBox["v",
+      FontSize->18]}], "=", " ", 
+    RowBox[{"A", " ", "\[Alpha]", " ", 
+     SuperscriptBox["A", 
+      RowBox[{"-", "1"}]], "v", " "}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n                                    ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[DoubleLongRightArrow]", " ", "A"}], " ", 
+      StyleBox["v",
+       FontSize->18]}], "=", " ", 
+     RowBox[{"\[Alpha]", " ", "A", " ", 
+      SuperscriptBox["A", 
+       RowBox[{"-", "1"}]], "v", "  "}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n                                    ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[DoubleLongRightArrow]", " ", "A"}], " ", 
+      StyleBox["v",
+       FontSize->18]}], "=", " ", 
+     RowBox[{
+      RowBox[{"\[Alpha]", " ", "I", " ", 
+       RowBox[{"v", " ", "\[DoubleLongRightArrow]", " ", "A"}], " ", 
+       StyleBox["v",
+        FontSize->18]}], "=", " ", 
+      RowBox[{"\[Alpha]", "  ", "v"}]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " .                   \[FilledSquare]\n\n\n",
+ StyleBox["c)",
+  FontColor->RGBColor[0.013595788509956512`, 0.22500953688868544`, 1.]],
+ " Let ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Alpha]", "max"], TraditionalForm]]],
+ " be the eigenvalue of ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " with the largest absolute value, and let ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Alpha]", "min"], TraditionalForm]]],
+ " be the eigenvalue of ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]]],
+ " with smallest absolute value. Prove that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[LeftBracketingBar]", 
+      SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}], 
+     "\[LessEqual]"}], "||", "A", "||"}], TraditionalForm]]],
+ "  and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      FractionBox["1", 
+       RowBox[{"\[LeftBracketingBar]", 
+        SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}]],
+      FontSize->24], "\[LessEqual]"}], "||", 
+    SuperscriptBox["A", 
+     RowBox[{"-", "1"}]], "||"}], TraditionalForm]]],
+ " . \n\n",
+ StyleBox["Proof:",
+  FontVariations->{"Underline"->True}],
+ "\nWe know that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"A", " ", "v"}], "=", 
+    RowBox[{
+     SubscriptBox["\[Alpha]", "max"], " ", "v"}]}], TraditionalForm]]],
+ ".  Hence once again by using the triangle inequality we have \t\t\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"||", 
+     RowBox[{
+      SubscriptBox["\[Alpha]", "max"], " ", "v"}], "||"}], "=", 
+    RowBox[{
+     RowBox[{"||", 
+      RowBox[{"A", " ", "v"}], "||", 
+      RowBox[{"\[DoubleLongRightArrow]", 
+       RowBox[{"\[LeftBracketingBar]", 
+        SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}]}], "||", 
+      "v", "||"}], "=", 
+     RowBox[{"||", 
+      RowBox[{"A", " ", "v"}], "||"}]}]}], TraditionalForm]]],
+ "\n\t\t\t\t\t   ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"=", " ", 
+    RowBox[{"||", "v", "||", "||", 
+     RowBox[{"A", " ", "v", " ", 
+      StyleBox[
+       FractionBox["1", 
+        RowBox[{"||", "v", "||"}]],
+       FontSize->24]}], 
+     StyleBox["||",
+      FontSize->18]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n\t\t\t\t\t   ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[LessEqual]", 
+    RowBox[{"||", "A", "||", "||", "v", "||"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " .\n\nHence ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[LeftBracketingBar]", 
+     SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}], "||", "v", "||", 
+    RowBox[{
+     StyleBox["\[LessEqual]",
+      FontSize->18], 
+     StyleBox[" ",
+      FontSize->18], 
+     RowBox[{"||", "A", "||", "||", "v", "||", " ", 
+      RowBox[{
+       RowBox[{"\[DoubleLongRightArrow]", 
+        RowBox[{"\[LeftBracketingBar]", 
+         SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}]}], 
+       StyleBox["\[LessEqual]",
+        FontSize->18]}], 
+      StyleBox[" ",
+       FontSize->18], "||", "A", "||", " "}]}]}], TraditionalForm]]],
+ ".      \[Checkmark]    \n\nFor the second case we use a similar argument :\n\
+           ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"A", " ", "v"}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Alpha]", "min"], " ", 
+      RowBox[{"v", " ", "\[DoubleLongRightArrow]", 
+       SuperscriptBox["A", 
+        RowBox[{"-", "1"}]]}], " ", "A", " ", "v"}], " ", "=", " ", 
+     RowBox[{
+      SuperscriptBox["A", 
+       RowBox[{"-", "1"}]], 
+      SubscriptBox["\[Alpha]", "min"], "v", " "}]}]}], TraditionalForm]]],
+ "\n                              ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[DoubleLongRightArrow]", " ", "v"}], " ", "=", " ", 
+    RowBox[{
+     SuperscriptBox["A", 
+      RowBox[{"-", "1"}]], 
+     SubscriptBox["\[Alpha]", "min"], " ", "v"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n                             ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[" ",
+     FontSize->16], 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       StyleBox["\[DoubleLongRightArrow]",
+        FontSize->16], 
+       StyleBox[
+        FractionBox["1", 
+         StyleBox[
+          SubscriptBox["\[Alpha]", "min"],
+          FontSize->16]],
+        FontSize->24]}], 
+      StyleBox["v",
+       FontSize->18]}], 
+     StyleBox["=",
+      FontSize->18], 
+     RowBox[{
+      SuperscriptBox[
+       StyleBox["A",
+        FontSize->18], 
+       RowBox[{"-", "1"}]], "v"}]}]}], TraditionalForm]]],
+ " \n                             ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{"\[DoubleLongRightArrow]", 
+      RowBox[{"||", 
+       RowBox[{
+        StyleBox[
+         FractionBox["1", 
+          StyleBox[
+           SubscriptBox["\[Alpha]", "min"],
+           FontSize->16]],
+         FontSize->24], 
+        StyleBox["v",
+         FontSize->18]}], 
+       StyleBox["||",
+        FontSize->18]}]}], 
+     StyleBox["=",
+      FontSize->18], 
+     RowBox[{
+      StyleBox["||",
+       FontSize->18], 
+      RowBox[{
+       SuperscriptBox[
+        StyleBox["A",
+         FontSize->18], 
+        RowBox[{"-", "1"}]], "v"}], "||"}]}]}], TraditionalForm]]],
+ "\n                             ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[DoubleLongRightArrow]", 
+       StyleBox[
+        FractionBox["1", 
+         RowBox[{"\[LeftBracketingBar]", 
+          SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}]],
+        FontSize->24]}], 
+      StyleBox["||",
+       FontSize->18], 
+      StyleBox["v",
+       FontSize->18], 
+      StyleBox["||",
+       FontSize->18]}], 
+     StyleBox["=",
+      FontSize->18], 
+     RowBox[{
+      StyleBox["||",
+       FontSize->18], 
+      RowBox[{
+       SuperscriptBox[
+        StyleBox["A",
+         FontSize->18], 
+        RowBox[{"-", "1"}]], "v"}], "||"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\n                              ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"=", 
+    RowBox[{"||", "v", "||", "||", 
+     RowBox[{
+      SuperscriptBox["A", 
+       RowBox[{"-", "1"}]], " ", "v", " ", 
+      StyleBox[
+       FractionBox["1", 
+        RowBox[{"||", "v", "||"}]],
+       FontSize->24]}], 
+     StyleBox["||",
+      FontSize->18], 
+     RowBox[{"\[LessEqual]", 
+      RowBox[{"||", 
+       SuperscriptBox["A", 
+        RowBox[{"-", "1"}]], "||", "||", "v", "||", " "}]}]}]}], 
+   TraditionalForm]]],
+ "\n\nThus ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     FractionBox["1", 
+      StyleBox[
+       RowBox[{"\[LeftBracketingBar]", 
+        SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}],
+       FontSize->16]],
+     FontSize->24], 
+    StyleBox["||",
+     FontSize->18], 
+    StyleBox["v",
+     FontSize->18], 
+    StyleBox["||",
+     FontSize->18], 
+    RowBox[{"\[LessEqual]", 
+     RowBox[{"||", 
+      SuperscriptBox["A", 
+       RowBox[{"-", "1"}]], "||", "||", "v", "||"}]}]}], TraditionalForm]]],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[DoubleLongRightArrow]", 
+      StyleBox[
+       FractionBox["1", 
+        StyleBox[
+         RowBox[{"\[LeftBracketingBar]", 
+          SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}],
+         FontSize->16]],
+       FontSize->24]}], "\[LessEqual]"}], 
+    StyleBox["||",
+     FontSize->18], 
+    SuperscriptBox["A", 
+     RowBox[{"-", "1"}]], 
+    StyleBox["||",
+     FontSize->18]}], TraditionalForm]]],
+ "      \[Checkmark]               \[FilledSquare] \n\n\n",
+ StyleBox["d)",
+  FontColor->RGBColor[0.0018310826276035706`, 0.3013351644159609, 1.]],
+ " Prove that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     FractionBox[
+      StyleBox[
+       RowBox[{"\[LeftBracketingBar]", 
+        SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}],
+       FontSize->16], 
+      StyleBox[
+       RowBox[{"\[LeftBracketingBar]", 
+        SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}],
+       FontSize->16]],
+     FontSize->24], "\[LessEqual]", "C"}], TraditionalForm]]],
+ ", the condition number of ",
+ Cell[BoxData[
+  FormBox["A", TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ". \n\n",
+ StyleBox["Proof:",
+  FontVariations->{"Underline"->True}],
+ "\nWe know that the condition number ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"C", "=", 
+    StyleBox[
+     RowBox[{"||", "A", "||", "||", 
+      SuperscriptBox["A", 
+       RowBox[{"-", "1"}]], "||"}],
+     FontSize->18]}], TraditionalForm]]],
+ " (which is usually equal to 1). From part  ",
+ StyleBox["c)",
+  FontColor->RGBColor[0.006454566262302586, 0.2743114366369116, 1.]],
+ " we know that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[LeftBracketingBar]", 
+      SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}], 
+     "\[LessEqual]"}], "||", "A", "||"}], TraditionalForm]]],
+ " and that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     StyleBox[
+      FractionBox[
+       StyleBox["1",
+        FontSize->16], 
+       StyleBox[
+        RowBox[{"\[LeftBracketingBar]", 
+         SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}],
+        FontSize->16]],
+      FontSize->24], "\[LessEqual]"}], 
+    StyleBox["||",
+     FontSize->18], 
+    SuperscriptBox["A", 
+     RowBox[{"-", "1"}]], 
+    StyleBox["||",
+     FontSize->18]}], TraditionalForm]]],
+ ". \nHence we have that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      StyleBox[
+       FractionBox[
+        StyleBox[
+         RowBox[{"\[LeftBracketingBar]", 
+          SubscriptBox["\[Alpha]", "max"], "\[RightBracketingBar]"}],
+         FontSize->16], 
+        StyleBox[
+         RowBox[{"\[LeftBracketingBar]", 
+          SubscriptBox["\[Alpha]", "min"], "\[RightBracketingBar]"}],
+         FontSize->16]],
+       FontSize->24], "\[LessEqual]"}], "||", "A", "||", "||", 
+     SuperscriptBox["A", 
+      RowBox[{"-", "1"}]], "||"}], " ", "=", "C"}], TraditionalForm]]],
+ ".   \t\t   \[FilledSquare]"
+}], "Text",
+ CellChangeTimes->{{3.6032097455524673`*^9, 3.603209753302532*^9}, {
+   3.603209796168532*^9, 3.603210248886763*^9}, 3.603211684674822*^9, {
+   3.6032119008669157`*^9, 3.603211997210676*^9}, {3.603212125921853*^9, 
+   3.6032121748343487`*^9}, {3.603212238047765*^9, 3.603212337083248*^9}, {
+   3.603212368813324*^9, 3.603212443883422*^9}, {3.6032124865148497`*^9, 
+   3.60321251458318*^9}, {3.603217709414956*^9, 3.603217753016551*^9}, {
+   3.603217819174511*^9, 3.603217875042554*^9}, {3.603217958660013*^9, 
+   3.6032181147616653`*^9}, {3.603218245707955*^9, 3.6032182628510838`*^9}, {
+   3.6032183019574823`*^9, 3.603218344285904*^9}, {3.6032183838713827`*^9, 
+   3.603218469321414*^9}, {3.603218538211546*^9, 3.603218547523526*^9}, {
+   3.6032187672164297`*^9, 3.603218787259075*^9}, {3.603218889770471*^9, 
+   3.603219057757186*^9}, {3.6032191085182734`*^9, 3.603219116195661*^9}, 
+   3.603219168836219*^9, {3.603406487880352*^9, 3.603406490742009*^9}, {
+   3.603406574592864*^9, 3.6034065784537888`*^9}, {3.6034068913029757`*^9, 
+   3.603407012577896*^9}, {3.603407074521762*^9, 3.603407149839246*^9}, {
+   3.603407204362412*^9, 3.6034072479509497`*^9}, {3.603407298327688*^9, 
+   3.603407376004957*^9}, {3.6034075226316147`*^9, 3.603407550442227*^9}, {
+   3.603407602274581*^9, 3.603407612656928*^9}, {3.603407680832225*^9, 
+   3.6034078664220324`*^9}, {3.603407910598917*^9, 3.6034080468008213`*^9}, {
+   3.603408092694618*^9, 3.6034081018422813`*^9}, {3.60340819955588*^9, 
+   3.6034082218016043`*^9}, {3.603408252012908*^9, 3.6034083996091967`*^9}, {
+   3.6034084333506527`*^9, 3.603408461943646*^9}, {3.6034085988386173`*^9, 
+   3.6034085993238792`*^9}, {3.6034086308592253`*^9, 3.60340866865758*^9}, {
+   3.6034087874322987`*^9, 3.603408852657199*^9}, 3.603449413892851*^9, {
+   3.6050324946240883`*^9, 3.605032531105617*^9}, {3.605032564124777*^9, 
+   3.6050325938854094`*^9}, {3.6051992289789143`*^9, 3.605199242800789*^9}, {
+   3.605199322234725*^9, 3.605199400986394*^9}, {3.6051994562373953`*^9, 
+   3.605199474122986*^9}, 3.6051995450014153`*^9, {3.6051997808185167`*^9, 
+   3.605199829515683*^9}, {3.605199887643819*^9, 3.6051999129209146`*^9}, {
+   3.605199959053967*^9, 3.605199969438841*^9}, 3.605200033444718*^9, {
+   3.617144854050603*^9, 3.6171450218442497`*^9}, {3.617145102270981*^9, 
+   3.6171451196375217`*^9}, {3.617145155436026*^9, 3.61714580628666*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 609},
+WindowMargins->{{127, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 98, 1, 92, "Title"],
+Cell[680, 25, 159, 2, 51, "Subtitle"],
+Cell[CellGroupData[{
+Cell[864, 31, 96, 1, 64, "Section"],
+Cell[963, 34, 1071, 28, 100, "Text"],
+Cell[CellGroupData[{
+Cell[2059, 66, 373, 10, 103, "Input"],
+Cell[2435, 78, 595, 10, 24, "Message"],
+Cell[3033, 90, 636, 17, 46, "Output"]
+}, Open  ]],
+Cell[3684, 110, 1623, 53, 183, "Text"],
+Cell[CellGroupData[{
+Cell[5332, 167, 329, 9, 85, "Input"],
+Cell[5664, 178, 648, 11, 41, "Message"],
+Cell[6315, 191, 561, 16, 57, "Output"]
+}, Open  ]],
+Cell[6891, 210, 1402, 49, 121, "Text"],
+Cell[8296, 261, 2042, 64, 149, "Text"],
+Cell[CellGroupData[{
+Cell[10363, 329, 199, 3, 46, "Input"],
+Cell[10565, 334, 1142, 28, 108, "Output"],
+Cell[11710, 364, 764, 21, 56, "Output"]
+}, Open  ]],
+Cell[12489, 388, 1228, 39, 124, "Text"],
+Cell[13720, 429, 21027, 681, 1537, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

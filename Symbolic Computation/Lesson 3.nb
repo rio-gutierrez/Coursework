@@ -1,0 +1,4317 @@
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[         0,          0]
+NotebookDataLength[    138870,       4316]
+NotebookOptionsPosition[    125137,       3880]
+NotebookOutlinePosition[    125854,       3908]
+CellTagsIndexPosition[    125767,       3903]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["115 points. A perfect paper A+", "Text",
+ CellChangeTimes->{{3.5725578595471497`*^9, 3.5725578817560863`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+M154 Spring 2013 Lesson 3
+Mario Gutierrez\
+\>", "Title",
+ CellChangeTimes->{{3.571250654017185*^9, 3.571250656783416*^9}, {
+  3.5716963249398947`*^9, 3.571696334470908*^9}, {3.663539245841689*^9, 
+  3.663539248486401*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5712506635994663`*^9, 3.5712506725726023`*^9}, {
+  3.571250805233827*^9, 3.5712508087677917`*^9}, {3.571251077101632*^9, 
+  3.571251079235165*^9}, {3.5716963374319124`*^9, 3.5716963445829225`*^9}},
+ FontColor->RGBColor[1, 0, 0]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Polynomials", "Title",
+ CellChangeTimes->{{3.554056847556143*^9, 3.554056852299583*^9}}],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " has a variety of commands for studying polynomials. Query ",
+ StyleBox["Coefficient",
+  FontWeight->"Bold"],
+ ",",
+ StyleBox["CoefficientList,",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["Exponent",
+  FontWeight->"Bold"],
+ ".Reading the ",
+ StyleBox["details and options ",
+  FontSlant->"Italic"],
+ "section of the document center shows that these commands work on \
+polynomials even if they are in non-expanded form."
+}], "Text",
+ CellChangeTimes->{{3.554150686260768*^9, 3.554150707419404*^9}, {
+  3.554150739892518*^9, 3.55415076367736*^9}, {3.554150835009357*^9, 
+  3.554150839400126*^9}, {3.5541508759772453`*^9, 3.554150906482348*^9}, {
+  3.554151071721653*^9, 3.5541511286022253`*^9}, {3.554151573955533*^9, 
+  3.5541516123233013`*^9}, {3.5541516677187347`*^9, 3.554151706302664*^9}, {
+  3.5542418093503513`*^9, 3.5542418265571203`*^9}, {3.570735958304093*^9, 
+  3.570735978727028*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.554152006196342*^9, 3.554152018866972*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Coefficient", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      RowBox[{"2", "x"}], "+", "1"}], ")"}], "20"], ",", "x", ",", "16"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5541517196806498`*^9, 3.554151852998069*^9}, {
+  3.554153299178574*^9, 3.554153299962229*^9}}],
+
+Cell[BoxData["62852101650"], "Output",
+ CellChangeTimes->{3.554151855989991*^9, 3.554153305640044*^9, 
+  3.570736138998229*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Coefficient", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      RowBox[{"3", "x"}], "+", 
+      RowBox[{"2", "z"}]}], ")"}], "3"], ",", "x", ",", "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.554153311609076*^9, 3.554153375908843*^9}, 
+   3.554154434450596*^9}],
+
+Cell[BoxData[
+ RowBox[{"8", " ", 
+  SuperscriptBox["z", "3"]}]], "Output",
+ CellChangeTimes->{3.554153379178129*^9, 3.554154437972315*^9, 
+  3.570736154967001*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Exponent", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      RowBox[{"2", "x"}], "+", "3"}], ")"}], "20"], ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.554151866709399*^9, 3.5541518694695587`*^9}, {
+  3.554152027971693*^9, 3.5541520555898046`*^9}}],
+
+Cell[BoxData["40"], "Output",
+ CellChangeTimes->{3.554152057413332*^9, 3.5707361666719923`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CoefficientList", "[", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      RowBox[{"2", "x"}], "+", "3"}], ")"}], "4"], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5541520772273083`*^9, 3.554152124872006*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "81", ",", "216", ",", "324", ",", "312", ",", "214", ",", "104", ",", "36",
+    ",", "8", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{3.5541521277253103`*^9, 3.570736175500616*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Problem1: 15 points\na: ",
+  FontWeight->"Bold"],
+ "Give a function ",
+ StyleBox["lc",
+  FontWeight->"Bold"],
+ " such that ",
+ StyleBox["lc[poly]",
+  FontWeight->"Bold"],
+ " gives the leading coefficient of ",
+ StyleBox["poly. ",
+  FontWeight->"Bold"],
+ "Take the variable of poly to be ",
+ StyleBox["x",
+  FontWeight->"Bold"],
+ ". Thus ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"lc", "[", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"3", 
+         SuperscriptBox["x", "4"]}], "+", 
+        RowBox[{"2", "x"}], "+", "1"}], ")"}], "2"], "]"}], "=", "9"}], 
+   TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.5541531620671186`*^9, 3.554153164490637*^9}, {
+   3.554153194668421*^9, 3.554153277870891*^9}, {3.554153397851377*^9, 
+   3.5541534028912773`*^9}, {3.5541534432845707`*^9, 3.554153559656786*^9}, {
+   3.554153689181932*^9, 3.554153717078693*^9}, {3.5541538132221537`*^9, 
+   3.5541539122321444`*^9}, {3.554154105757061*^9, 3.55415410826071*^9}, {
+   3.5542418900353823`*^9, 3.554241936289769*^9}, {3.554244647406789*^9, 
+   3.554244664759336*^9}, 3.557938734531176*^9, {3.570910211628524*^9, 
+   3.5709102173632193`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lc", "[", "poly_", "]"}], ":=", 
+  RowBox[{"Coefficient", "[", 
+   RowBox[{"poly", ",", "x", ",", 
+    RowBox[{"Exponent", "[", 
+     RowBox[{"poly", ",", "x"}], "]"}]}], "]"}]}]], "Input",
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lc", "[", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      SuperscriptBox["x", "4"]}], "+", 
+     RowBox[{"2", "x"}], "+", "1"}], ")"}], "2"], "]"}]], "Input",
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData["9"], "Output",
+ CellChangeTimes->{3.571063913278566*^9, 3.571312276510311*^9, 
+  3.5716964541161118`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["b:",
+  FontWeight->"Bold"],
+ " Give a function ",
+ StyleBox["lm",
+  FontWeight->"Bold"],
+ " such that ",
+ StyleBox["lm[poly]",
+  FontWeight->"Bold"],
+ " gives the leading monomial of ",
+ StyleBox["poly.",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.554154055754681*^9, 3.554154098379757*^9}, {
+  3.5541541331816397`*^9, 3.55415424902526*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lm", "[", "poly_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"lc", "[", "poly", "]"}], "*", 
+   SuperscriptBox["x", 
+    RowBox[{"Exponent", "[", 
+     RowBox[{"poly", ",", "x"}], "]"}]]}]}]], "Input",
+ CellChangeTimes->{3.571312285443475*^9},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell["Now we test our function on a random polynomial:", "Text",
+ CellChangeTimes->{{3.571064008103603*^9, 3.571064034424999*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"lm", "[", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      SuperscriptBox["x", "3"]}], "+", 
+     RowBox[{"5", 
+      SuperscriptBox["x", "2"]}], "+", "x", "-", "1"}], ")"}], "2"], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.571064049503447*^9, 3.5710640706599197`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"4", " ", 
+  SuperscriptBox["x", "6"]}]], "Output",
+ CellChangeTimes->{{3.5710640727946033`*^9, 3.571064076621564*^9}, {
+   3.5713122826074667`*^9, 3.5713122882394123`*^9}, 3.5716964622905264`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["c: ",
+  FontWeight->"Bold"],
+ "Give a function ",
+ StyleBox["icl[list_]",
+  FontWeight->"Bold"],
+ " such that ",
+ StyleBox["icl[CoefficientList[poly,x]]=poly",
+  FontWeight->"Bold"],
+ ". It is useful to observe that ",
+ StyleBox["CoefficientList ",
+  FontWeight->"Bold"],
+ "of a polynomial of degree n has length n+1. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        SubscriptBox["a", "0"], 
+        SuperscriptBox["x", "0"]}], "+", 
+       RowBox[{
+        SubscriptBox["a", "1"], 
+        SuperscriptBox["x", "1"]}]}], "..."}], 
+     SubscriptBox["a", "n"], 
+     SuperscriptBox["x", "n"]}], ")"}], TraditionalForm]]],
+ ". ",
+ StyleBox["Icl[{1,2,3}]",
+  FontWeight->"Bold"],
+ " should be ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "+", 
+    RowBox[{"2", "x"}], "+", 
+    RowBox[{"3", 
+     SuperscriptBox["x", "2"]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.554154527396935*^9, 3.5541546411678553`*^9}, {
+   3.5541546741452627`*^9, 3.554154723530903*^9}, {3.554154861311191*^9, 
+   3.554154861935274*^9}, 3.5542407445711727`*^9, {3.5542420457249813`*^9, 
+   3.554242118223795*^9}, {3.554242201605459*^9, 3.5542422331849957`*^9}, {
+   3.554242275752336*^9, 3.554242326187827*^9}, {3.570736046664966*^9, 
+   3.570736104955493*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"icl", "[", "list_", "]"}], ":=", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"list", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+     "*", 
+     SuperscriptBox["x", 
+      RowBox[{"j", "-", "1"}]]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"j", ",", "1", ",", 
+      RowBox[{"Length", "[", "list", "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.571312414132352*^9, 3.57131244697583*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"icl", "[", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}],
+  FontWeight->"Bold"]], "Input",
+ CellChangeTimes->{{3.571179813387085*^9, 3.571179817974731*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"2", " ", "x"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", "2"]}]}]], "Output",
+ CellChangeTimes->{3.571179820642263*^9, 3.5713124533518753`*^9, 
+  3.571696472430544*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["15 points", "Text",
+ CellChangeTimes->{{3.572556586216264*^9, 3.572556590646974*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[CellGroupData[{
+
+Cell["Set Theory", "Section",
+ CellChangeTimes->{{3.554055658463974*^9, 3.5540556601118593`*^9}, {
+  3.55415570277614*^9, 3.55415572358209*^9}}],
+
+Cell["Read S 2.4", "Text",
+ CellChangeTimes->{{3.554157432970914*^9, 3.554157446699456*^9}}],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["Union",
+  FontWeight->"Bold"],
+ ". Notice that we can evaluate union on any number of lists "
+}], "Text",
+ CellChangeTimes->{{3.554156409447936*^9, 3.554156421991238*^9}, {
+  3.554156470872827*^9, 3.554156539891172*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.554156546647251*^9, 3.554156550460865*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.554156552766672*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d", ",", "3", ",", "4", ",", "$"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<ab\>\"", ",", "5", ",", "1", ",", "d"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.554156554990876*^9, 3.554156629504922*^9}, {
+   3.5541567241257057`*^9, 3.554156803112206*^9}, {3.554156833376614*^9, 
+   3.554156868057219*^9}, 3.554157020503168*^9, {3.5706763036919603`*^9, 
+   3.5706763090415707`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "3", ",", "4", ",", "5", ",", "\<\"ab\"\>", ",", "a", ",", "b", 
+   ",", "d", ",", "$"}], "}"}]], "Output",
+ CellChangeTimes->{3.554156882709518*^9, 3.554157024300357*^9, 
+  3.570676312317004*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.570677070741255*^9}],
+
+Cell[TextData[{
+ "Also the output of ",
+ StyleBox["Union ",
+  FontWeight->"Bold"],
+ "is a ",
+ StyleBox["sorted ",
+  FontSlant->"Italic"],
+ " list. We won\[CloseCurlyQuote]t discuss how ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " orders elements. "
+}], "Text",
+ CellChangeTimes->{{3.554156660295557*^9, 3.554156717921666*^9}, {
+   3.554156896217393*^9, 3.55415690073589*^9}, {3.554156969547975*^9, 
+   3.55415700663592*^9}, 3.5541570405346327`*^9}],
+
+Cell["", "Text",
+ CellChangeTimes->{
+  3.557813082411581*^9, {3.557813121325219*^9, 3.557813167684243*^9}, 
+   3.5707364610729513`*^9},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[TextData[{
+ StyleBox["Problem2 5 points ",
+  FontWeight->"Bold"],
+ "Define a function ",
+ StyleBox["uc[p_,x_] ",
+  FontWeight->"Bold"],
+ "which given a polynomial gives the list of coefficients which appear in ",
+ StyleBox["p[x]",
+  FontWeight->"Bold"],
+ ". Thus ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"uc", "[", 
+     RowBox[{
+      RowBox[{"2", 
+       SuperscriptBox["x", 
+        RowBox[{"4", " "}]]}], "+", 
+      RowBox[{"3", 
+       SuperscriptBox["x", "3"]}], "+", 
+      RowBox[{"2", 
+       SuperscriptBox["x", "2"]}], "+", 
+      RowBox[{"-", "7"}]}], "]"}], " "}], TraditionalForm]]],
+ "should be ",
+ StyleBox["{-7,0,2,3}",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.5578132187665167`*^9, 3.5578136136846037`*^9}, {
+   3.5578138214122334`*^9, 3.557813822244483*^9}, {3.557813979771524*^9, 
+   3.557813991290223*^9}, 3.5707364144328814`*^9, {3.570736466904306*^9, 
+   3.570736470304225*^9}, 3.570746949369587*^9, {3.5709102435348263`*^9, 
+   3.570910248699952*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uc", "[", 
+   RowBox[{"p_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{"Union", "[", 
+   RowBox[{"CoefficientList", "[", 
+    RowBox[{"p", ",", "x"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.57131262012077*^9, 3.571312636080459*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"uc", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", 
+     SuperscriptBox["x", "4"]}], "+", 
+    RowBox[{"3", 
+     SuperscriptBox["x", "3"]}], "+", 
+    RowBox[{"2", 
+     SuperscriptBox["x", "2"]}], "-", "7"}], ",", "x"}], "]"}]], "Input",
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "7"}], ",", "0", ",", "2", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.571179929197682*^9, {3.571312625222136*^9, 3.571312640308526*^9}, 
+   3.571696482164961*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["5 points", "Text",
+ CellChangeTimes->{{3.572556647032989*^9, 3.572556650824943*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["Intersection",
+  FontWeight->"Bold"],
+ ". Like ",
+ StyleBox["Union, Intersection ",
+  FontWeight->"Bold"],
+ "works on any number of lists.\n\nQuery ",
+ StyleBox["Complement",
+  FontWeight->"Bold"],
+ ". The document center explanation is clearer than that in S."
+}], "Text",
+ CellChangeTimes->{{3.5541570975507936`*^9, 3.554157212555439*^9}, {
+   3.554157323008808*^9, 3.5541574102258253`*^9}, 3.5541575201365147`*^9, {
+   3.554240858846919*^9, 3.554240868844565*^9}}],
+
+Cell[TextData[{
+ "Observe that the result of ",
+ StyleBox["Subsets[List]",
+  FontWeight->"Bold"],
+ " is very  different from ",
+ StyleBox["Subsets[Union[list]]",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.554158073282033*^9, 3.554158120435461*^9}, {
+  3.554158158874021*^9, 3.554158201406603*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Subsets", "[", 
+  RowBox[{"{", 
+   RowBox[{"a", ",", "a", ",", "b", ",", "b"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5541582141865597`*^9, 3.554158236673259*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "a", "}"}], ",", 
+   RowBox[{"{", "a", "}"}], ",", 
+   RowBox[{"{", "b", "}"}], ",", 
+   RowBox[{"{", "b", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"b", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a", ",", "b", ",", "b"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.554158240289048*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Subsets", "[", 
+  RowBox[{"Union", "[", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "a", ",", "b", ",", "b"}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5541582643142643`*^9, 3.554158299259712*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "a", "}"}], ",", 
+   RowBox[{"{", "b", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.554158300955316*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["DeleteDuplicates",
+  FontWeight->"Bold"],
+ ". Like ",
+ StyleBox["Union",
+  FontWeight->"Bold"],
+ " it drops duplicates from a list. However unlike ",
+ StyleBox["Union",
+  FontWeight->"Bold"],
+ " it does not sort the resulting list."
+}], "Text",
+ CellChangeTimes->{{3.5541583811011744`*^9, 3.5541583848850613`*^9}, {
+  3.554158434504183*^9, 3.554158560459467*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ex", "=", 
+  RowBox[{"{", 
+   RowBox[{"c", ",", "a", ",", "b", ",", "1", ",", "a", ",", "1"}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.554215466303792*^9, 3.5542155453117313`*^9}, {
+  3.5542156016821947`*^9, 3.5542156041223297`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"c", ",", "a", ",", "b", ",", "1", ",", "a", ",", "1"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.5542156085199127`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", "ex", "]"}]], "Input",
+ CellChangeTimes->{{3.554215550046135*^9, 3.554215554639687*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "a", ",", "b", ",", "c"}], "}"}]], "Output",
+ CellChangeTimes->{3.55421555670114*^9, 3.554215627246949*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DeleteDuplicates", "[", "ex", "]"}]], "Input",
+ CellChangeTimes->{{3.5542155631216087`*^9, 3.554215575792532*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"c", ",", "a", ",", "b", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{3.554215577952455*^9, 3.554215632581622*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "ex", "]"}]], "Input",
+ CellChangeTimes->{{3.5707368124655933`*^9, 3.5707368164536543`*^9}}],
+
+Cell[TextData[{
+ "Comment: Suppose we wish to take the union of each list in a list of lists. \
+The answer is to ",
+ StyleBox["Flatten",
+  FontWeight->"Bold"],
+ " the list of lists at level 1 and then take union. For example suppose we \
+have the list"
+}], "Text",
+ CellChangeTimes->{{3.5707366358462467`*^9, 3.570736770642996*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"example", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", 
+      RowBox[{"{", 
+       RowBox[{"\[Alpha]", ",", "\[Beta]"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "2", ",", 
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b"}], "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"4", ",", "5"}], "}"}], ",", "3", ",", "3"}], "}"}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.570736804301619*^9, 3.5707369771163673`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Alpha]", ",", "\[Beta]"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2", ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"4", ",", "5"}], "}"}], ",", "3", ",", "3"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.57073699131817*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["example",
+  FontWeight->"Bold"],
+ " is a list of three sublists. Observe that \[Alpha],\[Beta],a,b,4 and 5 are \
+not elements of any of the three sub-lists"
+}], "Text",
+ CellChangeTimes->{{3.570737099039567*^9, 3.570737213274836*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", 
+  RowBox[{"example", ",", "1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.570736999605401*^9, 3.570737011238089*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", "\[Beta]"}], "}"}], ",", "2", ",", "2", ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5"}], "}"}], ",", "3", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{3.570737013158304*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"Flatten", "[", 
+   RowBox[{"example", ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.570737021161069*^9, 3.570737053823818*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3", ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", "\[Beta]"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.570737055312193*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "If we use ",
+ StyleBox["Flatten ",
+  FontWeight->"Bold"],
+ " without a level specification"
+}], "Text",
+ CellChangeTimes->{{3.5707372304193573`*^9, 3.570737263740522*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Flatten", "[", "example", "]"}]], "Input",
+ CellChangeTimes->{{3.570737268360955*^9, 3.570737288663157*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "\[Alpha]", ",", "\[Beta]", ",", "2", ",", "2", ",", "a", ",", 
+   "b", ",", "4", ",", "5", ",", "3", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{3.570737290527708*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"Flatten", "[", "example", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.570737304696762*^9, 3.570737319672906*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "a", ",", "b", ",", 
+   "\[Alpha]", ",", "\[Beta]"}], "}"}]], "Output",
+ CellChangeTimes->{3.570737322763586*^9}]
+}, Open  ]],
+
+Cell["We get elements we should not see in the union", "Text",
+ CellChangeTimes->{{3.570737347721072*^9, 3.570737364152155*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "example", "]"}]], "Input",
+ CellChangeTimes->{{3.554240897703826*^9, 3.554240902359467*^9}, {
+  3.5707373718736753`*^9, 3.570737375669952*^9}}],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["MemberQ",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.570736537058238*^9, 3.5707365759638567`*^9}}],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["Tuples",
+  FontWeight->"Bold"],
+ ". This is exactly the command used for taking Cartesian products of lists"
+}], "Text",
+ CellChangeTimes->{{3.570737467013103*^9, 3.570737516173628*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["A comment about loading Packages.", "Subsubsection",
+ CellChangeTimes->{{3.554157533190673*^9, 3.5541575793280573`*^9}}],
+
+Cell[TextData[{
+ "Read S 1.8. Trust me: if a package has name ",
+ StyleBox["Name",
+  FontWeight->"Bold"],
+ ". The syntax ",
+ StyleBox["Needs[\[OpenCurlyDoubleQuote]Name`\[CloseCurlyDoubleQuote]] ",
+  FontWeight->"Bold"],
+ "is better than the syntax ",
+ StyleBox["<<Name`",
+  FontWeight->"Bold"],
+ ". There will be problems if you input ",
+ StyleBox["<<Name`",
+  FontWeight->"Bold"],
+ " and then input it again later. These problems don\[CloseCurlyQuote]t  \
+arise if you use ",
+ StyleBox["Needs[\[OpenCurlyDoubleQuote]Name`\[CloseCurlyDoubleQuote]]",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.5541576462027903`*^9, 3.554158028209146*^9}, {
+  3.554158582309169*^9, 3.55415861173367*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The Random Functions and Identities", "Section",
+ CellChangeTimes->{{3.554050873389069*^9, 3.554050895075095*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["RandomInteger,RandomReal,RandomComplex.", "Subsection",
+ CellChangeTimes->{{3.554052458723641*^9, 3.554052540437895*^9}, {
+  3.554158782086398*^9, 3.554158787044207*^9}}],
+
+Cell["Read:", "Text",
+ CellChangeTimes->{{3.554219868317877*^9, 3.5542198758373404`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hyperlink", "[", 
+  RowBox[{
+  "\"\<Random vs.Pseudorandom\>\"", ",", 
+   "\"\<http://en.wikipedia.org/wiki/Random_number_generation\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.554219970795786*^9, 3.554220013036158*^9}, 
+   3.55422005688408*^9, {3.554220311709538*^9, 3.554220332222939*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"Random vs.Pseudorandom\"\>", True->
+    StyleBox["\<\"Random vs.Pseudorandom\"\>", "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://en.wikipedia.org/wiki/Random_number_generation"], None},
+   ButtonNote->"http://en.wikipedia.org/wiki/Random_number_generation"],
+  Annotation[#, "http://en.wikipedia.org/wiki/Random_number_generation", 
+   "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{
+  3.554220060990322*^9, {3.554220314093711*^9, 3.554220334912437*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "( The syntax for the command whose output is a weblink  is\n",
+ StyleBox["Hyperlink[\[OpenCurlyDoubleQuote]name\[CloseCurlyDoubleQuote],\
+\[CloseCurlyDoubleQuote]address\[CloseCurlyDoubleQuote]]",
+  FontWeight->"Bold"],
+ ")"
+}], "Text",
+ CellChangeTimes->{{3.554240966929734*^9, 3.554241108132743*^9}, {
+  3.5542430393784018`*^9, 3.5542430730241423`*^9}}],
+
+Cell[TextData[{
+ "No computer algorithm can generate truly random numbers. ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s random number generators are among the best \
+pseudo-random number generators. True random number generators can only be \
+generated by hardware. For instance quantum mechanics guarantees that \
+measuring particle emission from a lump of radio-active material gives truly \
+random numbers. More suitable for computation is measurement of noise in an \
+electronic circuit."
+}], "Text",
+ CellChangeTimes->{{3.554220077074059*^9, 3.55422029023437*^9}, {
+  3.554220355204115*^9, 3.554220362580723*^9}, {3.554241127453865*^9, 
+  3.554241128846912*^9}, {3.570737552390726*^9, 3.5707375887519207`*^9}}],
+
+Cell[TextData[{
+ "The functions ",
+ StyleBox["Random[type,range]",
+  FontWeight->"Bold"],
+ " are obsolete they have been replaced by ",
+ StyleBox["RandomInteger",
+  FontWeight->"Bold"],
+ ",",
+ StyleBox["RandomReal",
+  FontWeight->"Bold"],
+ ", and ",
+ StyleBox["RandomComplex.",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.554158904231875*^9, 3.554158929688821*^9}, {
+   3.554159314655787*^9, 3.5541594019375772`*^9}, 3.554159443690838*^9}],
+
+Cell[CellGroupData[{
+
+Cell["The Full Syntax of RandomReal", "Subsubsection",
+ CellChangeTimes->{{3.5541595219517803`*^9, 3.554159550558736*^9}, {
+  3.5541595863856*^9, 3.554159597128127*^9}}],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["RandomInteger,RandomReal",
+  FontWeight->"Bold"],
+ ", and ",
+ StyleBox["RandomComplex. ",
+  FontWeight->"Bold"],
+ "The document center gives the best explanation of the syntax. Firstly ",
+ StyleBox["RandomReal ",
+  FontWeight->"Bold"],
+ "like many other commands we have seen e.g. ",
+ StyleBox["NIntegrate ,",
+  FontWeight->"Bold"],
+ "has an option ",
+ StyleBox["WorkingPrecision",
+  FontWeight->"Bold"],
+ ". Without this option ",
+ StyleBox["RandomReal",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["RandomComplex",
+  FontWeight->"Bold"],
+ " give machine precision numbers."
+}], "Text",
+ CellChangeTimes->{{3.554160494808714*^9, 3.5541605129209843`*^9}, {
+  3.5541605467957373`*^9, 3.554160815251873*^9}, {3.554219897286031*^9, 
+  3.554219944519936*^9}, {3.5542403495969152`*^9, 3.5542403843564034`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RandomReal", "[", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], "]"}], "//", "InputForm"}]], "Input",
+ CellChangeTimes->{{3.554160820314509*^9, 3.554160826165702*^9}, {
+  3.554160933577196*^9, 3.5541609610583763`*^9}}],
+
+Cell["2.4195747461058774", "Output",
+ CellChangeTimes->{3.554160963898932*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "W can get higher precision numbers by using ",
+ StyleBox["WorkingPrecision",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.554160994721425*^9, 3.554161032227477*^9}, 
+   3.554161356072816*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomReal", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"WorkingPrecision", "\[Rule]", "50"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.55416096899717*^9, 3.554160971250626*^9}, {
+  3.554161361176824*^9, 3.554161395090522*^9}}],
+
+Cell[BoxData["2.\
+71644306387767213755816653962721189323002664942764977190442614486192101988515`\
+50."], "Output",
+ CellChangeTimes->{3.55416139744189*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"RandomComplex", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "+", 
+        RowBox[{"3", "I"}]}], ",", 
+       RowBox[{"5", "+", 
+        RowBox[{"7", "I"}]}]}], "}"}], "]"}], "//", "InputForm"}], 
+   "\[LineSeparator]"}],
+  FontWeight->"Bold"]], "Input",
+ CellChangeTimes->{{3.554161476139682*^9, 3.554161486571903*^9}, {
+  3.5542154338431253`*^9, 3.55421543862564*^9}, {3.554215716014296*^9, 
+  3.554215764859182*^9}, {3.554215837534074*^9, 3.5542158432107973`*^9}}],
+
+Cell["\<\
+4.4749752221016585 + 
+ 6.645191272856964*I\
+\>", "Output",
+ CellChangeTimes->{3.5542157690921593`*^9, 3.5542158471668053`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   StyleBox["RandomComplex",
+    FontWeight->"Bold"], 
+   StyleBox["[",
+    FontWeight->"Bold"], 
+   RowBox[{
+    StyleBox[
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "+", 
+        RowBox[{"3", "I"}]}], ",", 
+       RowBox[{"5", "+", 
+        RowBox[{"7", "I"}]}]}], "}"}],
+     FontWeight->"Bold"], 
+    StyleBox[",",
+     FontWeight->"Bold"], 
+    RowBox[{
+     StyleBox["WorkingPrecision",
+      FontWeight->"Bold"], 
+     StyleBox["\[Rule]",
+      FontWeight->"Bold"], 
+     StyleBox[
+      RowBox[{
+       StyleBox["4",
+        FontWeight->"Bold"], "0"}]]}]}], 
+   StyleBox["]",
+    FontWeight->"Bold"]}], 
+  StyleBox["\[LineSeparator]",
+   FontWeight->"Bold"]}]], "Input",
+ CellChangeTimes->{{3.554161476139682*^9, 3.554161486571903*^9}, {
+  3.5542154338431253`*^9, 3.55421543862564*^9}, {3.554215716014296*^9, 
+  3.554215791881665*^9}, {3.554215862692656*^9, 3.55421586428465*^9}}],
+
+Cell[BoxData[
+ RowBox[{"3.\
+71494740454560710624295974354954583013707303456684792151354206489935055509714`\
+40.", "+", 
+  RowBox[{
+  "3.9157398878658045426602670779638308513351262818185978366903195341928085658\
+2929`40.", " ", "\[ImaginaryI]"}]}]], "Output",
+ CellChangeTimes->{3.554215794357163*^9, 3.554215866225771*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["RandomReal[bound,n]",
+  FontWeight->"Bold"],
+ " gives a list of ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " random reals"
+}], "Text",
+ CellChangeTimes->{{3.554215927172811*^9, 3.5542159728062353`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomReal", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", "6"}], "]"}]], "Input",
+ CellChangeTimes->{{3.554215896925325*^9, 3.554215913261134*^9}, {
+  3.5542160096730223`*^9, 3.554216025465662*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2.022413268774379`", ",", "2.7456047324544075`", ",", "2.02795158075788`", 
+   ",", "2.7297997313920055`", ",", "2.807616184392245`", ",", 
+   "2.8200930617384246`"}], "}"}]], "Output",
+ CellChangeTimes->{3.554216028068426*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["RandomReal[range, {n, m}]",
+  FontWeight->"Bold"],
+ " gives an ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " element list of ",
+ StyleBox["m",
+  FontSlant->"Italic"],
+ "-element lists of random numbers. This is particularily useful in linear \
+algebra where we may wish to work with random matrices."
+}], "Text",
+ CellChangeTimes->{{3.5542160560592613`*^9, 3.5542160942526627`*^9}, {
+  3.554216199254368*^9, 3.5542163016027203`*^9}, {3.554240417180869*^9, 
+  3.554240470951108*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomReal", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5542160991328163`*^9, 3.554216130045898*^9}, {
+  3.554240485873629*^9, 3.554240489849058*^9}, {3.554241507412334*^9, 
+  3.55424150957198*^9}, {3.55424321107908*^9, 3.554243236152001*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "0.7605839156261229`", ",", "0.33479586398935823`", ",", 
+     "0.21855271334726223`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.860175599938632`", ",", "0.7406184242569682`", ",", 
+     "0.5795273812122768`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.554216132692527*^9, 3.554216321840796*^9, 3.554240493308268*^9, {
+   3.554243221662796*^9, 3.5542432378490257`*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["RandomComplex[range,{n,m}]",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["RandomInteger[range,{n,m}]",
+  FontWeight->"Bold"],
+ " work the same way."
+}], "Text",
+ CellChangeTimes->{{3.554216355206128*^9, 3.554216482977281*^9}}],
+
+Cell["Here is simulating twenty five tosses of a pair of dice", "Text",
+ CellChangeTimes->{{3.554241458982114*^9, 3.554241484265994*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RandomInteger", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"25", ",", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.554241490902051*^9, 3.554241539884818*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"6", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "4"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.554241569575406*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Consider the game of craps. Typically cheating happens by weighting the \
+dice. ",
+ StyleBox["RandomInteger",
+  FontWeight->"Bold"],
+ " lets one play an honest game. If the chance in games of chance is truly \
+random then only a fool believes in luck in these games. The lottery is a \
+fool tax and the strip in Las Vegas is the fool holy city."
+}], "Text",
+ CellChangeTimes->{{3.554241594444203*^9, 3.5542417044413*^9}, 
+   3.5542432725593653`*^9, {3.554243314160325*^9, 3.554243454677294*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rationalize", "Subsubsection",
+ CellChangeTimes->{{3.554216534699786*^9, 3.5542165656681232`*^9}}],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["Rationalize",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.557938403764986*^9, 3.5579384154689417`*^9}, 
+   3.5579384595367727`*^9}],
+
+Cell[TextData[{
+ "Suppose we have a real number ",
+ StyleBox["s.",
+  FontSlant->"Italic"],
+ " By using decimal approximations we can find rational numbers as close as \
+we like to s. Now suppose we have a radius \[CapitalDelta] then it makes \
+sense to consider the rational number ",
+ StyleBox["q",
+  FontSlant->"Italic"],
+ " with smallest denominator within \[CapitalDelta] of ",
+ StyleBox["r",
+  FontSlant->"Italic"],
+ ". ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " finds this number with the command ",
+ StyleBox["Rationalize[s,rad]",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.5542165880076523`*^9, 3.554216749387438*^9}, {
+  3.554216808664559*^9, 3.554217001629736*^9}, {3.554217034391203*^9, 
+  3.5542170757841253`*^9}, {3.554243583908401*^9, 3.554243622900031*^9}, {
+  3.570675899475828*^9, 3.570675901721119*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"c", "=", 
+  RowBox[{"RandomReal", "[", "100", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5542170914297237`*^9, 3.554217112266737*^9}, {
+  3.5542172063843317`*^9, 3.554217307905849*^9}, {3.554217369188294*^9, 
+  3.554217407046105*^9}}],
+
+Cell[BoxData["84.45518372504986`"], "Output",
+ CellChangeTimes->{{3.554217389446196*^9, 3.5542174096150007`*^9}, 
+   3.5542174957452087`*^9, 3.554217701129693*^9, 3.55421797662919*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Rationalize", "[", 
+  RowBox[{"c", ",", 
+   SuperscriptBox["10", 
+    RowBox[{"-", "11"}]]}], "]"}]], "Input",
+ CellChangeTimes->{{3.554217978965775*^9, 3.554217998684597*^9}}],
+
+Cell[BoxData[
+ FractionBox["25128542", "297537"]], "Output",
+ CellChangeTimes->{3.5542180016588984`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"c", "-", 
+  RowBox[{"Rationalize", "[", 
+   RowBox[{"c", ",", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "11"}]]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.554218012410398*^9, 3.554218043294017*^9}}],
+
+Cell[BoxData["5.400124791776761`*^-13"], "Output",
+ CellChangeTimes->{3.554218046370591*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "As in the applications of the document center query for ",
+ StyleBox["Rationalize ",
+  FontWeight->"Bold"],
+ "we get successive approximations to \[DoubledPi]:"
+}], "Text",
+ CellChangeTimes->{{3.554218168321348*^9, 3.554218211035097*^9}, {
+  3.5542405657299967`*^9, 3.554240594379284*^9}, {3.5542412557139482`*^9, 
+  3.554241273802615*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Rationalize", "[", 
+    RowBox[{"\[Pi]", ",", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "n"}]]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.554218076348668*^9, 3.554218118737858*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox["22", "7"], ",", 
+   FractionBox["22", "7"], ",", 
+   FractionBox["201", "64"], ",", 
+   FractionBox["333", "106"], ",", 
+   FractionBox["355", "113"], ",", 
+   FractionBox["355", "113"], ",", 
+   FractionBox["75948", "24175"], ",", 
+   FractionBox["100798", "32085"], ",", 
+   FractionBox["103993", "33102"], ",", 
+   FractionBox["312689", "99532"]}], "}"}]], "Output",
+ CellChangeTimes->{3.5542181213652067`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "There is no function ",
+ StyleBox["RandomRational",
+  FontWeight->"Bold"],
+ " but using ",
+ StyleBox["Rationalize",
+  FontWeight->"Bold"],
+ " we can cobble together a function ",
+ StyleBox["randomRational ",
+  FontWeight->"Bold"],
+ " that gives lists of semi-random rational numbers."
+}], "Text",
+ CellChangeTimes->{{3.526842479635332*^9, 3.5268426024427557`*^9}, {
+   3.5325272249601994`*^9, 3.53252722584796*^9}, {3.554218232155867*^9, 
+   3.5542182903658524`*^9}, {3.554218323375293*^9, 3.554218383809764*^9}, {
+   3.5542184247646027`*^9, 3.554218464852318*^9}, 3.554241780112824*^9, {
+   3.557938498495883*^9, 3.557938499256246*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"randomRational", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"bound1_", ",", "bound2_"}], "}"}], ",", "\[CapitalDelta]_", ",",
+     "n_"}], "]"}], ":=", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Rationalize", "[", 
+      RowBox[{"#", ",", "\[CapitalDelta]"}], "]"}], "&"}], ",", 
+    RowBox[{"RandomReal", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"bound1", "+", "\[CapitalDelta]"}], ",", 
+        RowBox[{"bound2", "-", "\[CapitalDelta]"}]}], "}"}], ",", "n"}], 
+     "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.52686147832873*^9, 3.526861517298794*^9}, {
+   3.526861552236393*^9, 3.526861567044799*^9}, {3.526861609590787*^9, 
+   3.5268620134485273`*^9}, 3.526862061851904*^9, {3.526862145621881*^9, 
+   3.526862196781896*^9}, 3.526862240368375*^9, {3.526928714918379*^9, 
+   3.526928963506414*^9}, {3.526929031479938*^9, 3.526929068229898*^9}, {
+   3.526933083235351*^9, 3.5269330973235073`*^9}, {3.526941226304147*^9, 
+   3.5269412395280123`*^9}}],
+
+Cell[TextData[{
+ "Because of the need to evaluate ",
+ StyleBox["Rationalize",
+  FontWeight->"Bold"],
+ " over and over this command is significantly slower than ",
+ StyleBox["RandomInteger",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.554241337940813*^9, 3.5542414096711597`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"randomRational", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"11", ",", "14"}], "}"}], ",", 
+   SuperscriptBox["10", 
+    RowBox[{"-", "10"}]], ",", "7"}], "]"}]], "Input",
+ CellChangeTimes->{{3.554218502437765*^9, 3.554218545712715*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox["1417609", "106046"], ",", 
+   FractionBox["833083", "64965"], ",", 
+   FractionBox["749905", "57426"], ",", 
+   FractionBox["744789", "58282"], ",", 
+   FractionBox["1000242", "73405"], ",", 
+   FractionBox["1255108", "94871"], ",", 
+   FractionBox["749180", "62421"]}], "}"}]], "Output",
+ CellChangeTimes->{3.554218547835556*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Testing Identities using Random Numbers.", "Subsection",
+ CellChangeTimes->{{3.5542203960391912`*^9, 3.554220429799103*^9}}],
+
+Cell[TextData[{
+ "Suppose we have two functions ",
+ StyleBox["f",
+  FontSlant->"Italic"],
+ StyleBox[" ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ "and ",
+ StyleBox["g",
+  FontSlant->"Italic"],
+ " and we wish to know whether they are identically equal. Sometimes, of \
+course we can use well known, e.g. trigonometric, identities to show that ",
+ StyleBox["f=g",
+  FontSlant->"Italic"],
+ " is an identity. ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s random number generators allow us to experimentally \
+test whether ",
+ StyleBox["f=g",
+  FontSlant->"Italic"],
+ " is an identity. The method is to evaluate ",
+ StyleBox["f[x]==g[x]",
+  FontWeight->"Bold"],
+ " on a large list of random numbers. If we always get ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ " then we have ",
+ StyleBox["experimental evidence",
+  FontSlant->"Italic"],
+ " (not a proof!) that ",
+ StyleBox["f=g",
+  FontSlant->"Italic"],
+ StyleBox[" ",
+  FontWeight->"Bold",
+  FontSlant->"Italic"],
+ StyleBox[" ",
+  FontWeight->"Bold"],
+ "is an identity. One ",
+ StyleBox["False",
+  FontWeight->"Bold"],
+ " example shows that ",
+ StyleBox["f=g",
+  FontSlant->"Italic"],
+ " is not an identity. If we have a large list whose entries are chosen from ",
+ StyleBox["True,False ",
+  FontWeight->"Bold"],
+ "examining the occurrence of ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ " and ",
+ StyleBox["False",
+  FontWeight->"Bold"],
+ " is facilitated by using ",
+ StyleBox["Union ",
+  FontWeight->"Bold"],
+ " to see whether all entries are ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ " or whether some entries are ",
+ StyleBox["False.",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.554220489513465*^9, 3.554220765697486*^9}, {
+  3.554221074340167*^9, 3.554221155277643*^9}, {3.554221198799335*^9, 
+  3.554221378348606*^9}, {3.554221439655121*^9, 3.554221448934663*^9}, {
+  3.554221494936369*^9, 3.55422151840133*^9}, {3.554221759376729*^9, 
+  3.554221802330508*^9}, {3.554222733375496*^9, 3.554222799065713*^9}, {
+  3.554224200318161*^9, 3.554224265035981*^9}, {3.5542243047095337`*^9, 
+  3.5542243209783497`*^9}, {3.5542417873278217`*^9, 3.554241792243167*^9}, {
+  3.5542448053658333`*^9, 3.554244828709239*^9}, {3.570746830253207*^9, 
+  3.570746863712076*^9}}],
+
+Cell[TextData[{
+ StyleBox["Problem4:",
+  FontWeight->"Bold"],
+ " 15 pointsFor rational numbers ",
+ StyleBox["q",
+  FontSlant->"Italic"],
+ " there are two way of evaluating ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "q"], TraditionalForm]]],
+ " one is ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], 
+      RowBox[{"1", "/", 
+       RowBox[{"Denominator", "[", "q", "]"}]}]], ")"}], 
+    RowBox[{"Numerator", "[", "q", "]"}]], TraditionalForm]]],
+ " the other is ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], 
+      RowBox[{"Numerator", "[", "q", "]"}]], ")"}], 
+    RowBox[{"1", "/", 
+     RowBox[{"Denominator", "[", "q", "]"}]}]], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.5542219425438633`*^9, 3.5542221724002542`*^9}, {
+   3.55422222484836*^9, 3.554222231420718*^9}, {3.554222389104089*^9, 
+   3.554222398731719*^9}, {3.554222483106266*^9, 3.554222524218028*^9}, {
+   3.554244703866287*^9, 3.5542447296013947`*^9}, 3.557938772795804*^9, {
+   3.570747023468425*^9, 3.5707470239563723`*^9}, {3.570910317750741*^9, 
+   3.570910324094988*^9}, {3.570910467491777*^9, 3.570910468075322*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[TextData[{
+ StyleBox["a:",
+  FontWeight->"Bold"],
+ " Use ",
+ StyleBox["RandomRational",
+  FontWeight->"Bold"],
+ " to test whether ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], 
+      RowBox[{"1", "/", 
+       RowBox[{"Denominator", "[", "q", "]"}]}]], ")"}], 
+    RowBox[{"Numerator", "[", "q", "]"}]], TraditionalForm]]],
+ " is identical with ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "q"], TraditionalForm]]],
+ ". Use 50000 test cases between 1 and 10000."
+}], "Text",
+ CellChangeTimes->{{3.554222554265896*^9, 3.5542227169588013`*^9}, {
+  3.55422286278755*^9, 3.554222880316378*^9}, {3.554224052621128*^9, 
+  3.554224065281838*^9}, {3.554224173717998*^9, 3.554224174303192*^9}, {
+  3.570747212646133*^9, 3.570747225627243*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["Hint: Take the pure function ", "Text",
+ CellChangeTimes->{{3.5707382696573677`*^9, 3.570738305321245*^9}, {
+   3.5707383512204857`*^9, 3.5707383522871103`*^9}, 3.570747067987316*^9},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"(", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"-", "1"}], ")"}], 
+      RowBox[{"1", "/", 
+       RowBox[{"Denominator", "[", "#", "]"}]}]], ")"}], 
+    RowBox[{"Numerator", "[", "#", "]"}]], "\[Equal]", 
+   SuperscriptBox[
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}], "#"]}], "&"}]], "DisplayFormula",
+ CellChangeTimes->{{3.570747164745542*^9, 3.5707471835471497`*^9}}],
+
+Cell[TextData[{
+ "and ",
+ StyleBox["Map ",
+  FontWeight->"Bold"],
+ "it to a large list of random rational numbers. If you always get ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ " you have evidence for the identity."
+}], "Text",
+ CellChangeTimes->{{3.570738402021884*^9, 3.5707384727027187`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"-", "1"}], ")"}], 
+         RowBox[{"1", "/", 
+          RowBox[{"Denominator", "[", "#", "]"}]}]], ")"}], 
+       RowBox[{"Numerator", "[", "#", "]"}]], "\[Equal]", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], "#"]}], "&"}], ",", 
+    RowBox[{"randomRational", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", "10000"}], "}"}], ",", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "10"}]], ",", "50000"}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.571247672689547*^9, 3.571247710372698*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", "True", "}"}]], "Output",
+ CellChangeTimes->{
+  3.571247543360057*^9, 3.571247680713233*^9, {3.571247714914196*^9, 
+   3.571247733670184*^9}, 3.571696442213291*^9, 3.57169649289778*^9, 
+   3.572556748094014*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.5725567033637247`*^9, 3.572556710586979*^9}}],
+
+Cell[TextData[{
+ StyleBox["b: ",
+  FontWeight->"Bold"],
+ "Show that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"(", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"-", "1"}], ")"}], 
+       RowBox[{"Numerator", "[", "q", "]"}]], ")"}], 
+     RowBox[{"1", "/", 
+      RowBox[{"Denominator", "[", "q", "]"}]}]], "\[Equal]", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "q"]}], TraditionalForm]]],
+ " is not an identity. "
+}], "Text",
+ CellChangeTimes->{
+  3.554224161608322*^9, {3.5542243577424726`*^9, 3.55422455374612*^9}, {
+   3.554244746962899*^9, 3.5542447561953077`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["\<\
+When inputting a random number for the numerator and denominator, we recieve:\
+\>", "Text",
+ CellChangeTimes->{{3.571312766251933*^9, 3.5713127968842373`*^9}, {
+  3.571696388611597*^9, 3.571696433695676*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox[
+   RowBox[{"(", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"-", "1"}], ")"}], "2"], ")"}], 
+   FractionBox["1", "3"]], "\[Equal]", 
+  SuperscriptBox[
+   RowBox[{"(", 
+    RowBox[{"-", "1"}], ")"}], 
+   FractionBox["2", "3"]]}]], "Input",
+ CellChangeTimes->{{3.5712476173570337`*^9, 3.571247642750162*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.5712476441525*^9, 3.571312883281839*^9, 
+  3.5716964994029913`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["15 points", "Text",
+ CellChangeTimes->{{3.572556769358842*^9, 3.572556772628994*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["Consider the difference identity for the tangent function", "Text",
+ CellChangeTimes->{{3.554234562477323*^9, 3.5542346027340918`*^9}, {
+   3.554234643031146*^9, 3.554234662896443*^9}, {3.5542350236922894`*^9, 
+   3.554235029772646*^9}, 3.554236158698615*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Tan", "\[NegativeThinSpace]", 
+   RowBox[{"(", 
+    RowBox[{"\[Alpha]", "-", "\[Beta]"}], ")"}]}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"Tan", "\[NegativeThinSpace]", 
+     RowBox[{"(", "\[Alpha]", ")"}]}], "-", 
+    RowBox[{"Tan", "\[NegativeThinSpace]", 
+     RowBox[{"(", "\[Beta]", ")"}]}]}], 
+   RowBox[{"1", "+", 
+    RowBox[{"Tan", "\[NegativeThinSpace]", 
+     RowBox[{"(", "\[Alpha]", ")"}], "\[NegativeThinSpace]", "Tan", 
+     "\[NegativeThinSpace]", 
+     RowBox[{"(", "\[Beta]", ")"}]}]}]]}]], "DisplayFormula",
+ CellChangeTimes->{{3.5542346794408283`*^9, 3.554234741836578*^9}, {
+   3.554234797191625*^9, 3.55423500586127*^9}, 3.5542361586993732`*^9}],
+
+Cell[TextData[{
+ StyleBox["Problem5:",
+  FontWeight->"Bold"],
+ " 15 points Remember that in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " the transcendental functions are defined for complex numbers. Test this \
+identity on ",
+ StyleBox["Complex ",
+  FontSlant->"Italic"],
+ "numbers.  Use 50000 tests. You will need the ",
+ StyleBox["RandomComplex[range,{n,m}] ",
+  FontWeight->"Bold"],
+ "syntax.Test on complex numbers in the rectangle with corners 0 and 10+10\
+\[ImaginaryI]. \n\n",
+ StyleBox["a:",
+  FontWeight->"Bold"],
+ "First use the form of ",
+ StyleBox["RandomComplex ",
+  FontWeight->"Bold"],
+ " that works with machine precision. Does the give evidence for the identity"
+}], "Text",
+ CellChangeTimes->{{3.554235169834742*^9, 3.55423525964441*^9}, {
+   3.554235323678232*^9, 3.554235426170492*^9}, {3.554236019926313*^9, 
+   3.554236041094805*^9}, 3.554236158706053*^9, {3.554236258853736*^9, 
+   3.554236343929706*^9}, {3.554236447117034*^9, 3.554236449172401*^9}, {
+   3.554238329253558*^9, 3.554238336045252*^9}, {3.554239158740786*^9, 
+   3.554239178635284*^9}, {3.554239214699733*^9, 3.554239284941896*^9}, {
+   3.554239319992654*^9, 3.554239352568425*^9}, {3.554239497910331*^9, 
+   3.554239500462125*^9}, {3.554239585816845*^9, 3.554239595881474*^9}, {
+   3.554244297218349*^9, 3.554244298450354*^9}, {3.554244369172875*^9, 
+   3.5542444564641457`*^9}, {3.554244866278351*^9, 3.554244881294684*^9}, 
+   3.557938805372178*^9, {3.570910357599865*^9, 3.570910364184396*^9}, {
+   3.570910479924357*^9, 3.5709104804523287`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"Tan", "[", 
+         RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+         "]"}], "-", 
+        RowBox[{"Tan", "[", 
+         RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+         "]"}]}], 
+       RowBox[{"1", "+", 
+        RowBox[{
+         RowBox[{"Tan", "[", 
+          RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+           "]"}], 
+         RowBox[{"Tan", "[", 
+          RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+           "]"}]}]}]], "==", 
+      RowBox[{"Tan", "[", 
+       RowBox[{
+        RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+        "-", 
+        RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}],
+        "]"}]}], "&"}], ",", 
+    RowBox[{"RandomComplex", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"10", "+", 
+         RowBox[{"10", "\[ImaginaryI]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"50000", ",", "2"}], "}"}]}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.571249003197947*^9, 3.5712490439357033`*^9}, {
+  3.571249080658372*^9, 3.5712491154659367`*^9}, {3.5712498556737556`*^9, 
+  3.571249916939073*^9}, {3.571313586468648*^9, 3.5713135892564363`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"False", ",", "True"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.571248296975749*^9, 3.5712483307169724`*^9, 3.5712490936217546`*^9, {
+   3.571249129464904*^9, 3.57124913099631*^9}, 3.571249927447153*^9, 
+   3.571313598237238*^9, 3.5716965056430025`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+No, the test does not give evidence for the identity. Based on the output, \
+some values within the range hold for the identity being true, while other \
+values within the range result in false. \
+\>", "Text",
+ CellChangeTimes->{{3.571249967576442*^9, 3.571250060247258*^9}, {
+  3.5716965403530636`*^9, 3.571696607417581*^9}, {3.571696643094844*^9, 
+  3.5716966811901107`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[TextData[{
+ StyleBox["b : ",
+  FontWeight->"Bold"],
+ "Now use precision 20. Does the test confirm the identity?"
+}], "Text",
+ CellChangeTimes->{{3.554239513004671*^9, 3.554239576976362*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Union", "[", 
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"Tan", "[", 
+         RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+         "]"}], "-", 
+        RowBox[{"Tan", "[", 
+         RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+         "]"}]}], 
+       RowBox[{"1", "+", 
+        RowBox[{
+         RowBox[{"Tan", "[", 
+          RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+           "]"}], 
+         RowBox[{"Tan", "[", 
+          RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+           "]"}]}]}]], "==", 
+      RowBox[{"Tan", "[", 
+       RowBox[{
+        RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+        "-", 
+        RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}],
+        "]"}]}], "&"}], ",", 
+    RowBox[{"RandomComplex", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"10", "+", 
+         RowBox[{"10", "\[ImaginaryI]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"50000", ",", "2"}], "}"}], ",", 
+      RowBox[{"WorkingPrecision", "\[Rule]", "20"}]}], "]"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5542376522013283`*^9, 3.5542377117383757`*^9}, {
+  3.554237825589747*^9, 3.554238045678678*^9}, {3.554238102123186*^9, 
+  3.554238157251204*^9}, {3.5542382081910954`*^9, 3.5542382131586657`*^9}, {
+  3.5542382432086143`*^9, 3.554238292641376*^9}, {3.554238364403738*^9, 
+  3.554238521734569*^9}, {3.554238566475193*^9, 3.554238588947381*^9}, {
+  3.554238624477221*^9, 3.554238650958027*^9}, {3.554238995191799*^9, 
+  3.554239042496132*^9}, {3.5542393032927103`*^9, 3.554239310004325*^9}, {
+  3.554239880718013*^9, 3.5542399032278843`*^9}, {3.571249150791964*^9, 
+  3.5712493525979843`*^9}, {3.5713136207663383`*^9, 3.5713136266648083`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", "True", "}"}]], "Output",
+ CellChangeTimes->{3.571248377461532*^9, 3.5712491674316473`*^9, 
+  3.571249385794154*^9, 3.571313645215701*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["With precision 20, the test does confirm the identity.", "Text",
+ CellChangeTimes->{{3.571250095547812*^9, 3.5712501075345497`*^9}, {
+  3.5716966928745317`*^9, 3.571696700066144*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[TextData[{
+ "c: ",
+ StyleBox["Explain the difference between these two results. ",
+  FontWeight->"Plain"]
+}], "Text",
+ CellChangeTimes->{{3.55424008290057*^9, 3.5542401568199778`*^9}, 
+   3.570910380648315*^9},
+ FontWeight->"Bold",
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["\<\
+When using machine precision the identity seems to be false for some values \
+and true for others. This can be due to the extremely close precision or \
+default precision which the machine exhibits which can in turn cause rounding \
+errors. When a precision is specified, the identity holds true.\
+\>", "Text",
+ CellChangeTimes->{{3.571250161513113*^9, 3.571250218845702*^9}, {
+  3.571250253344049*^9, 3.57125044504956*^9}, {3.5713138228429413`*^9, 
+  3.571313849522545*^9}, {3.571696804399127*^9, 3.5716968654420347`*^9}, {
+  3.57169847143229*^9, 3.571698519464774*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell["15 points", "Text",
+ CellChangeTimes->{{3.572556844032386*^9, 3.572556847480036*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[TextData[{
+ "This identity tells us that given a pair of distinct non-parallel lines \
+with slopes ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "1"], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["s", "2"], TraditionalForm]]],
+ " the angle between them at the intersection is "
+}], "Text",
+ CellChangeTimes->{{3.5542426479306583`*^9, 3.554242788790292*^9}, {
+   3.554242943163937*^9, 3.554242948580821*^9}, 3.5707462020586967`*^9}],
+
+Cell[BoxData[
+ RowBox[{"arctan", "[", 
+  FractionBox[
+   RowBox[{
+    SubscriptBox["s", "1"], "-", 
+    SubscriptBox["s", "2"]}], 
+   RowBox[{"1", "+", 
+    RowBox[{
+     SubscriptBox["s", "1"], 
+     SubscriptBox["s", "2"]}]}]], "]"}]], "DisplayFormula",
+ CellChangeTimes->{{3.554242806352255*^9, 3.554242877195058*^9}}],
+
+Cell[TextData[{
+ "Assuming we trust ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s ",
+ StyleBox["Simplify",
+  FontWeight->"Bold"],
+ " command we have"
+}], "Text",
+ CellChangeTimes->{{3.5707462248482018`*^9, 3.570746257441189*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"Tan", "[", "a", "]"}], "-", 
+    RowBox[{"Tan", "[", "b", "]"}]}], 
+   RowBox[{"1", "+", 
+    RowBox[{
+     RowBox[{"Tan", "[", "a", "]"}], 
+     RowBox[{"Tan", "[", "b", "]"}]}]}]], "]"}]], "Input",
+ CellChangeTimes->{{3.570746306410076*^9, 3.57074634410224*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Tan", "[", 
+  RowBox[{"a", "-", "b"}], "]"}]], "Output",
+ CellChangeTimes->{3.570746347052353*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Select", "Section",
+ CellChangeTimes->{{3.5578146979328957`*^9, 3.5578147002587347`*^9}}],
+
+Cell[TextData[{
+ "A ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox[" predicate ",
+  FontSlant->"Italic"],
+ " is a function which has range ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ " or ",
+ StyleBox["False",
+  FontWeight->"Bold"],
+ ". Examples of predicates are all the functions "
+}], "Text",
+ CellChangeTimes->{{3.557865535216189*^9, 3.5578656934752893`*^9}, {
+   3.5578657788250303`*^9, 3.557865797206571*^9}, 3.55786584222689*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "*Q"}]], "Input",
+ CellChangeTimes->{{3.557865806652108*^9, 3.5578658114974127`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["System`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["System`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["AcyclicGraphQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"AcyclicGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["AlgebraicIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"AlgebraicIntegerQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["AlgebraicUnitQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"AlgebraicUnitQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ArgumentCountQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"ArgumentCountQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ArrayQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"ArrayQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["AtomQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"AtomQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["BinaryImageQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"BinaryImageQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["BipartiteGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"BipartiteGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["CompleteGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"CompleteGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ConnectedGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"ConnectedGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ContinuousTimeModelQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"ContinuousTimeModelQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ControllableModelQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"ControllableModelQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["CoprimeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"CoprimeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["DigitQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"DigitQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["DirectedGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"DirectedGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["DirectoryQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"DirectoryQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["DiscreteTimeModelQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"DiscreteTimeModelQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["DistributionParameterQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"DistributionParameterQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["EdgeCoverQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"EdgeCoverQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["EdgeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"EdgeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["EllipticNomeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"EllipticNomeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["EmptyGraphQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"EmptyGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["EulerianGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"EulerianGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["EvenQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"EvenQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ExactNumberQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"ExactNumberQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["FileExistsQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"FileExistsQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["FreeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"FreeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["GraphQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"GraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["GroupElementQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"GroupElementQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["HamiltonianGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"HamiltonianGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["HermitianMatrixQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"HermitianMatrixQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["HypergeometricPFQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"HypergeometricPFQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ImageQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"ImageQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["IndependentEdgeSetQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"IndependentEdgeSetQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["IndependentVertexSetQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info3557851414-4732935", {"IndependentVertexSetQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["InexactNumberQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"InexactNumberQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["IntegerQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"IntegerQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["IntervalMemberQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"IntervalMemberQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["InverseEllipticNomeQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"InverseEllipticNomeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["IrreduciblePolynomialQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"IrreduciblePolynomialQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["IsomorphicGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"IsomorphicGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["LegendreQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"LegendreQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["LetterQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"LetterQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["LinkConnectedQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info3557851414-4732935", {"LinkConnectedQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["LinkReadyQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"LinkReadyQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ListQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"ListQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["LoopFreeGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"LoopFreeGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["LowerCaseQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"LowerCaseQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["MachineNumberQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"MachineNumberQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["MarcumQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"MarcumQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["MatchLocalNameQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"MatchLocalNameQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["MatchQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"MatchQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["MatrixQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"MatrixQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["MemberQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"MemberQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["NameQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"NameQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["NumberQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"NumberQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["NumericQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"NumericQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ObservableModelQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"ObservableModelQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["OddQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"OddQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["OptionQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"OptionQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["OrderedQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"OrderedQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["OutputControllableModelQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"OutputControllableModelQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PartitionsQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"PartitionsQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PathGraphQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"PathGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PermutationCyclesQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"PermutationCyclesQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PermutationListQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"PermutationListQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PolynomialQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"PolynomialQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PositiveDefiniteMatrixQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"PositiveDefiniteMatrixQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PossibleZeroQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"PossibleZeroQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PrimePowerQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"PrimePowerQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["PrimeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"PrimeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["QHypergeometricPFQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"QHypergeometricPFQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["QuadraticIrrationalQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"QuadraticIrrationalQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["RootOfUnityQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"RootOfUnityQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["SameQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"SameQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["SatisfiableQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"SatisfiableQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["SimpleGraphQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"SimpleGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["SquareFreeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"SquareFreeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["StringFreeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"StringFreeQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["StringMatchQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"StringMatchQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["StringQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"StringQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["SymmetricMatrixQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"SymmetricMatrixQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["SyntaxQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"SyntaxQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["TautologyQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"TautologyQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["TensorQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"TensorQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["TreeGraphQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"TreeGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["TrueQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"TrueQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["UndirectedGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"UndirectedGraphQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["UnsameQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"UnsameQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["UpperCaseQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"UpperCaseQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["ValueQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"ValueQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["VectorQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"VectorQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["VertexCoverQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"VertexCoverQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["VertexQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3557851414-4732935", {"VertexQ", "System`"}},
+          ButtonNote->"System`"]},
+        {
+         ButtonBox["WeightedGraphQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"WeightedGraphQ", "System`"}},
+          ButtonNote->"System`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]], "\n", 
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["PacletManager`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["PacletManager`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["PacletNewerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3557851414-4732935", {"PacletNewerQ", "PacletManager`"}},
+          ButtonNote->"PacletManager`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.95]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]}], "Print", "InfoCell",
+ CellChangeTimes->{3.5578658143839417`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\!\(\*RowBox[{\\\"MemberQ\\\", \\\"[\\\", RowBox[{StyleBox[\\\
+\"list\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"form\\\", \\\"TI\\\"]}], \
+\\\"]\\\"}]\) returns True if an element of \!\(\*StyleBox[\\\"list\\\", \
+\\\"TI\\\"]\) matches \!\(\*StyleBox[\\\"form\\\", \\\"TI\\\"]\), and False \
+otherwise. \\n\!\(\*RowBox[{\\\"MemberQ\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"list\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"form\\\", \
+\\\"TI\\\"], \\\",\\\", StyleBox[\\\"levelspec\\\", \\\"TI\\\"]}], \
+\\\"]\\\"}]\) tests all parts of \!\(\*StyleBox[\\\"list\\\", \\\"TI\\\"]\) \
+specified by \!\(\*StyleBox[\\\"levelspec\\\", \\\"TI\\\"]\). \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/MemberQ"]}]], "Print", "PrintUsage",
+ CellTags->"Info3557851414-4732935"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["TrueQ",
+  FontWeight->"Bold"],
+ ". In some sense this is the universal predicate:"
+}], "Text",
+ CellChangeTimes->{{3.557865896839343*^9, 3.557865957988186*^9}, {
+  3.57074648153867*^9, 3.570746502769616*^9}}],
+
+Cell[TextData[{
+ StyleBox["Problem6",
+  FontWeight->"Bold"],
+ ": 10 points Define an operator ",
+ StyleBox["pred ",
+  FontWeight->"Bold"],
+ "such that for any function, ",
+ StyleBox["f",
+  FontSlant->"Italic"],
+ ", ",
+ StyleBox["pred[f][x]",
+  FontWeight->"Bold"],
+ " is ",
+ StyleBox["True ",
+  FontWeight->"Bold"],
+ "when f[x] is ",
+ StyleBox["True ",
+  FontWeight->"Bold"],
+ " and otherwise is ",
+ StyleBox["False",
+  FontWeight->"Bold"],
+ ". That is ",
+ StyleBox["pred",
+  FontWeight->"Bold"],
+ " turns functions into predicates. Hint compose with ",
+ StyleBox["TrueQ",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.557866033510828*^9, 3.557866205916958*^9}, {
+   3.557866255951495*^9, 3.55786635107405*^9}, 3.5578664174045153`*^9, 
+   3.557938950786351*^9, {3.57073869192033*^9, 3.570738723000169*^9}, {
+   3.570910399553409*^9, 3.570910403801265*^9}, {3.570910511493436*^9, 
+   3.570910512685198*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pred", "[", "f_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"TrueQ", "[", 
+    RowBox[{"f", "[", "#", "]"}], "]"}], "&"}]}]], "Input",
+ CellChangeTimes->{3.571314274856461*^9},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell["10 points", "Text",
+ CellChangeTimes->{{3.572557415419339*^9, 3.572557418795892*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[CellGroupData[{
+
+Cell["A Tiny Bit of logic", "Subsection",
+ CellChangeTimes->{{3.5578666407253523`*^9, 3.557866656564926*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"a", ",", "b", ",", "c"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5578670386740103`*^9, 3.557867046605116*^9}}],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " denotes the conjunctive ",
+ StyleBox["and ",
+  FontSlant->"Italic"],
+ "by ",
+ StyleBox["&&",
+  FontWeight->"Bold"],
+ ". The conjunctive ",
+ StyleBox["or",
+  FontSlant->"Italic"],
+ " is denoted by ",
+ StyleBox["||. ",
+  FontWeight->"Bold"],
+ "The negation ",
+ StyleBox["not",
+  FontSlant->"Italic"],
+ " is denoted by ",
+ StyleBox["!",
+  FontWeight->"Bold"],
+ ","
+}], "Text",
+ CellChangeTimes->{{3.557866694004861*^9, 3.557866695176209*^9}, {
+  3.557866808801161*^9, 3.557866987409176*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{"a", "&&", "b", "&&", "c"}], "]"}]], "Input",
+ CellChangeTimes->{{3.557867002674258*^9, 3.557867021357041*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"And", "[", 
+    RowBox[{"a", ",", "b", ",", "c"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.557867024014578*^9, 3.557867054527123*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{"a", "||", "b", "||", "c"}], "]"}]], "Input",
+ CellChangeTimes->{{3.557867065411395*^9, 3.557867090350662*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Or", "[", 
+    RowBox[{"a", ",", "b", ",", "c"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.557867092465074*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{
+   RowBox[{"!", " ", "a"}], " ", "&&", " ", "b"}], "]"}]], "Input",
+ CellChangeTimes->{{3.557867096564796*^9, 3.5578671204002867`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"And", "[", 
+    RowBox[{
+     RowBox[{"Not", "[", "a", "]"}], ",", "b"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.557867122922697*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{"!", 
+   RowBox[{"(", 
+    RowBox[{"a", " ", "&&", " ", "b"}], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5578671402726383`*^9, 3.557867164353709*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Not", "[", 
+    RowBox[{"And", "[", 
+     RowBox[{"a", ",", "b"}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.5578671657216387`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Pay particular attention to the difference in precedence between these two \
+results. Notice that ",
+ StyleBox["Not",
+  FontWeight->"Bold"],
+ " takes precedence over ",
+ StyleBox["And",
+  FontWeight->"Bold"],
+ " As with arithmetic it can\[CloseCurlyQuote]t hurt to use parentheses to \
+establish order of precedence."
+}], "Text",
+ CellChangeTimes->{{3.557867200264399*^9, 3.5578673207876787`*^9}, {
+  3.570738754689115*^9, 3.570738786602319*^9}}],
+
+Cell[TextData[{
+ StyleBox["Comment:",
+  FontSlant->"Italic"],
+ " Given a predicate ",
+ StyleBox["pre",
+  FontWeight->"Bold"],
+ ", ",
+ StyleBox["!pre ",
+  FontWeight->"Bold"],
+ "should also be a predicate, but it isn\[CloseCurlyQuote]t. Just as ",
+ StyleBox["f[g] ",
+  FontWeight->"Bold"],
+ " is not a function, we need to use ",
+ StyleBox["Composition[f,g].",
+  FontWeight->"Bold"],
+ " To get the negation of a predicate ",
+ StyleBox["pre",
+  FontWeight->"Bold"],
+ ", we need to use ",
+ StyleBox["Composition[Not,pred]",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.557936557549409*^9, 3.557936593828207*^9}, {
+  3.5579368083655787`*^9, 3.557936915415663*^9}, {3.557936948771923*^9, 
+  3.557937097854274*^9}, {3.557937128559792*^9, 3.557937260867921*^9}, {
+  3.5707388323560247`*^9, 3.570738854620346*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["The Select Command", "Subsubsection",
+ CellChangeTimes->{{3.557867384590652*^9, 3.557867393734315*^9}}],
+
+Cell[TextData[{
+ "If you have forgotten the command ",
+ StyleBox["Range",
+  FontWeight->"Bold"],
+ " go back and review."
+}], "Text",
+ CellChangeTimes->{{3.557868055197731*^9, 3.5578681105034037`*^9}}],
+
+Cell[TextData[{
+ "Query ",
+ StyleBox["Select",
+  FontWeight->"Bold"],
+ ". The document center gives the best explanation. Basically given a \
+function ",
+ StyleBox["f ",
+  FontSlant->"Italic"],
+ " and a list ",
+ StyleBox["l,",
+  FontSlant->"Italic"],
+ " ",
+ StyleBox["Select[l,f] ",
+  FontWeight->"Bold"],
+ "gives the sublist of elements ",
+ StyleBox["x",
+  FontSlant->"Italic"],
+ " for which ",
+ StyleBox["f[x]",
+  FontWeight->"Bold"],
+ " is ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ ". The function ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]]],
+ " need not be a predicate. Most of the time we will use pure functions for ",
+ Cell[BoxData[
+  FormBox["f", TraditionalForm]]],
+ ". By the way if there are no elements for which f is ",
+ StyleBox["True Select ",
+  FontWeight->"Bold"],
+ "give the empty list ",
+ StyleBox["{}",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{
+  3.5578674078238783`*^9, 3.557867446170166*^9, {3.557867496116878*^9, 
+   3.55786750076215*^9}, {3.5578675720844584`*^9, 3.557867669384283*^9}, {
+   3.557867701425343*^9, 3.557867746075482*^9}, {3.55786778702197*^9, 
+   3.557867816485331*^9}, {3.557867866502818*^9, 3.557868000803712*^9}, {
+   3.557868594616817*^9, 3.5578686307218323`*^9}, {3.557868912526155*^9, 
+   3.557868964349578*^9}, 3.557939118690064*^9, {3.557939154561612*^9, 
+   3.55793918940135*^9}, {3.570746693003093*^9, 3.5707467694439297`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Select ",
+  FontWeight->"Bold"],
+ "has an optional variable ",
+ StyleBox["Select[List,f,n]",
+  FontWeight->"Bold"],
+ " which gives the first ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " elements for which ",
+ StyleBox["f",
+  FontSlant->"Italic"],
+ "(x)",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "is ",
+ StyleBox["True",
+  FontWeight->"Bold"],
+ ". This is particularily useful when testing identities because we don\
+\[CloseCurlyQuote]t have to go through the whole list and test equality of \
+the two functions on every element but merely go through the list until we \
+find an element for which the equality is ",
+ StyleBox["False. ",
+  FontWeight->"Bold"]
+}], "Text",
+ CellChangeTimes->{{3.5578682940075502`*^9, 3.5578683894093227`*^9}, {
+  3.557868433730723*^9, 3.5578684520433617`*^9}, {3.557868484700449*^9, 
+  3.557868531095097*^9}, {3.557868572143752*^9, 3.557868585784387*^9}, {
+  3.557868729741102*^9, 3.557868829344611*^9}, {3.557868878650448*^9, 
+  3.557868901336667*^9}, {3.570741354014292*^9, 3.570741386645782*^9}}],
+
+Cell[TextData[{
+ StyleBox["Problem6 20 points: ",
+  FontWeight->"Bold"],
+ "What are the numbers between 1 and 3095 are  such that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "6"], "+", "1091"}], TraditionalForm]]],
+ " are prime?"
+}], "Text",
+ CellChangeTimes->{{3.557869217174562*^9, 3.557869232238516*^9}, {
+   3.5578692642477083`*^9, 3.557869302721517*^9}, {3.557869402316063*^9, 
+   3.557869587130815*^9}, {3.5578699383668756`*^9, 3.557870012617375*^9}, {
+   3.55787014705517*^9, 3.557870181623184*^9}, 3.5578703898698473`*^9, {
+   3.557870429343498*^9, 3.557870464760468*^9}, 3.557939298557579*^9, {
+   3.570910532838005*^9, 3.570910563766778*^9}, {3.570910741453771*^9, 
+   3.570910743629475*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", 
+    RowBox[{"1", ",", "3905"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"PrimeQ", "[", 
+     RowBox[{
+      SuperscriptBox["#", "6"], "+", "1091"}], "]"}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.57125136450301*^9, 3.571251395427925*^9}, {
+  3.5712514762717257`*^9, 3.5712515404018087`*^9}, {3.571251625615604*^9, 
+  3.571251661102653*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.571251447765737*^9, 3.571251477393847*^9}, {
+   3.571251528819667*^9, 3.571251543104062*^9}, 3.5712516280369253`*^9, 
+   3.5712516618380537`*^9, 3.5716969974194665`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["There are none.", "Text",
+ CellChangeTimes->{{3.571251556472475*^9, 3.571251557724979*^9}, {
+  3.5716970068262825`*^9, 3.5716970147354965`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[TextData[{
+ StyleBox["b: ",
+  FontWeight->"Bold"],
+ "How many numbers between  the numbers between 1 and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["10", "6"], " ", "are"}], TraditionalForm]]],
+ " such that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SuperscriptBox["x", "6"], "+", "1091"}], TraditionalForm]]],
+ " is prime"
+}], "Text",
+ CellChangeTimes->{{3.557870325476049*^9, 3.557870370877409*^9}, {
+  3.557870491721736*^9, 3.5578705638680153`*^9}, {3.557870708425655*^9, 
+  3.557870724474016*^9}, {3.557870776174786*^9, 3.557870794475503*^9}, {
+  3.5579312563299427`*^9, 3.557931257961692*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", 
+      SuperscriptBox["10", "6"]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"PrimeQ", "[", 
+      RowBox[{
+       SuperscriptBox["#", "6"], "+", "1091"}], "]"}], "&"}]}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.557869596911048*^9, 3.557869679001741*^9}, {
+  3.557869780661364*^9, 3.557869785702566*^9}, {3.557869818695826*^9, 
+  3.5578698259122057`*^9}, {3.557870021222068*^9, 3.557870023478467*^9}, {
+  3.5578700686173162`*^9, 3.5578701229532633`*^9}, {3.557870573734931*^9, 
+  3.557870605249794*^9}, {3.557870803807954*^9, 3.557870840323031*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData["402"], "Output",
+ CellChangeTimes->{
+  3.557870614127862*^9, {3.557870821635521*^9, 3.5578708478229427`*^9}, 
+   3.5716970280423203`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["There are 402 numbers that satisfy such condition.", "Text",
+ CellChangeTimes->{{3.571251784036024*^9, 3.571251831122048*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[TextData[{
+ StyleBox["c:",
+  FontWeight->"Bold"],
+ " What is the first such number?"
+}], "Text",
+ CellChangeTimes->{{3.55793128485742*^9, 3.557931295338035*^9}, {
+  3.557931355500326*^9, 3.557931383213046*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", 
+    RowBox[{"1", ",", 
+     SuperscriptBox["10", "6"]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"PrimeQ", "[", 
+     RowBox[{
+      SuperscriptBox["#", "6"], "+", "1091"}], "]"}], "&"}], ",", "1"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.571251753483221*^9, 3.5712517591807003`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", "3906", "}"}]], "Output",
+ CellChangeTimes->{3.5712517617765617`*^9, 3.5716970407261424`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["d:",
+  FontWeight->"Bold"],
+ " What is the last such number. Hint: Go through the range backwards. Use ",
+ StyleBox["Reverse",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.557870896751666*^9, 3.557870964681695*^9}, {
+  3.557931138662055*^9, 3.5579311403253736`*^9}, {3.5707389016064873`*^9, 
+  3.5707389201510677`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"Reverse", "[", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", 
+      SuperscriptBox["10", "6"]}], "]"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"PrimeQ", "[", 
+     RowBox[{
+      SuperscriptBox["#", "6"], "+", "1091"}], "]"}], "&"}], ",", "1"}], 
+  "]"}]], "Input",
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", "999180", "}"}]], "Output",
+ CellChangeTimes->{3.571251745622561*^9, 3.571697046014552*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["20 points", "Text",
+ CellChangeTimes->{{3.572557465677445*^9, 3.5725574698298883`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SquareFree and the Erdos Conjecture", "Subsection",
+ CellChangeTimes->{{3.557872715151511*^9, 3.557872726285383*^9}, {
+  3.557872851161949*^9, 3.5578728638742037`*^9}}],
+
+Cell["Read ", "Text",
+ CellChangeTimes->{{3.557872872458818*^9, 3.557872905619359*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"Squarefree\"\>", True->
+    StyleBox["\<\"Squarefree\"\>", "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://mathworld.wolfram.com/Squarefree.html"], None},
+   ButtonNote->"http://mathworld.wolfram.com/Squarefree.html"],
+  Annotation[#, "http://mathworld.wolfram.com/Squarefree.html", 
+   "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{3.557872988949493*^9}],
+
+Cell[TextData[{
+ "Query the predicate  ",
+ StyleBox["SquareFreeQ",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.557873677503755*^9, 3.557873706463072*^9}, {
+  3.557873743512165*^9, 3.5578738036025047`*^9}, {3.570740078359659*^9, 
+  3.570740079415423*^9}}],
+
+Cell[TextData[{
+ StyleBox["Problem7: 15 points a: ",
+  FontWeight->"Bold"],
+ "Looking at the exponent of each of the elements in the list ",
+ StyleBox["FactorInteger ",
+  FontWeight->"Bold"],
+ " and using ",
+ StyleBox["Select",
+  FontWeight->"Bold"],
+ " construct your own variant of ",
+ StyleBox["SquareFree",
+  FontWeight->"Bold"],
+ ". Call it ",
+ StyleBox["squareFreeQ.",
+  FontWeight->"Bold"],
+ " (You want the list of powers in ",
+ StyleBox["FactorInteger ",
+  FontWeight->"Bold"],
+ "to be all be 1, equivalently no power should be greater than  1 . The right \
+",
+ StyleBox["Select ",
+  FontWeight->"Bold"],
+ "evaluated on ",
+ StyleBox["FactorInteger",
+  FontWeight->"Bold"],
+ " should give ",
+ StyleBox["{}",
+  FontWeight->"Bold"],
+ ".Notice we only have to find one power >1 so you will speed things up by \
+using ",
+ StyleBox["Select",
+  FontWeight->"Bold"],
+ " with an option. "
+}], "Text",
+ CellChangeTimes->{{3.5578739151019373`*^9, 3.557873924870646*^9}, {
+   3.557873981840477*^9, 3.557874225728771*^9}, {3.55787431725202*^9, 
+   3.557874385406196*^9}, {3.5578745117393293`*^9, 3.557874548812055*^9}, {
+   3.557874607319829*^9, 3.557874642744265*^9}, {3.557874685010725*^9, 
+   3.557874724946025*^9}, 3.557875307296335*^9, {3.5578756105999613`*^9, 
+   3.5578756418494663`*^9}, 3.557931711375517*^9, 3.557939460542695*^9, {
+   3.557939544061654*^9, 3.557939549119502*^9}, {3.557939640026617*^9, 
+   3.557939644856203*^9}, {3.5579397009943743`*^9, 3.557939703842524*^9}, {
+   3.570738996601391*^9, 3.570739015930032*^9}, {3.570739049651517*^9, 
+   3.570739061140382*^9}, {3.57073929294137*^9, 3.570739372822624*^9}, {
+   3.5707395657655*^9, 3.570739704763014*^9}, {3.5707397458677597`*^9, 
+   3.570739754742392*^9}, {3.5707400874322166`*^9, 3.5707400885041924`*^9}, {
+   3.570740618525085*^9, 3.570740664348093*^9}, {3.5707407848889637`*^9, 
+   3.570740805809473*^9}, {3.5707408417867613`*^9, 3.5707409178748703`*^9}, {
+   3.5707414160240593`*^9, 3.5707414575165854`*^9}, {3.57091059156092*^9, 
+   3.5709106099769363`*^9}, {3.5709107244766912`*^9, 3.570910725300807*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"squareFreeQ", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Last", "/@", 
+      RowBox[{"FactorInteger", "[", "n", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"#", ">", "1"}], "&"}]}], "]"}], "\[Equal]", 
+   RowBox[{"{", " ", "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.57125347831699*^9, 3.571253478762699*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[TextData[{
+ "\n\n",
+ StyleBox["b: ",
+  FontWeight->"Bold"],
+ "Test that your construction ",
+ StyleBox["squareFreeQ",
+  FontWeight->"Bold"],
+ " and and ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s ",
+ StyleBox["SquareFreeQ ",
+  FontWeight->"Bold"],
+ "are identical",
+ StyleBox[".",
+  FontWeight->"Bold"],
+ " Do this on a list of ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "5"], TraditionalForm]]],
+ " random integers between ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "13"], TraditionalForm]]],
+ "and ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "14"], TraditionalForm]]],
+ ". Tell me how long it takes to perform this test. Be prepared to wait a \
+little while."
+}], "Text",
+ CellChangeTimes->{{3.5578739151019373`*^9, 3.557873924870646*^9}, {
+   3.557873981840477*^9, 3.557874225728771*^9}, {3.55787431725202*^9, 
+   3.557874385406196*^9}, {3.5578745117393293`*^9, 3.557874548812055*^9}, {
+   3.557874607319829*^9, 3.557874642744265*^9}, {3.557874685010725*^9, 
+   3.557874724946025*^9}, 3.557875307296335*^9, {3.5578756105999613`*^9, 
+   3.5578756418494663`*^9}, 3.557931711375517*^9, 3.557939460542695*^9, {
+   3.557939544061654*^9, 3.557939549119502*^9}, {3.557939640026617*^9, 
+   3.557939644856203*^9}, {3.5579397009943743`*^9, 3.557939703842524*^9}, {
+   3.570738996601391*^9, 3.570739015930032*^9}, {3.570739049651517*^9, 
+   3.570739061140382*^9}, {3.57073929294137*^9, 3.570739372822624*^9}, {
+   3.5707395657655*^9, 3.570739704763014*^9}, {3.5707397458677597`*^9, 
+   3.570739754742392*^9}, {3.5707400874322166`*^9, 3.5707400885041924`*^9}, {
+   3.570740618525085*^9, 3.570740664348093*^9}, {3.5707407848889637`*^9, 
+   3.570740805809473*^9}, {3.5707408417867613`*^9, 3.5707409178748703`*^9}, {
+   3.5707414160240593`*^9, 3.570741604757683*^9}, {3.570741644264123*^9, 
+   3.5707417096496267`*^9}, {3.570742039924378*^9, 3.570742051557027*^9}, {
+   3.5707422325552998`*^9, 3.5707422709249973`*^9}, {3.570742666816122*^9, 
+   3.570742667550413*^9}, {3.5707427392305117`*^9, 3.570742745389592*^9}, {
+   3.570910633634251*^9, 3.570910639722291*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"Union", "[", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"squareFreeQ", "[", "#", "]"}], "\[Equal]", 
+       RowBox[{"SquareFreeQ", "[", "#", "]"}]}], "&"}], ",", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         SuperscriptBox["10", "13"], ",", 
+         SuperscriptBox["10", "14"]}], "}"}], ",", 
+       SuperscriptBox["10", "5"]}], "]"}]}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.571253569325696*^9, 3.571253571162327*^9}, {
+  3.5712537127899103`*^9, 3.57125372326537*^9}, {3.5712537812435703`*^9, 
+  3.571253813436412*^9}, {3.571678553917687*^9, 3.5716785574675083`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"43.83628099999999960800778353586792945862`7.662433615469229", ",", 
+   RowBox[{"{", "True", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.571253899509774*^9, 3.571678643995965*^9, 
+  3.571697110349065*^9, 3.571698309581006*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["It takes about 44 seconds.", "Text",
+ CellChangeTimes->{{3.5716983841491365`*^9, 3.5716984115115848`*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell["15 points", "Text",
+ CellChangeTimes->{{3.572557548329093*^9, 3.572557551384769*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["", "Text"],
+
+Cell["Quoting from:", "Text",
+ CellChangeTimes->{{3.557874915923191*^9, 3.557874926008257*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"squarefree test\"\>", True->
+    StyleBox["\<\"squarefree test\"\>", "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://mathworld.wolfram.com/Squarefree.html"], None},
+   ButtonNote->"http://mathworld.wolfram.com/Squarefree.html"],
+  Annotation[#, "http://mathworld.wolfram.com/Squarefree.html", 
+   "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{3.541046376666543*^9}],
+
+Cell[TextData[{
+ "\[OpenCurlyDoubleQuote]There is no known polynomial time algorithm for \
+recognizing squarefree integers or for computing the squarefree part of an \
+integer. In fact, this problem may be no easier than the general problem of \
+integer factorization (obviously, if an integer  ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " can be factored completely, ",
+ StyleBox["n",
+  FontSlant->"Italic"],
+ " is squarefree if and only if it contains no duplicated factors). \
+\[OpenCurlyDoubleQuote]"
+}], "Text",
+ CellChangeTimes->{{3.541046290758872*^9, 3.541046327487527*^9}, {
+  3.541046441942754*^9, 3.541046454956748*^9}, {3.541051214777047*^9, 
+  3.541051230769908*^9}}],
+
+Cell[TextData[{
+ "As has been discussed earlier the difficulty of factoring ,considered as a \
+function of the number of digits,",
+ StyleBox[" d,",
+  FontSlant->"Italic"],
+ " is thought to grow more quickly than any polynomial ",
+ StyleBox["p(d)",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.5410466760984783`*^9, 3.541046819399279*^9}, {
+  3.541046854422626*^9, 3.541047002376256*^9}, {3.541051268035061*^9, 
+  3.5410513309055243`*^9}}],
+
+Cell[TextData[{
+ "\nRecall the Binomial coefficient ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"m"},
+       {"n"}
+      }], "\[NoBreak]", ")"}], ".", " "}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.540997627943768*^9, 3.5409976819608803`*^9}, {
+   3.540999337483098*^9, 3.5409993938715897`*^9}, 3.540999428901785*^9, 
+   3.5410027646658792`*^9, {3.5410077275019913`*^9, 3.5410077386950703`*^9}, {
+   3.541031813908855*^9, 3.541031859809452*^9}, {3.541031896372829*^9, 
+   3.541032173501504*^9}, {3.5410329835884132`*^9, 3.541033019224682*^9}, {
+   3.541033069814289*^9, 3.541033081164167*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"Binomial Coefficient\"\>", True->
+    StyleBox["\<\"Binomial Coefficient\"\>", "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://www.mathwords.com/b/binomial_coefficients.htm"], None},
+   ButtonNote->"http://www.mathwords.com/b/binomial_coefficients.htm"],
+  Annotation[#, "http://www.mathwords.com/b/binomial_coefficients.htm", 
+   "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{3.5410317176518793`*^9}],
+
+Cell[TextData[{
+ "\nQuery ",
+ StyleBox["Binomial",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.540997627943768*^9, 3.5409976819608803`*^9}, {
+   3.540999337483098*^9, 3.5409993938715897`*^9}, 3.540999428901785*^9, 
+   3.5410027646658792`*^9, {3.5410077275019913`*^9, 3.5410077386950703`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Problem8 5 points: ",
+  FontWeight->"Bold"],
+ "How  many digits are there in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {"60000"},
+      {"30000"}
+     }], "\[NoBreak]", ")"}], TraditionalForm]]],
+ ". Hint Problem 1 lesson 1."
+}], "Text",
+ CellChangeTimes->{{3.5410055100793*^9, 3.541005579296978*^9}, {
+  3.5410057868044777`*^9, 3.541005797851101*^9}, {3.541032183205492*^9, 
+  3.541032189420968*^9}, {3.541046539316989*^9, 3.541046566660102*^9}, {
+  3.55793978163225*^9, 3.557939807495185*^9}, {3.5709106524823008`*^9, 
+  3.57091066062658*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Floor", "[", 
+   RowBox[{"Log", "[", 
+    RowBox[{"10", ",", 
+     RowBox[{"Binomial", "[", 
+      RowBox[{"60000", ",", "30000"}], "]"}]}], "]"}], "]"}], "+", 
+  "1"}]], "Input",
+ CellChangeTimes->{{3.571254379562785*^9, 3.57125438491079*^9}},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData["18060"], "Output",
+ CellChangeTimes->{{3.571254380532188*^9, 3.5712543853586473`*^9}, 
+   3.571697110427065*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "5 points. But Query ",
+ StyleBox["IntegerLength",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.572557665806238*^9, 3.5725576925893373`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[TextData[{
+ " In the next problem numbers of the form ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", "\[NoBreak]", GridBox[{
+      {
+       RowBox[{"2", "n"}]},
+      {"n"}
+     }], "\[NoBreak]", ")"}], TraditionalForm]]],
+ " are speedily tested fro squarefreeness."
+}], "Text",
+ CellChangeTimes->{{3.541032242950026*^9, 3.541032256420128*^9}, {
+   3.5410327192235107`*^9, 3.54103273682312*^9}, {3.541032767179058*^9, 
+   3.5410328237565117`*^9}, 3.541046650702125*^9, {3.5410513589442387`*^9, 
+   3.541051362864369*^9}, {3.55793547276755*^9, 3.5579354906695337`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"#", ",", 
+     RowBox[{"SquareFreeQ", "[", "#", "]"}]}], "}"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Binomial", "[", 
+     RowBox[{"4", ",", "2"}], "]"}], ",", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"6", ",", "3"}], "]"}], ",", 
+    RowBox[{"Binomial", "[", 
+     RowBox[{"8", ",", "4"}], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.55787514594963*^9, 3.557875214990382*^9}, {
+   3.5578752700830812`*^9, 3.557875288263752*^9}, 3.557875328576397*^9, {
+   3.557875376247573*^9, 3.557875391475758*^9}, {3.5578754235885687`*^9, 
+   3.5578754391994963`*^9}, {3.5578754987730227`*^9, 3.5578755363645144`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"6", ",", "True"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"20", ",", "False"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"70", ",", "True"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.557875447136704*^9, 3.557875540802992*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Problem 9: 10 points",
+  FontWeight->"Bold"],
+ "(The Erd\[ODoubleDot]s squarefree conjecture)"
+}], "Text",
+ CellChangeTimes->{{3.540940929380546*^9, 3.54094096232786*^9}, {
+   3.540941005855906*^9, 3.540941024469775*^9}, 3.540941271065522*^9, {
+   3.540941310069099*^9, 3.540941317005308*^9}, {3.540941396852968*^9, 
+   3.540941404714406*^9}, {3.540941511020525*^9, 3.540941543310204*^9}, {
+   3.540941628860038*^9, 3.540941631131291*^9}, {3.540941711821042*^9, 
+   3.540941719742716*^9}, {3.54094192082789*^9, 3.540941924451537*^9}, 
+   3.540941978473569*^9, {3.5409437615681334`*^9, 3.540943849948564*^9}, {
+   3.540944144323915*^9, 3.540944148905634*^9}, 3.5409511540512447`*^9, {
+   3.540994593919599*^9, 3.5409946183121777`*^9}, {3.540997570489378*^9, 
+   3.5409976088696203`*^9}, 3.5409978877546387`*^9, 3.541006689158017*^9, {
+   3.541031799397637*^9, 3.541031800083507*^9}, {3.541042739276095*^9, 
+   3.541042741338327*^9}, {3.557939875418944*^9, 3.557939877536792*^9}, {
+   3.570910669546823*^9, 3.5709106929081078`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell["Read This:", "Text",
+ CellChangeTimes->{{3.540944383651951*^9, 3.540944416727456*^9}, {
+  3.540951184459173*^9, 3.540951198370625*^9}, {3.54099841388722*^9, 
+  3.540998419946938*^9}},
+ Background->RGBColor[1, 1, 0.85]],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"Erd\[ODoubleDot]s Squarefree Conjecture\"\>", 
+    True->
+    StyleBox["\<\"Erd\[ODoubleDot]s Squarefree Conjecture\"\>", 
+     "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://mathworld.wolfram.com/ErdosSquarefreeConjecture.html"], None},
+   ButtonNote->"http://mathworld.wolfram.com/ErdosSquarefreeConjecture.html"],
+  Annotation[#, "http://mathworld.wolfram.com/ErdosSquarefreeConjecture.html",
+    "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{3.540944324268052*^9, 3.5409980631256104`*^9},
+ Background->RGBColor[1, 1, 0.85]],
+
+Cell[TextData[{
+ StyleBox["a:",
+  FontWeight->"Bold"],
+ " Test the Erdos squarefree conjecture for 5<",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "\[LessEqual]", "30000"}], TraditionalForm]]],
+ ". You should use ",
+ StyleBox["SquareFreeQ",
+  FontWeight->"Bold"],
+ ". Give the time it takes to perform this test. On my computer this takes \
+around 10 seconds "
+}], "Text",
+ CellChangeTimes->{{3.5409977450279827`*^9, 3.540997771475107*^9}, {
+   3.540998582867099*^9, 3.540998588136971*^9}, 3.5409989514056063`*^9, {
+   3.54099921730239*^9, 3.540999236505715*^9}, {3.541006297126258*^9, 
+   3.5410063264886103`*^9}, {3.541032844228004*^9, 3.541032848554381*^9}, {
+   3.541033165820018*^9, 3.541033191603197*^9}, {3.541033589944456*^9, 
+   3.541033629528977*^9}, {3.541033713576145*^9, 3.5410337849952707`*^9}, {
+   3.541044095366694*^9, 3.5410441158390083`*^9}, {3.557933415377088*^9, 
+   3.5579334170070057`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{
+        RowBox[{"2", "#"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", 
+      RowBox[{"5", ",", "30000"}], "]"}]}], ",", "SquareFreeQ", ",", "1"}], 
+   "]"}], "]"}]], "Input",
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"14.2116910999999994658082869136705994606`7.173245672537148", ",", 
+   RowBox[{"{", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.571254626844688*^9, 3.571697126541893*^9, 
+  3.571697956926386*^9, 3.5716981202446733`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["b: ",
+  FontWeight->"Bold"],
+ "Now test using your ",
+ StyleBox["squareFreeQ",
+  FontWeight->"Bold"],
+ " and give the time it takes to perform this test. Be prepared to wait."
+}], "Text",
+ CellChangeTimes->{{3.5410336930253353`*^9, 3.541033701592152*^9}, {
+   3.541033800098419*^9, 3.541033868484836*^9}, {3.541044140334303*^9, 
+   3.5410441716025867`*^9}, {3.557875088705113*^9, 3.557875091742556*^9}, 
+   3.570742910925074*^9, {3.570744511991824*^9, 3.5707445230761127`*^9}},
+ Background->RGBColor[0.87, 0.94, 1]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Timing", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Binomial", "[", 
+       RowBox[{
+        RowBox[{"2", "#"}], ",", "#"}], "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", 
+      RowBox[{"5", ",", "30000"}], "]"}]}], ",", "squareFreeQ", ",", "1"}], 
+   "]"}], "]"}]], "Input",
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"814.73082260000001042499206960201263427734`8.931614059971864", ",", 
+   RowBox[{"{", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.571256291791007*^9, 3.5716979424339604`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["10 points", "Text",
+ CellChangeTimes->{{3.572557730646592*^9, 3.572557738782773*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.571256647174717*^9, 3.5712566598963003`*^9}}],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s built-in commands are almost always much faster than \
+commands that are user constructed."
+}], "Text",
+ CellChangeTimes->{{3.541036778922678*^9, 3.541036847769001*^9}, 
+   3.54104401345411*^9, 3.541044220855276*^9, 3.557875711066988*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["PrimeQ and Probabalistic Primality Testing", "Subsection",
+ CellChangeTimes->{{3.557880845269842*^9, 3.557880871684371*^9}}],
+
+Cell[TextData[{
+ "Most of the known reasonably high speed primality tests are probablistic in \
+the sense that if they indicate that a number is prime there is a high \
+probability that the number is prime, but not certainty. ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ "\[CloseCurlyQuote]s ",
+ StyleBox["PrimeQ ",
+  FontWeight->"Bold"],
+ "is in fact quite accurate. It has been tested up to ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["10", "15"], TraditionalForm]]],
+ " and there are no known numbers on which it gives a false result."
+}], "Text",
+ CellChangeTimes->{{3.5578809976639833`*^9, 3.55788102901782*^9}, {
+  3.557881155920096*^9, 3.5578811906633387`*^9}, {3.557881236816811*^9, 
+  3.557881271969686*^9}, {3.557881447575959*^9, 3.55788149012957*^9}, {
+  3.557881650326746*^9, 3.5578817033445797`*^9}, {3.557881807205338*^9, 
+  3.5578819024319077`*^9}, {3.557881936633019*^9, 3.557881990810858*^9}}],
+
+Cell["Read", "Text",
+ CellChangeTimes->{{3.5578820140152683`*^9, 3.557882015307789*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Hyperlink", "[", 
+  RowBox[{
+  "\"\<Mersenne Primes\>\"", ",", 
+   "\"\<http://en.wikipedia.org/wiki/Mersenne_prime\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.557882030734454*^9, 3.5578821147781076`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"Mersenne Primes\"\>", True->
+    StyleBox["\<\"Mersenne Primes\"\>", "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://en.wikipedia.org/wiki/Mersenne_prime"], None},
+   ButtonNote->"http://en.wikipedia.org/wiki/Mersenne_prime"],
+  Annotation[#, "http://en.wikipedia.org/wiki/Mersenne_prime", 
+   "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{3.5578822262444677`*^9}]
+}, Open  ]],
+
+Cell["\<\
+Here is the list of the exponents up to 10000 of the Mersenne primes .\
+\>", "Text",
+ CellChangeTimes->{{3.557882145032301*^9, 3.55788218045732*^9}, 
+   3.5578825682313538`*^9, {3.5707449259638643`*^9, 3.570744951899098*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Mersenne", "=", 
+  RowBox[{"{", 
+   RowBox[{
+   "2", ",", "3", ",", "5", ",", "7", ",", "13", ",", "17", ",", "19", ",", 
+    "31", ",", "61", ",", "89", ",", "107", ",", "127", ",", "521", ",", 
+    "607", ",", "1279", ",", "2203", ",", "2281", ",", "3217", ",", "4253", 
+    ",", "4423", ",", "9689", ",", "9941"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.557881295698098*^9, 3.557881388835207*^9}, {
+  3.557881422142502*^9, 3.557881425235653*^9}, {3.557881504845767*^9, 
+  3.5578815700408993`*^9}, {3.557891927132267*^9, 3.557891930941215*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "2", ",", "3", ",", "5", ",", "7", ",", "13", ",", "17", ",", "19", ",", 
+   "31", ",", "61", ",", "89", ",", "107", ",", "127", ",", "521", ",", "607",
+    ",", "1279", ",", "2203", ",", "2281", ",", "3217", ",", "4253", ",", 
+   "4423", ",", "9689", ",", "9941"}], "}"}]], "Output",
+ CellChangeTimes->{3.5578919340259247`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Problem9: ",
+  FontWeight->"Bold"],
+ "Test that ",
+ StyleBox["PrimeQ",
+  FontWeight->"Bold"],
+ " gives accurate results on the Mersenne primes with these exponents"
+}], "Text",
+ CellChangeTimes->{{3.55788229957827*^9, 3.557882410553678*^9}, 
+   3.557940092041561*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["2", "Mersenne"], "-", "1"}], ",", 
+   RowBox[{
+    RowBox[{"!", 
+     RowBox[{"PrimeQ", "[", "#", "]"}]}], "&"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5578914264046583`*^9, 3.55789152154711*^9}, {
+  3.557891713855322*^9, 3.557891764917327*^9}, {3.557891889577683*^9, 
+  3.557891898570024*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.5578919091172953`*^9, 3.557891962554573*^9}]
+}, Open  ]],
+
+Cell["Or", "Text",
+ CellChangeTimes->{{3.557937393434496*^9, 3.5579373948644943`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["2", "Mersenne"], "-", "1"}], ",", 
+   RowBox[{"Composition", "[", 
+    RowBox[{"Not", ",", "PrimeQ"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5578914264046583`*^9, 3.55789152154711*^9}, {
+  3.557891713855322*^9, 3.557891764917327*^9}, {3.557891889577683*^9, 
+  3.557891898570024*^9}, {3.557937404827536*^9, 3.5579374418614883`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.5579374535197287`*^9}]
+}, Open  ]],
+
+Cell["5 points", "Text",
+ CellChangeTimes->{{3.572557787688655*^9, 3.5725577904327917`*^9}},
+ Background->RGBColor[1, 0.9, 0.8]],
+
+Cell["\<\
+These days Mersenne primes,which for large exponent are the largest primes \
+known, are hunted for by a program that runs distributively over the \
+internet:The Great Internet Mersenne Prime Search, (GIMPS). Why not run it on \
+your computer. It is designed to take a very small percent of processor time\
+\>", "Text",
+ CellChangeTimes->{{3.557882737298903*^9, 3.557882773782158*^9}, {
+  3.557882808409277*^9, 3.557882850704701*^9}, {3.557882920141626*^9, 
+  3.557883044767866*^9}, {3.5579399444991817`*^9, 3.557939971972138*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  ButtonBox[
+   PaneSelectorBox[{False->"\<\"GIMPS\"\>", True->
+    StyleBox["\<\"GIMPS\"\>", "HyperlinkActive"]}, Dynamic[
+     CurrentValue["MouseOver"]],
+    BaseStyle->{"Hyperlink"},
+    BaselinePosition->Baseline,
+    FrameMargins->0,
+    ImageSize->Automatic],
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     URL["http://www.mersenne.org/"], None},
+   ButtonNote->"http://www.mersenne.org/"],
+  Annotation[#, "http://www.mersenne.org/", "Hyperlink"]& ]], "Output",
+ CellChangeTimes->{3.557883127320386*^9}],
+
+Cell["\<\
+In January of 2013 this program found the largest known  prime. See:\
+\>", "Text",
+ CellChangeTimes->{{3.570744998118305*^9, 3.570745045782709*^9}, 
+   3.570745166474881*^9, {3.5707456856144123`*^9, 3.5707456920692883`*^9}, 
+   3.570745751336473*^9}],
+
+Cell[TextData[ButtonBox["Largest Primes",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://primes.utm.edu/largest.html"], None},
+ ButtonNote->"http://primes.utm.edu/largest.html"]], "Text",
+ CellChangeTimes->{{3.570745730648307*^9, 3.570745786063142*^9}}],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.5578815978052607`*^9, 3.557881604301345*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.557870304595171*^9, 3.557870307997447*^9}},
+ FontWeight->"Plain"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.557869908335726*^9, 3.5578699088557653`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.557869195238305*^9, 3.557869200526557*^9}},
+ FontWeight->"Plain"],
+
+Cell["", "Text",
+ CellChangeTimes->{{3.557866438852997*^9, 3.557866441517117*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.55786600917743*^9, 3.5578660146319313`*^9}},
+ FontWeight->"Plain"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.557865733982418*^9, 3.557865747291267*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowToolbars->"EditBar",
+WindowSize->{1584, 765},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic},
+ShowSelection->True,
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3557851414-4732935"->{
+  Cell[83587, 2630, 912, 17, 135, "Print",
+   CellTags->"Info3557851414-4732935"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3557851414-4732935", 125660, 3897}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[400, 13, 116, 1, 37, "Text"],
+Cell[CellGroupData[{
+Cell[541, 18, 232, 6, 183, "Title"],
+Cell[776, 26, 277, 4, 35, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1090, 35, 94, 1, 114, "Title"],
+Cell[1187, 38, 962, 24, 61, "Text"],
+Cell[2152, 64, 92, 1, 35, "Input"],
+Cell[CellGroupData[{
+Cell[2269, 69, 355, 10, 43, "Input"],
+Cell[2627, 81, 127, 2, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2791, 88, 347, 10, 43, "Input"],
+Cell[3141, 100, 163, 4, 38, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3341, 109, 343, 10, 43, "Input"],
+Cell[3687, 121, 95, 1, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3819, 127, 295, 8, 43, "Input"],
+Cell[4117, 137, 228, 5, 35, "Output"]
+}, Open  ]],
+Cell[4360, 145, 1238, 36, 88, "Text"],
+Cell[5601, 183, 262, 7, 56, "Input"],
+Cell[CellGroupData[{
+Cell[5888, 194, 246, 8, 63, "Input"],
+Cell[6137, 204, 157, 3, 106, "Output"]
+}, Open  ]],
+Cell[6309, 210, 419, 15, 110, "Text"],
+Cell[6731, 227, 310, 9, 113, "Input"],
+Cell[7044, 238, 168, 2, 110, "Text"],
+Cell[CellGroupData[{
+Cell[7237, 244, 355, 11, 121, "Input"],
+Cell[7595, 257, 258, 5, 112, "Output"]
+}, Open  ]],
+Cell[7868, 265, 1376, 44, 172, "Text"],
+Cell[9247, 311, 500, 14, 120, "Input"],
+Cell[CellGroupData[{
+Cell[9772, 329, 254, 7, 106, "Input"],
+Cell[10029, 338, 260, 7, 112, "Output"]
+}, Open  ]],
+Cell[10304, 348, 127, 2, 110, "Text"],
+Cell[CellGroupData[{
+Cell[10456, 354, 144, 2, 195, "Section"],
+Cell[10603, 358, 92, 1, 71, "Text"],
+Cell[10698, 361, 258, 7, 71, "Text"],
+Cell[CellGroupData[{
+Cell[10981, 372, 119, 2, 66, "Input"],
+Cell[11103, 376, 87, 2, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11227, 383, 544, 13, 66, "Input"],
+Cell[11774, 398, 248, 6, 66, "Output"]
+}, Open  ]],
+Cell[12037, 407, 68, 1, 66, "Input"],
+Cell[12108, 410, 458, 14, 71, "Text"],
+Cell[12569, 426, 173, 4, 110, "Text"],
+Cell[12745, 432, 1046, 32, 121, "Text"],
+Cell[13794, 466, 308, 8, 108, "Input"],
+Cell[CellGroupData[{
+Cell[14127, 478, 301, 10, 120, "Input"],
+Cell[14431, 490, 267, 7, 106, "Output"]
+}, Open  ]],
+Cell[14713, 500, 126, 2, 110, "Text"],
+Cell[14842, 504, 505, 14, 165, "Text"],
+Cell[15350, 520, 310, 9, 71, "Text"],
+Cell[CellGroupData[{
+Cell[15685, 533, 195, 4, 66, "Input"],
+Cell[15883, 539, 969, 30, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16889, 574, 229, 5, 66, "Input"],
+Cell[17121, 581, 251, 8, 66, "Output"]
+}, Open  ]],
+Cell[17387, 592, 401, 13, 71, "Text"],
+Cell[CellGroupData[{
+Cell[17813, 609, 262, 6, 66, "Input"],
+Cell[18078, 617, 160, 4, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18275, 626, 125, 2, 66, "Input"],
+Cell[18403, 630, 156, 3, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18596, 638, 138, 2, 66, "Input"],
+Cell[18737, 642, 157, 3, 66, "Output"]
+}, Open  ]],
+Cell[18909, 648, 129, 2, 66, "Input"],
+Cell[19041, 652, 332, 8, 71, "Text"],
+Cell[CellGroupData[{
+Cell[19398, 664, 535, 17, 66, "Input"],
+Cell[19936, 683, 466, 16, 66, "Output"]
+}, Open  ]],
+Cell[20417, 702, 261, 6, 71, "Text"],
+Cell[CellGroupData[{
+Cell[20703, 712, 155, 3, 66, "Input"],
+Cell[20861, 717, 335, 9, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21233, 731, 188, 4, 66, "Input"],
+Cell[21424, 737, 315, 9, 66, "Output"]
+}, Open  ]],
+Cell[21754, 749, 189, 6, 71, "Text"],
+Cell[CellGroupData[{
+Cell[21968, 759, 132, 2, 66, "Input"],
+Cell[22103, 763, 225, 5, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22365, 773, 164, 3, 66, "Input"],
+Cell[22532, 778, 205, 5, 66, "Output"]
+}, Open  ]],
+Cell[22752, 786, 128, 1, 71, "Text"],
+Cell[22883, 789, 181, 3, 66, "Input"],
+Cell[23067, 794, 155, 6, 71, "Text"],
+Cell[23225, 802, 224, 6, 71, "Text"],
+Cell[CellGroupData[{
+Cell[23474, 812, 126, 1, 82, "Subsubsection"],
+Cell[23603, 815, 706, 20, 118, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24358, 841, 120, 1, 195, "Section"],
+Cell[CellGroupData[{
+Cell[24503, 846, 176, 2, 103, "Subsection"],
+Cell[24682, 850, 89, 1, 71, "Text"],
+Cell[CellGroupData[{
+Cell[24796, 855, 321, 7, 70, "Input"],
+Cell[25120, 864, 710, 17, 71, "Output"]
+}, Open  ]],
+Cell[25845, 884, 373, 8, 118, "Text"],
+Cell[26221, 894, 744, 13, 165, "Text"],
+Cell[26968, 909, 451, 15, 71, "Text"],
+Cell[CellGroupData[{
+Cell[27444, 928, 169, 2, 82, "Subsubsection"],
+Cell[27616, 932, 842, 26, 118, "Text"],
+Cell[CellGroupData[{
+Cell[28483, 962, 261, 6, 66, "Input"],
+Cell[28747, 970, 78, 1, 66, "Output"]
+}, Open  ]],
+Cell[28840, 974, 220, 6, 71, "Text"],
+Cell[CellGroupData[{
+Cell[29085, 984, 295, 7, 70, "Input"],
+Cell[29383, 993, 155, 3, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29575, 1001, 543, 15, 110, "Input"],
+Cell[30121, 1018, 136, 4, 103, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30294, 1027, 934, 33, 110, "Input"],
+Cell[31231, 1062, 322, 7, 66, "Output"]
+}, Open  ]],
+Cell[31568, 1072, 229, 8, 71, "Text"],
+Cell[CellGroupData[{
+Cell[31822, 1084, 252, 6, 66, "Input"],
+Cell[32077, 1092, 270, 6, 66, "Output"]
+}, Open  ]],
+Cell[32362, 1101, 508, 14, 71, "Text"],
+Cell[CellGroupData[{
+Cell[32895, 1119, 394, 9, 66, "Input"],
+Cell[33292, 1130, 463, 13, 66, "Output"]
+}, Open  ]],
+Cell[33770, 1146, 252, 8, 71, "Text"],
+Cell[34025, 1156, 137, 1, 71, "Text"],
+Cell[CellGroupData[{
+Cell[34187, 1161, 254, 7, 70, "Input"],
+Cell[34444, 1170, 1570, 53, 110, "Output"]
+}, Open  ]],
+Cell[36029, 1226, 513, 10, 118, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36579, 1241, 104, 1, 82, "Subsubsection"],
+Cell[36686, 1244, 187, 7, 71, "Text"],
+Cell[36876, 1253, 846, 22, 118, "Text"],
+Cell[CellGroupData[{
+Cell[37747, 1279, 256, 5, 66, "Input"],
+Cell[38006, 1286, 184, 2, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38227, 1293, 200, 5, 81, "Input"],
+Cell[38430, 1300, 104, 2, 110, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38571, 1307, 226, 6, 81, "Input"],
+Cell[38800, 1315, 92, 1, 72, "Output"]
+}, Open  ]],
+Cell[38907, 1319, 358, 8, 71, "Text"],
+Cell[CellGroupData[{
+Cell[39290, 1331, 325, 9, 70, "Input"],
+Cell[39618, 1342, 469, 13, 110, "Output"]
+}, Open  ]],
+Cell[40102, 1358, 655, 16, 71, "Text"],
+Cell[40760, 1376, 1048, 25, 70, "Input"],
+Cell[41811, 1403, 291, 8, 71, "Text"],
+Cell[CellGroupData[{
+Cell[42127, 1415, 264, 7, 81, "Input"],
+Cell[42394, 1424, 386, 10, 110, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42841, 1441, 130, 1, 103, "Subsection"],
+Cell[42974, 1444, 2262, 71, 257, "Text"],
+Cell[45239, 1517, 1387, 42, 125, "Text"],
+Cell[46629, 1561, 924, 29, 125, "Text"],
+Cell[47556, 1592, 227, 3, 110, "Text"],
+Cell[47786, 1597, 457, 14, 72, "DisplayFormula"],
+Cell[48246, 1613, 334, 10, 110, "Text"],
+Cell[CellGroupData[{
+Cell[48605, 1627, 803, 24, 121, "Input"],
+Cell[49411, 1653, 277, 6, 106, "Output"]
+}, Open  ]],
+Cell[49703, 1662, 84, 1, 71, "Text"],
+Cell[49790, 1665, 685, 23, 125, "Text"],
+Cell[50478, 1690, 256, 5, 110, "Text"],
+Cell[CellGroupData[{
+Cell[50759, 1699, 396, 13, 135, "Input"],
+Cell[51158, 1714, 159, 3, 106, "Output"]
+}, Open  ]],
+Cell[51332, 1720, 127, 2, 110, "Text"],
+Cell[51462, 1724, 265, 3, 71, "Text"],
+Cell[51730, 1729, 708, 17, 97, "DisplayFormula"],
+Cell[52441, 1748, 1586, 34, 251, "Text"],
+Cell[CellGroupData[{
+Cell[54052, 1786, 1481, 39, 158, "Input"],
+Cell[55536, 1827, 332, 7, 106, "Output"]
+}, Open  ]],
+Cell[55883, 1837, 425, 8, 110, "Text"],
+Cell[56311, 1847, 233, 6, 110, "Text"],
+Cell[CellGroupData[{
+Cell[56569, 1857, 1987, 47, 158, "Input"],
+Cell[58559, 1906, 204, 4, 106, "Output"]
+}, Open  ]],
+Cell[58778, 1913, 227, 3, 110, "Text"],
+Cell[59008, 1918, 274, 8, 110, "Text"],
+Cell[59285, 1928, 619, 10, 157, "Text"],
+Cell[59907, 1940, 127, 2, 110, "Text"],
+Cell[60037, 1944, 467, 13, 75, "Text"],
+Cell[60507, 1959, 321, 10, 95, "DisplayFormula"],
+Cell[60831, 1971, 257, 9, 71, "Text"],
+Cell[CellGroupData[{
+Cell[61113, 1984, 345, 10, 120, "Input"],
+Cell[61461, 1996, 122, 3, 66, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61644, 2006, 95, 1, 195, "Section"],
+Cell[61742, 2009, 458, 16, 71, "Text"],
+Cell[CellGroupData[{
+Cell[62225, 2029, 113, 2, 66, "Input"],
+Cell[CellGroupData[{
+Cell[62363, 2035, 21221, 593, 5228, "Print"],
+Cell[83587, 2630, 912, 17, 135, "Print",
+ CellTags->"Info3557851414-4732935"]
+}, Open  ]]
+}, Open  ]],
+Cell[84526, 2651, 246, 7, 71, "Text"],
+Cell[84775, 2660, 960, 34, 157, "Text"],
+Cell[85738, 2696, 243, 7, 108, "Input"],
+Cell[85984, 2705, 127, 2, 110, "Text"],
+Cell[CellGroupData[{
+Cell[86136, 2711, 109, 1, 103, "Subsection"],
+Cell[86248, 2714, 159, 3, 66, "Input"],
+Cell[86410, 2719, 556, 24, 71, "Text"],
+Cell[CellGroupData[{
+Cell[86991, 2747, 162, 3, 66, "Input"],
+Cell[87156, 2752, 279, 9, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87472, 2766, 162, 3, 66, "Input"],
+Cell[87637, 2771, 256, 9, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87930, 2785, 187, 4, 66, "Input"],
+Cell[88120, 2791, 280, 10, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88437, 2806, 207, 5, 66, "Input"],
+Cell[88647, 2813, 282, 10, 66, "Output"]
+}, Open  ]],
+Cell[88944, 2826, 464, 12, 118, "Text"],
+Cell[89411, 2840, 817, 25, 118, "Text"],
+Cell[CellGroupData[{
+Cell[90253, 2869, 109, 1, 82, "Subsubsection"],
+Cell[90365, 2872, 200, 6, 71, "Text"],
+Cell[90568, 2880, 1405, 44, 118, "Text"],
+Cell[91976, 2926, 1056, 29, 118, "Text"],
+Cell[93035, 2957, 761, 17, 113, "Text"],
+Cell[CellGroupData[{
+Cell[93821, 2978, 459, 12, 120, "Input"],
+Cell[94283, 2992, 275, 5, 106, "Output"]
+}, Open  ]],
+Cell[94573, 3000, 188, 3, 110, "Text"],
+Cell[94764, 3005, 660, 19, 113, "Text"],
+Cell[CellGroupData[{
+Cell[95449, 3028, 721, 17, 120, "Input"],
+Cell[96173, 3047, 189, 4, 106, "Output"]
+}, Open  ]],
+Cell[96377, 3054, 170, 2, 110, "Text"],
+Cell[96550, 3058, 253, 7, 110, "Text"],
+Cell[CellGroupData[{
+Cell[96828, 3069, 398, 12, 120, "Input"],
+Cell[97229, 3083, 159, 3, 106, "Output"]
+}, Open  ]],
+Cell[97403, 3089, 401, 11, 110, "Text"],
+Cell[CellGroupData[{
+Cell[97829, 3104, 368, 12, 120, "Input"],
+Cell[98200, 3118, 157, 3, 106, "Output"]
+}, Open  ]],
+Cell[98372, 3124, 129, 2, 110, "Text"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98550, 3132, 174, 2, 103, "Subsection"],
+Cell[98727, 3136, 87, 1, 71, "Text"],
+Cell[98817, 3139, 610, 16, 71, "Output"],
+Cell[99430, 3157, 272, 8, 71, "Text"],
+Cell[99705, 3167, 2121, 50, 203, "Text"],
+Cell[101829, 3219, 427, 12, 108, "Input"],
+Cell[102259, 3233, 2157, 50, 253, "Text"],
+Cell[CellGroupData[{
+Cell[104441, 3287, 764, 19, 120, "Input"],
+Cell[105208, 3308, 307, 6, 106, "Output"]
+}, Open  ]],
+Cell[105530, 3317, 150, 2, 110, "Text"],
+Cell[105683, 3321, 127, 2, 110, "Text"],
+Cell[105813, 3325, 16, 0, 71, "Text"],
+Cell[105832, 3327, 95, 1, 71, "Text"],
+Cell[105930, 3330, 620, 16, 71, "Output"],
+Cell[106553, 3348, 680, 15, 118, "Text"],
+Cell[107236, 3365, 456, 12, 71, "Text"],
+Cell[107695, 3379, 652, 15, 163, "Text"],
+Cell[108350, 3396, 656, 16, 71, "Output"],
+Cell[109009, 3414, 310, 8, 118, "Text"],
+Cell[109322, 3424, 643, 17, 156, "Text"],
+Cell[CellGroupData[{
+Cell[109990, 3445, 317, 9, 108, "Input"],
+Cell[110310, 3456, 164, 3, 106, "Output"]
+}, Open  ]],
+Cell[110489, 3462, 211, 7, 110, "Text"],
+Cell[110703, 3471, 571, 14, 116, "Text"],
+Cell[CellGroupData[{
+Cell[111299, 3489, 697, 17, 66, "Input"],
+Cell[111999, 3508, 306, 9, 66, "Output"]
+}, Open  ]],
+Cell[112320, 3520, 1095, 18, 110, "Text"],
+Cell[113418, 3540, 224, 4, 110, "Text"],
+Cell[113645, 3546, 783, 19, 110, "Output"],
+Cell[114431, 3567, 950, 21, 110, "Text"],
+Cell[CellGroupData[{
+Cell[115406, 3592, 382, 12, 108, "Input"],
+Cell[115791, 3606, 300, 6, 106, "Output"]
+}, Open  ]],
+Cell[116106, 3615, 542, 12, 110, "Text"],
+Cell[CellGroupData[{
+Cell[116673, 3631, 382, 12, 108, "Input"],
+Cell[117058, 3645, 255, 5, 106, "Output"]
+}, Open  ]],
+Cell[117328, 3653, 127, 2, 110, "Text"],
+Cell[117458, 3657, 94, 1, 66, "Input"],
+Cell[117555, 3660, 325, 7, 71, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[117917, 3672, 130, 1, 103, "Subsection"],
+Cell[118050, 3675, 921, 19, 121, "Text"],
+Cell[118974, 3696, 88, 1, 71, "Text"],
+Cell[CellGroupData[{
+Cell[119087, 3701, 232, 5, 70, "Input"],
+Cell[119322, 3708, 619, 16, 71, "Output"]
+}, Open  ]],
+Cell[119956, 3727, 235, 4, 71, "Text"],
+Cell[CellGroupData[{
+Cell[120216, 3735, 572, 10, 66, "Input"],
+Cell[120791, 3747, 370, 7, 66, "Output"]
+}, Open  ]],
+Cell[121176, 3757, 294, 9, 71, "Text"],
+Cell[CellGroupData[{
+Cell[121495, 3770, 379, 10, 78, "Input"],
+Cell[121877, 3782, 111, 2, 66, "Output"]
+}, Open  ]],
+Cell[122003, 3787, 86, 1, 71, "Text"],
+Cell[CellGroupData[{
+Cell[122114, 3792, 423, 9, 78, "Input"],
+Cell[122540, 3803, 89, 2, 66, "Output"]
+}, Open  ]],
+Cell[122644, 3808, 128, 2, 110, "Text"],
+Cell[122775, 3812, 540, 8, 118, "Text"],
+Cell[123318, 3822, 536, 15, 71, "Output"],
+Cell[123857, 3839, 260, 5, 71, "Text"],
+Cell[124120, 3846, 261, 5, 71, "Text"],
+Cell[124384, 3853, 84, 1, 71, "Text"],
+Cell[124471, 3856, 114, 2, 66, "Input"],
+Cell[124588, 3860, 94, 1, 66, "Input"],
+Cell[124685, 3863, 114, 2, 66, "Input"],
+Cell[124802, 3867, 82, 1, 71, "Text"],
+Cell[124887, 3870, 115, 2, 66, "Input"],
+Cell[125005, 3874, 92, 1, 66, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

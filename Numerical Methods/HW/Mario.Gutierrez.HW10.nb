@@ -1,0 +1,1247 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     41188,       1238]
+NotebookOptionsPosition[     40336,       1207]
+NotebookOutlinePosition[     40690,       1223]
+CellTagsIndexPosition[     40647,       1220]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Math 385 HW # 10", "Title",
+ CellChangeTimes->{{3.60867914516188*^9, 3.6086791690796537`*^9}}],
+
+Cell["Mario L. Gutierrez Abed", "Subtitle",
+ CellChangeTimes->{{3.608679171913817*^9, 3.60867917694335*^9}, {
+  3.617187418578434*^9, 3.617187420200591*^9}}],
+
+Cell[TextData[{
+ StyleBox["(1)",
+  FontColor->RGBColor[1., 0.15214770733196, 0.]],
+ " We are given the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", "x", ")"}], "=", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+       StyleBox[
+        FractionBox[
+         StyleBox["x",
+          FontSize->14], "5"],
+        FontSize->16]}]]}]}], TraditionalForm]]],
+ " , with ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Element]", 
+    RowBox[{"[", 
+     RowBox[{"0", ",", "20"}], "]"}]}], TraditionalForm]]],
+ ". Take ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", "0", ")"}], "=", "0"}], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[CapitalDelta]", " ", "x"}], "=", "2"}], TraditionalForm]]],
+ ". We need to apply Forward Euler, Forward Euler w/ corrector, \
+Midpoint/Runge, and Taylor method and then plot all on the same graph. \n\n",
+ StyleBox["Solution:",
+  FontVariations->{"Underline"->True}],
+ "\nWe are given the curve ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", "x", ")"}], "=", 
+    RowBox[{"1", "-", 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", 
+       StyleBox[
+        FractionBox["x", "5"],
+        FontSize->14]}]]}]}], TraditionalForm]]],
+ " . \nConsequently, we have\n\[Bullet]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"u", "'"}], 
+     RowBox[{"(", "x", ")"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "5"], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"-", 
+        StyleBox[
+         FractionBox["x", "5"],
+         FontSize->14]}]]}], "=", 
+     RowBox[{
+      FractionBox["1", "5"], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "u"}], ")"}]}]}]}], TraditionalForm]]],
+ "   \n\[Bullet]  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"u", "''"}], 
+     RowBox[{"(", "x", ")"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "25"]}], 
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"-", 
+        StyleBox[
+         FractionBox["x", "5"],
+         FontSize->14]}]]}], "=", 
+     RowBox[{
+      FractionBox["1", "25"], 
+      RowBox[{"(", 
+       RowBox[{"u", "-", "1"}], ")"}]}]}]}], TraditionalForm]]],
+ "\n\n\t\t\t\t        ",
+ StyleBox["Forward Euler",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[0.5476462958724346, 0.06037994964522774, 0.]],
+ "\nApplying forward Euler, we can estimate ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", "(", 
+    SubscriptBox["x", 
+     RowBox[{"i", "+", "1"}]], ")"}], TraditionalForm]]],
+ " from each ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", "(", 
+    SubscriptBox["x", "i"], ")"}], TraditionalForm]]],
+ ". To that end, we use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     SubscriptBox["x", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"f", "(", 
+       RowBox[{
+        SubscriptBox["x", "i"], ",", 
+        RowBox[{"u", "(", 
+         SubscriptBox["x", "i"], ")"}]}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", 
+         RowBox[{"i", "+", "1"}]], "-", 
+        SubscriptBox["x", "i"]}], ")"}]}]}]}], TraditionalForm]]],
+ ",\nwhere ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{
+      SubscriptBox["x", "i"], ",", 
+      RowBox[{"u", "(", 
+       SubscriptBox["x", "i"], ")"}]}], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "'"}], 
+     RowBox[{"(", 
+      SubscriptBox["x", "i"], ")"}]}]}], TraditionalForm]]],
+ "  and  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", 
+      RowBox[{"i", "+", "1"}]], "-", 
+     SubscriptBox["x", "i"]}], "=", 
+    RowBox[{"\[CapitalDelta]", " ", "x"}]}], TraditionalForm]]],
+ " . "
+}], "Text",
+ CellChangeTimes->{{3.608679187241928*^9, 3.608679201570251*^9}, {
+  3.6086793304184437`*^9, 3.608679395886977*^9}, {3.608679428672585*^9, 
+  3.608679559480085*^9}, {3.608724202773026*^9, 3.6087242336644287`*^9}, {
+  3.608728100236899*^9, 3.608728148781067*^9}, {3.608734623252981*^9, 
+  3.6087346547461557`*^9}, {3.608735491359418*^9, 3.608735534875839*^9}, {
+  3.608735567580599*^9, 3.608735665071876*^9}, {3.6087356967593718`*^9, 
+  3.6087357603476152`*^9}, {3.608735816086956*^9, 3.608735818992551*^9}, {
+  3.6087418694854107`*^9, 3.6087418849140177`*^9}, {3.617187444206436*^9, 
+  3.617187451238785*^9}, {3.617187566594751*^9, 3.617187568116746*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"euler", "=", 
+   RowBox[{"{", "0", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u1", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "2"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "20"}], ",", 
+    RowBox[{"i", "=", 
+     RowBox[{"i", "+", "2"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"u1", "=", 
+      RowBox[{"u1", "+", 
+       RowBox[{
+        FractionBox["1", "5"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "u1"}], ")"}], "*", "2"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"euler", ",", "u1"}], "]"}]}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6087234444762993`*^9, 3.608723595964973*^9}, {
+   3.6087236277326*^9, 3.608723627891972*^9}, {3.608723686827512*^9, 
+   3.60872378875741*^9}, {3.6087238507997007`*^9, 3.608723877605645*^9}, {
+   3.6087239556879053`*^9, 3.60872395741573*^9}, {3.608724060465678*^9, 
+   3.6087240921124268`*^9}, {3.6087241241148357`*^9, 3.608724125354435*^9}, {
+   3.608724262547421*^9, 3.608724378515871*^9}, 3.608724417757135*^9, {
+   3.6087246619896593`*^9, 3.608724726244314*^9}, {3.608724782409679*^9, 
+   3.608724935541018*^9}, {3.608725001696199*^9, 3.608725030868279*^9}, {
+   3.60872508301938*^9, 3.608725092641691*^9}, {3.608725123202737*^9, 
+   3.608725159683996*^9}, 3.608725274926206*^9, {3.6087253727798233`*^9, 
+   3.608725387376336*^9}, {3.608725521708609*^9, 3.608725526463311*^9}, {
+   3.60872577381032*^9, 3.608725775393095*^9}, 3.608725881320486*^9, {
+   3.6087259523604937`*^9, 3.608725977558257*^9}, {3.608726455811425*^9, 
+   3.608726503434227*^9}, {3.60872690489358*^9, 3.608726905524129*^9}, {
+   3.6087279982835913`*^9, 3.608728006673153*^9}, {3.608729031386085*^9, 
+   3.6087290339019737`*^9}, {3.608735776005982*^9, 3.608735778356614*^9}, {
+   3.608738863249845*^9, 3.608738863584732*^9}, {3.608752062019742*^9, 
+   3.608752062131332*^9}}],
+
+Cell[TextData[{
+ StyleBox["\t\t\t",
+  FontWeight->"Bold",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[0.5476462958724346, 0.06037994964522774, 0.]],
+ StyleBox["      ",
+  FontFamily->".Lucida Grande UI",
+  FontColor->RGBColor[0.5476462958724346, 0.06037994964522774, 0.]],
+ StyleBox["Forward Euler corrected",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[0.5476462958724346, 0.06037994964522774, 0.]],
+ StyleBox["\t\n",
+  FontWeight->"Bold",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[0.5476462958724346, 0.06037994964522774, 0.]],
+ StyleBox["Just like we did with the forward Euler method, we derive ",
+  FontColor->RGBColor[
+   0.2622415503166247, 0.2622568093385214, 0.2622415503166247]],
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["u", "1"], TraditionalForm]]],
+ " from ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["u", "0"], TraditionalForm]]],
+ " by setting \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    FormBox[
+     RowBox[{
+      SubscriptBox["u", "1"], "=", 
+      RowBox[{
+       SubscriptBox["u", "0"], "+", 
+       RowBox[{
+        SubsuperscriptBox["u", "0", "\[Prime]"], "\[CapitalDelta]", " ", 
+        "x"}]}]}],
+     TraditionalForm]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["u", "1"], "=", 
+    RowBox[{
+     RowBox[{"0", "+", 
+      RowBox[{
+       FractionBox["1", "5"], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "0"}], ")"}], "\[CenterDot]", "2"}]}]}], "=", 
+     FractionBox["2", "5"]}]}], TraditionalForm]]],
+ "\nThis time however, the remainder of the iterations will be different. We \
+take the corrective derivative at ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["u", "1"], TraditionalForm]]],
+ ", \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox[
+     OverscriptBox["u", "^"], "1", "\[Prime]"], "\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubsuperscriptBox["u", "1", "\[Prime]"], "+", 
+       SubsuperscriptBox["u", "0", "\[Prime]"]}], ")"}]}], "\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "10"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["u", "1"]}], ")"}], "+", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["u", "0"]}], ")"}]}], ")"}]}]}], TraditionalForm]]],
+ "\n\t            ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "10"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["u", "0"], "+", 
+           RowBox[{
+            SubsuperscriptBox["u", "0", "\[Prime]"], "\[CapitalDelta]", " ", 
+            "x"}]}], ")"}]}], ")"}], "+", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["u", "0"]}], ")"}]}], ")"}]}]}], TraditionalForm]]],
+ "\n\t            ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "10"], 
+     RowBox[{"(", 
+      RowBox[{"2", "-", 
+       RowBox[{"2", 
+        SubscriptBox["u", "0"]}], "-", 
+       RowBox[{
+        SubsuperscriptBox["u", "0", "\[Prime]"], "\[CapitalDelta]", " ", 
+        "x"}]}], ")"}]}]}], TraditionalForm]]],
+ "\n\t            ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "10"], 
+     RowBox[{"(", 
+      RowBox[{"2", "-", 
+       RowBox[{"2", 
+        SubscriptBox["u", "0"]}], "-", 
+       RowBox[{
+        FractionBox["1", "5"], 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          SubscriptBox["u", "0"]}], ")"}], "\[CapitalDelta]", " ", "x"}]}], 
+      ")"}]}]}], TraditionalForm]]],
+ "\nIn general we have \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubsuperscriptBox[
+     OverscriptBox["u", "^"], 
+     RowBox[{"i", "+", "1"}], "\[Prime]"], "\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubsuperscriptBox["u", 
+        RowBox[{"i", "+", "1"}], "\[Prime]"], "+", 
+       SubsuperscriptBox["u", "i", "\[Prime]"]}], ")"}]}], "\[TildeTilde]", 
+    RowBox[{
+     FractionBox["1", "10"], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["u", 
+          RowBox[{"i", "+", "1"}]]}], ")"}], "+", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         SubscriptBox["u", "i"]}], ")"}]}], ")"}]}]}], TraditionalForm]]],
+ "\n\nWe need to solve for ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["u", 
+    RowBox[{"i", "+", "1"}]], TraditionalForm]]],
+ " by executing\n ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["u", 
+     RowBox[{"i", "+", "1"}]], "=", 
+    RowBox[{
+     SubscriptBox["u", "i"], "+", 
+     RowBox[{
+      SubsuperscriptBox[
+       OverscriptBox["u", "^"], 
+       RowBox[{"i", "+", "1"}], "\[Prime]"], "(", 
+      RowBox[{
+       SubscriptBox["x", 
+        RowBox[{"i", "+", "1"}]], "-", 
+       SubscriptBox["x", "i"]}], ")"}]}]}], TraditionalForm]]],
+ "\n      ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"=", 
+     RowBox[{
+      SubscriptBox["u", "i"], "+", 
+      RowBox[{
+       SubsuperscriptBox[
+        OverscriptBox["u", "^"], 
+        RowBox[{"i", "+", "1"}], "\[Prime]"], "\[CapitalDelta]", " ", 
+       "x"}]}]}]}], TraditionalForm]]],
+ "\n      ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"=", 
+     RowBox[{
+      SubscriptBox["u", "i"], "+", 
+      RowBox[{
+       FractionBox["1", "10"], 
+       RowBox[{"(", 
+        RowBox[{"2", "-", 
+         RowBox[{"2", 
+          SubscriptBox["u", "i"]}], "-", 
+         RowBox[{
+          FractionBox["1", "5"], 
+          RowBox[{"(", 
+           RowBox[{"1", "-", 
+            SubscriptBox["u", "i"]}], ")"}], "\[CapitalDelta]", " ", "x"}]}], 
+        ")"}], "\[CapitalDelta]", " ", "x"}]}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQLVR5X0Pu8SvHfYFWhiCa58UycxC9p/mwBYh+JLPN
+BkTP5md0A9H8CZZ+IDpukVQEiO4veBcNoo1WPY0H0WzHX2SA6Cd++3NBdMfG
+o2UgOoJ5VSeInrk7fzKIPj3PYgaInrsrex6IniLHuAFEh334vQdEPw9OOAai
+T2jevACiQyu+3gbR2yqXSsgD6ZM206VA9LWnF+RAdGeQrjyItt/+SA1E/3sr
+rA6iv8kc0gbRd+pW6IDoOL5STxDtciwuAkQv+b0mDkTz99jGg+hWtawSEC18
+WaUMRM+dJ39XFUhH/d3yAET7i6yXVwPSCp3OCiA6uHXmRZvPrxyzOmfdBdEA
+w2KvTg==
+  "],
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ceuler", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     FractionBox["2", "5"]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u2", "=", 
+   FractionBox["2", "5"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "4"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "20"}], ",", 
+    RowBox[{"i", "=", 
+     RowBox[{"i", "+", "2"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"u2", "=", 
+      RowBox[{"u2", "+", 
+       RowBox[{
+        FractionBox["1", "10"], "*", 
+        RowBox[{"(", 
+         RowBox[{"2", "-", 
+          RowBox[{"2", "*", "u2"}], "-", 
+          RowBox[{
+           FractionBox["1", "5"], "*", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "u2"}], ")"}], "*", "2"}]}], ")"}], "*", 
+        "2"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"ceuler", ",", "u2"}], "]"}]}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.608726571556628*^9, 3.608726598675375*^9}, {
+  3.6087269088046713`*^9, 3.608726913076145*^9}, {3.608726989498581*^9, 
+  3.608727016288966*^9}, {3.608727170723024*^9, 3.608727179954917*^9}, {
+  3.60872722192518*^9, 3.608727304883739*^9}, {3.6087273914334173`*^9, 
+  3.608727396992667*^9}, {3.6087274530498867`*^9, 3.6087274882808247`*^9}, {
+  3.60872752058241*^9, 3.608727521350165*^9}, {3.608727557759083*^9, 
+  3.608727631838533*^9}, {3.608727812874666*^9, 3.608727882548436*^9}, {
+  3.608737360738151*^9, 3.608737361640388*^9}, {3.608738603943115*^9, 
+  3.60873866383978*^9}, {3.608738765661459*^9, 3.6087388067215347`*^9}, {
+  3.608738841675065*^9, 3.608738842001732*^9}, {3.608751911019291*^9, 
+  3.608751925648706*^9}, {3.6087521560374393`*^9, 3.608752156156241*^9}, {
+  3.6087524172849083`*^9, 3.608752417564311*^9}}],
+
+Cell[TextData[{
+ StyleBox["\t\t\t\t",
+  FontWeight->"Bold",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[
+   0.4416266117341878, 0.0571297779812314, 0.016327153429465172`]],
+ StyleBox["Taylor method",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[
+   0.4416266117341878, 0.0571297779812314, 0.016327153429465172`]],
+ "\nFor the Taylor method we have that the expansion of order 2 of our \
+function is given by \n",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", 
+       RowBox[{"i", "+", "1"}]], ")"}], "=", 
+     RowBox[{
+      RowBox[{"u", "(", 
+       SubscriptBox["x", "i"], ")"}], "+", 
+      RowBox[{
+       RowBox[{"f", "(", 
+        RowBox[{
+         SubscriptBox["x", "i"], ",", 
+         RowBox[{"u", "(", 
+          SubscriptBox["x", "i"], ")"}]}], ")"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["x", 
+          RowBox[{"i", "+", "1"}]], "-", 
+         SubscriptBox["x", "i"]}], ")"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"f", "'"}], 
+       RowBox[{"(", 
+        RowBox[{
+         SubscriptBox["x", "i"], ",", 
+         RowBox[{"u", "(", 
+          SubscriptBox["x", "i"], ")"}]}], ")"}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SubscriptBox["x", 
+           RowBox[{"i", "+", "1"}]], "-", 
+          SubscriptBox["x", "i"]}], ")"}], "2"]}]}]}],
+    Background->None], TraditionalForm]]],
+ "\nor \n            ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[" ",
+     Background->None], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"u", "(", 
+       SubscriptBox["x", 
+        RowBox[{"i", "+", "1"}]], ")"}],
+      Background->None], 
+     StyleBox["=",
+      Background->None], 
+     RowBox[{
+      StyleBox[
+       RowBox[{"u", "(", 
+        SubscriptBox["x", "i"], ")"}],
+       Background->None], 
+      RowBox[{
+       StyleBox["+",
+        Background->None], 
+       RowBox[{
+        StyleBox[
+         RowBox[{
+          RowBox[{"u", "'"}], 
+          RowBox[{"(", 
+           SubscriptBox["x", "i"], ")"}], "\[CapitalDelta]", " ", "x"}],
+         Background->None], 
+        RowBox[{
+         StyleBox["+",
+          Background->None], 
+         RowBox[{
+          StyleBox[
+           FractionBox["1", "2"],
+           Background->None], 
+          RowBox[{"u", "''"}], 
+          RowBox[{"(", 
+           SubscriptBox["x", "i"], ")"}], 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"\[CapitalDelta]", " ", "x"}], ")"}], "2"]}]}]}]}]}]}]}], 
+   TraditionalForm]]],
+ "\n      \[DoubleLongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     RowBox[{"u", "(", 
+      SubscriptBox["x", 
+       RowBox[{"i", "+", "1"}]], ")"}],
+     Background->None], 
+    StyleBox["=",
+     Background->None], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"u", "(", 
+       SubscriptBox["x", "i"], ")"}],
+      Background->None], 
+     StyleBox["+",
+      Background->None], 
+     RowBox[{
+      FractionBox["1", "5"], 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "-", "u"}], ")"}], "\[CenterDot]", 
+       StyleBox["2",
+        FontSize->14]}]}], "+", 
+     RowBox[{
+      StyleBox[
+       FractionBox["1", "2"],
+       Background->None], 
+      StyleBox["[",
+       Background->None], 
+      RowBox[{
+       FractionBox["1", "25"], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"u", "-", "1"}], ")"}], "\[CenterDot]", 
+        StyleBox["4",
+         FontSize->14]}]}], "]"}]}]}], TraditionalForm]]],
+ "\n      \[DoubleLongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    StyleBox[
+     RowBox[{"u", "(", 
+      SubscriptBox["x", 
+       RowBox[{"i", "+", "1"}]], ")"}],
+     Background->None], 
+    StyleBox["=",
+     Background->None], 
+    RowBox[{
+     StyleBox[
+      RowBox[{"u", "(", 
+       SubscriptBox["x", "i"], ")"}],
+      Background->None], 
+     StyleBox["+",
+      Background->None], 
+     RowBox[{
+      FractionBox["2", "5"], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "u"}], ")"}]}], "+", 
+     RowBox[{
+      FractionBox["2", "25"], 
+      RowBox[{"(", 
+       RowBox[{"u", "-", "1"}], ")"}]}]}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.608728330586277*^9, 3.608728389816085*^9}, {
+  3.608728424494965*^9, 3.608728512699196*^9}, {3.608728577649418*^9, 
+  3.6087285853454123`*^9}, {3.608728626296357*^9, 3.6087287112441807`*^9}, {
+  3.608728866759344*^9, 3.608728868639184*^9}, {3.6087345521817427`*^9, 
+  3.608734587907487*^9}, {3.608735938416203*^9, 3.608735970934124*^9}, {
+  3.617187589769637*^9, 3.6171876219013853`*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"taylor", "=", 
+   RowBox[{"{", "0", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u3", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "2"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "20"}], ",", 
+    RowBox[{"i", "=", 
+     RowBox[{"i", "+", "2"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"u3", "=", 
+      RowBox[{"u3", "+", 
+       RowBox[{
+        FractionBox["2", "5"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "u3"}], ")"}]}], "+", 
+       RowBox[{
+        FractionBox["2", "25"], "*", 
+        RowBox[{"(", 
+         RowBox[{"u3", "-", "1"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"taylor", ",", "u3"}], "]"}]}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.608728242136922*^9, 3.608728306415403*^9}, {
+  3.608728571786016*^9, 3.6087285718889923`*^9}, {3.60872872642379*^9, 
+  3.608728742512435*^9}, {3.608728832966372*^9, 3.608728844941594*^9}, {
+  3.608728883982645*^9, 3.60872890617202*^9}, {3.6087289466917763`*^9, 
+  3.6087289541548653`*^9}, {3.608738899657941*^9, 3.6087389002720633`*^9}, {
+  3.608752176164898*^9, 3.608752176251478*^9}}],
+
+Cell[TextData[{
+ StyleBox["\t\t\t",
+  FontWeight->"Bold",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[
+   0.4416266117341878, 0.0571297779812314, 0.016327153429465172`]],
+ StyleBox["       ",
+  FontFamily->".Lucida Grande UI",
+  FontColor->RGBColor[
+   0.4416266117341878, 0.0571297779812314, 0.016327153429465172`]],
+ StyleBox["Midpoint/Runge method",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[
+   0.4416266117341878, 0.0571297779812314, 0.016327153429465172`]],
+ "\nFor the Runge method we take ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Xi]", "i"], "=", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["x", 
+        RowBox[{"i", "+", "1"}]], "+", 
+       SubscriptBox["x", "i"]}], ")"}]}]}], TraditionalForm]]],
+ ", which is the midpoint for each subinterval ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{
+     SubscriptBox["x", "i"], ",", 
+     SubscriptBox["x", 
+      RowBox[{"i", "+", "1"}]]}], "]"}], TraditionalForm]]],
+ ". Then we need to execute \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     SubscriptBox["x", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"f", "(", 
+       RowBox[{
+        SubscriptBox["\[Xi]", "i"], ",", 
+        RowBox[{"u", "(", 
+         SubscriptBox["\[Xi]", "i"], ")"}]}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", 
+         RowBox[{"i", "+", "1"}]], "-", 
+        SubscriptBox["x", "i"]}], ")"}]}]}]}], TraditionalForm]]],
+ "\nor \n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     SubscriptBox["x", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"u", "'"}], 
+      RowBox[{"(", 
+       SubscriptBox["\[Xi]", "i"], ")"}], "\[CapitalDelta]", " ", "x"}]}]}], 
+   TraditionalForm]]],
+ "\n\nNow we have that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"u", "(", 
+    SubscriptBox["\[Xi]", "i"], ")"}], TraditionalForm]]],
+ " is estimated by\n ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     SubscriptBox["\[Xi]", "i"], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], 
+      RowBox[{"f", "(", 
+       RowBox[{
+        SubscriptBox["x", "i"], ",", 
+        RowBox[{"u", "(", 
+         SubscriptBox["x", "i"], ")"}]}], ")"}], 
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", 
+         RowBox[{"i", "+", "1"}]], "+", 
+        SubscriptBox["x", "i"]}], ")"}]}]}]}], TraditionalForm]]],
+ " or \n ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     SubscriptBox["\[Xi]", "i"], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], 
+      RowBox[{"u", "'"}], 
+      RowBox[{"(", 
+       SubscriptBox["x", "i"], ")"}], "\[CapitalDelta]", " ", "x"}]}]}], 
+   TraditionalForm]]],
+ "\nHence\n      ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"u", "'"}], 
+      RowBox[{"(", 
+       SubscriptBox["\[Xi]", "i"], ")"}]}], "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"u", "'"}], 
+       RowBox[{"(", 
+        SubscriptBox["x", "i"], ")"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       RowBox[{"u", "''"}], 
+       RowBox[{"(", 
+        SubscriptBox["x", "i"], ")"}], "\[CapitalDelta]", " ", "x"}]}]}]}], 
+   TraditionalForm]]],
+ "\n\[DoubleLongRightArrow] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"u", "'"}], 
+     RowBox[{"(", 
+      SubscriptBox["\[Xi]", "i"], ")"}]}], "=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "5"], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "u"}], ")"}]}], "+", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "2"], "\[CenterDot]", 
+       FractionBox["1", "25"]}], 
+      RowBox[{"(", 
+       RowBox[{"u", "-", "1"}], ")"}], "\[CapitalDelta]", " ", "x"}]}]}], 
+   TraditionalForm]]],
+ "\n               ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"=", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "5"], 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "u"}], ")"}]}], "+", 
+      RowBox[{
+       FractionBox["1", "50"], 
+       RowBox[{"(", 
+        RowBox[{"u", "-", "1"}], ")"}], "\[CapitalDelta]", " ", "x"}]}]}]}], 
+   TraditionalForm]]],
+ "\n\nThus, we have\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "(", 
+     SubscriptBox["x", 
+      RowBox[{"i", "+", "1"}]], ")"}], "=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"u", "'"}], 
+      RowBox[{"(", 
+       SubscriptBox["\[Xi]", "i"], ")"}], "\[CapitalDelta]", " ", "x"}]}]}], 
+   TraditionalForm]]],
+ "\n          ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "5"], 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "u"}], ")"}]}], "+", 
+        RowBox[{
+         FractionBox["1", "50"], 
+         RowBox[{"(", 
+          RowBox[{"u", "-", "1"}], ")"}], "\[CapitalDelta]", " ", "x"}]}], 
+       ")"}], "\[CapitalDelta]", " ", "x"}]}]}], TraditionalForm]]],
+ "\n          ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"=", 
+    RowBox[{
+     RowBox[{"u", "(", 
+      SubscriptBox["x", "i"], ")"}], "+", 
+     RowBox[{
+      FractionBox["1", "5"], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "u"}], ")"}], "\[CapitalDelta]", " ", "x"}], "+", 
+     RowBox[{
+      FractionBox["1", "50"], 
+      RowBox[{"(", 
+       RowBox[{"u", "-", "1"}], ")"}], 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"\[CapitalDelta]", " ", "x"}], ")"}], "2"]}]}]}], 
+   TraditionalForm]]],
+ "\nLet\[CloseCurlyQuote]s get on with the computations:"
+}], "Text",
+ CellChangeTimes->{{3.60873308108418*^9, 3.608733102378675*^9}, {
+  3.608733150651101*^9, 3.6087331677933493`*^9}, {3.608733295938201*^9, 
+  3.608733330414268*^9}, {3.608733613713457*^9, 3.608733635311442*^9}, {
+  3.608733693496138*^9, 3.608733703846148*^9}, {3.608733740024444*^9, 
+  3.60873377301726*^9}, {3.608733811089698*^9, 3.608733842756898*^9}, {
+  3.608733874363964*^9, 3.6087340049147882`*^9}, {3.60873405607551*^9, 
+  3.6087341207211533`*^9}, {3.608734157973118*^9, 3.608734224958506*^9}, {
+  3.608734423365128*^9, 3.608734424668623*^9}, {3.608734497040285*^9, 
+  3.608734528844384*^9}, {3.608735868834917*^9, 3.6087358810475693`*^9}, {
+  3.60874468196183*^9, 3.608744686694935*^9}, {3.608751139611205*^9, 
+  3.608751149669072*^9}, {3.608751227497999*^9, 3.60875130593152*^9}, {
+  3.617187635034482*^9, 3.6171876656264687`*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"runge", "=", 
+   RowBox[{"{", "0", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"u4", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "2"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "20"}], ",", 
+    RowBox[{"i", "=", 
+     RowBox[{"i", "+", "2"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"u4", "=", 
+      RowBox[{"u4", "+", 
+       RowBox[{
+        FractionBox["1", "5"], "*", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", "u4"}], ")"}], "*", "2"}], "+", 
+       RowBox[{
+        FractionBox["1", "50"], 
+        RowBox[{"(", 
+         RowBox[{"u4", "-", "1"}], ")"}], "*", "4"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"runge", ",", "u4"}], "]"}]}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6087290435820312`*^9, 3.608729086468032*^9}, 
+   3.6087330239035683`*^9, {3.608734271908051*^9, 3.60873430949087*^9}, {
+   3.608738913881466*^9, 3.608738914146933*^9}, {3.6087513380781384`*^9, 
+   3.608751338251729*^9}, {3.608752184532981*^9, 3.608752184623022*^9}}],
+
+Cell[TextData[{
+ "\t\t\t\t   ",
+ StyleBox[" ",
+  FontFamily->"Baskerville"],
+ StyleBox["RESULTS",
+  FontFamily->"Baskerville",
+  FontVariations->{"Underline"->True},
+  FontColor->RGBColor[0.6489509422446021, 0.08589303425650416, 0.]],
+ "\nNow let us plot our function and all the approximations..."
+}], "Text",
+ CellChangeTimes->{{3.6087389274884043`*^9, 3.608738956797885*^9}, {
+  3.608739370672154*^9, 3.608739372485924*^9}, {3.608739408798514*^9, 
+  3.608739446994051*^9}, {3.617187686182437*^9, 3.617187686584568*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"curve", "[", "x_", "]"}], "=", 
+   RowBox[{"1", "-", 
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", 
+      FractionBox["x", "5"]}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"curveplot", "=", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"curve", "[", "x", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "20"}], "}"}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", "\"\<Yo\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eulerplot", "=", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"euler", ",", 
+     RowBox[{"DataRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "20"}], "}"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Darker", "[", "Green", "]"}], ",", 
+        RowBox[{"PointSize", "[", "0.015", "]"}]}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"correctedplot", "=", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"ceuler", ",", 
+     RowBox[{"DataRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "20"}], "}"}]}], ",", 
+     RowBox[{"PlotMarkers", "\[Rule]", "\[Phi]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", "Purple"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"taylorplot", "=", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"taylor", ",", 
+     RowBox[{"DataRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "20"}], "}"}]}], ",", 
+     RowBox[{"PlotMarkers", "\[Rule]", "\[Theta]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Darker", "[", "Red", "]"}], ",", 
+        RowBox[{"PointSize", "[", "0.015", "]"}]}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rungeplot", "=", 
+   RowBox[{"ListPlot", "[", 
+    RowBox[{"runge", ",", 
+     RowBox[{"DataRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "20"}], "}"}]}], ",", 
+     RowBox[{"PlotMarkers", "\[Rule]", "\[Psi]"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"Orange", ",", 
+        RowBox[{"PointSize", "[", "0.015", "]"}]}], "}"}]}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "eulerplot", ",", "correctedplot", ",", "taylorplot", ",", "rungeplot", 
+     ",", "curveplot"}], "}"}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Framed", "[", "\"\<\[Bullet] --Euler\>\"", "]"}], ",", 
+        RowBox[{"Darker", "[", "Green", "]"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Framed", "[", "\"\<\[Phi] --Corrected\>\"", "]"}], ",", 
+        "Purple"}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Framed", "[", "\"\<\[Theta] --Taylor\>\"", "]"}], ",", 
+        RowBox[{"Darker", "[", "Red", "]"}]}], "]"}], ",", 
+      RowBox[{"Style", "[", 
+       RowBox[{
+        RowBox[{"Framed", "[", "\"\<\[Psi] --Runge\>\"", "]"}], ",", 
+        "Orange"}], "]"}]}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGCQAGIQvaN8aYv841eOdzftBtPBbAqTQfQKyVYwzeCzZjqI
+Dpu3YjmIZnlSsglE89Zu2gaieV4a7gOrS7MH0w9zbbgUgfQHKRl+EK23/b4k
+iH4gLasEom8k79MG0VFzp+qC1QV/MwXRHFFZ9iD6RL6RO4he0tEVBKKPJqdF
+geiOz9diQfSZc4u6QHTM3OrpIJpFkHURiE4TllkCohflmq4B0W9uPtgEorWn
+fN4Ooq1E7pwE0YdYLM6BaHX9hCsgei9P6j0Q/eWX5UMQfcDE6AOIvvQh8SNY
+nX3INxAtWxLOqASkLT61sIHoJKEpqiB6Ea+6tRpIvVy4LYje8J/XA0QfCZrv
+A6L5LlQEgOgV226HgOinF59HgMWvZcWAaACIxcY4
+  "]],
+
+Cell[BoxData[
+ GraphicsBox[{{{}, {{}, 
+     {RGBColor[0, 
+       NCache[
+        Rational[2, 3], 0.6666666666666666], 0], PointSize[0.015], 
+      PointBox[{{0., 0.}, {2., 0.4}, {4., 0.64}, {6., 0.784}, {8., 0.8704}, {
+       10., 0.92224}, {12., 0.953344}, {14., 0.9720064}, {16., 0.98320384}, {
+       18., 0.989922304}, {20., 0.9939533824}}]}, {}}, {}}, {{}, 
+    GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGAQA2IQjQM4zJoJAjftIVwBh+6c579XfnwE5Us4FO/SUTOT
+fw7lKzgsULL93fDtJZSv4rBqDgO7wNPXUL6Gw8Zj/RdjTN9C+ToOi4pWvuKW
+egflGzikdGtb9m6F8Y0c/kx06/WWfw/lmzj0uggmGKfD+EPHvQD8XFqU
+     "], {
+      {RGBColor[0.5, 0, 0.5], InsetBox["\[Phi]", 12], InsetBox["\[Phi]", 13], 
+       InsetBox["\[Phi]", 14], InsetBox["\[Phi]", 15], InsetBox["\[Phi]", 16],
+        InsetBox["\[Phi]", 17], InsetBox["\[Phi]", 18], 
+       InsetBox["\[Phi]", 19], InsetBox["\[Phi]", 20], InsetBox["\[Phi]", 21],
+        InsetBox["\[Phi]", 22]}, {}}], {}}, {{}, 
+    GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGAQA2IQjQM4VIusc39YdcUewhVwEO3xesVi8hDKl3BIeJLq
+q/PhKZSv4HB8/WruAo2XUL6KQ+2C9+wfIl5D+RoOvPvz7whfewPl6zgEvpi7
+xeHmWyjfwOHn3NLXtZ3voHwjh6nHZRaEMr6H8k0cNI66Xb4cBOMPHfcCAFyQ
+XSw=
+     "], {
+      {RGBColor[
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0, 0], PointSize[0.015], 
+       InsetBox["\[Theta]", 12], InsetBox["\[Theta]", 13], 
+       InsetBox["\[Theta]", 14], InsetBox["\[Theta]", 15], 
+       InsetBox["\[Theta]", 16], InsetBox["\[Theta]", 17], 
+       InsetBox["\[Theta]", 18], InsetBox["\[Theta]", 19], 
+       InsetBox["\[Theta]", 20], InsetBox["\[Theta]", 21], 
+       InsetBox["\[Theta]", 22]}, {}}], {}}, {{}, 
+    GraphicsComplexBox[CompressedData["
+1:eJxTTMoPSmViYGAQA2IQjQM4VIusc39YdcUewhVwEO3xesVi8hDKl3BIeJLq
+q/PhKZSv4HB8/WruAo2XUL6KQ+2C9+wfIl5D+RoOvPvz7whfewPl6zgEvpi7
+xeHmWyjfwOHn3NLXtZ3voHwjh6nHZRaEMr6H8k0cNI66Xb4cBOMPHfcCAFyQ
+XSw=
+     "], {
+      {RGBColor[1, 0.5, 0], PointSize[0.015], InsetBox["\[Psi]", 12], 
+       InsetBox["\[Psi]", 13], InsetBox["\[Psi]", 14], InsetBox["\[Psi]", 15],
+        InsetBox["\[Psi]", 16], InsetBox["\[Psi]", 17], 
+       InsetBox["\[Psi]", 18], InsetBox["\[Psi]", 19], InsetBox["\[Psi]", 20],
+        InsetBox["\[Psi]", 21], InsetBox["\[Psi]", 22]}, {}}], {}}, {{}, {}, 
+    {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwV03s01AkUB/Cp0dYOPSxrSeYhGQZjxq9206Z7o5fnlqg9ChlmRhlZ1pRe
+lDyarJpwKtXEsNVahx5rUluLKFZeJ2Tr0CaPlWFmyE5MlP3tH/fc7+eve873
+nMsSxAUK51IoFH9y/t+KZMFn/KjL68hYVzMsXfe4g+m3k3kIKJzCkkqLIJit
+rzrJZMqA4s7rjDKLAkVNNmMeMx8oYZQ3cxcmgsRDGjvJKAGKnbJKTEmDjuno
+vDHGfehdbb47YigX5nf3sTWMRuB5+GS+VBWD8mlB/AjjJVCoAcJ7Qb9B+U1Z
+t4SrBuaPbcfdA+tADM/yRxMmwCjOO767oAn2Dzr2V5QboCfENmF+7jOgsdLY
+r1dTkJuSIvPf8RzOLGniKPdQ8XT7KtaDnBcg6A6qpjZ/hosmDh2419IN8U/S
+BHFsGnp+XptSVvk33P7BZLul90LMV2d8U3SlF5RHYtS8nUuQ1kW1xFdvILVg
+Ztu/o6b4SZiwYGqsDygdvfjwsBn+cmLkRI+6H+wTRUlBnC9xg+FA+fDAAAzo
+L+ww/sMCRYLQR5MPBsFncN+xnHhLrLeamVOd8w8EDMid6PSlSDMykp8MGgJ1
+neD4n2XWmLv0W3SZHgKuaZeNV7gNChptrrYr3wIN9BE9E3R0XTm9Yjl/GDZr
+QiZtg5mYJ7drcqwZhhe1UXNCnFmokFUyHNerQXXqcRhTz8KH3mvOWN9Sg2ie
+tLe11RZVyyw3vaePQGTCEZXJpeXoyzi22yd5BFzFTq1+EXZY/XWSR3nnCLR9
+4WwsdV+Bfk26d1ZOo/CgPPWyM9UeMxTjbyTSUTgyh7O1+ZU98i9IjIuqR4HW
+c3jL/go2OhDfjeXM1cDgdVZewVEH5FIbwu3XaiDPwcrofrAjfjj90aVCqgH5
+JVFDBJODqf5n+9xuaCAkL7TVZIiDr2fTkhd3amBqwzVDQZUTiiTJ+/QULfQP
+eibVZjpj1iLnthy2Foo8+NYtES7o0CnirQjQQlm61FTswsV8Yb5wa5wWMoMj
+fal6Ln6VcUUZlq2FVT3KkswWVwxa/70ktlQLFx0vl7X48lA1dvDjpidaSKnJ
+vuh7n4eedzaGmr/Wgr918LWndnwcGZjnFfJeC+v3N+wylfExcE9yVhhNBwXL
+BHbNej56KxLiwuk6sKu7cT5glxvWmYU757rqQO5Sy2mvcsMBk7eeHNCBaMLo
+WSOHQHPGZmldgA4Et98xZWcJPHdlZY3Lbh1IUrfP+JwjcMGWQG8xaen2ir9M
+cgm8O76mqpD0Kb30jPw8gYcKZTFmoToodzdMX1AQGJve1zlJ2vBotut6KYFL
+lpa+fRhO3m83yX7cQGDM810bV0fq4FJxbHRGI4Glp/YGx5EuTmz12tJEoFzO
+DLxO+q6F/ENTK4FP6q+ZmkfpyL8yi+54TuD8yKclWtLsfiuvvn4Cm70iNhSK
+dMCrOEz/eZBAlgXXtov0mvRug3CIQGherDEW68CPrbg1rCZwk9TZ5yDphBgm
+fXycwJVuabb+0To4uvaE4c4EgS9+vb03lXT6wr7ORD2BNzUOVytJX7xZnDU1
+ReAyq8VtrL06KDpuJP79A4EnGVlNO0iXbhN6Hp0hsNopRpVFusK23mbdJwIn
+61U/1ZCumrA3zM6SfSbFb9OT/g8QxDzO
+      "]]}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  ImageSize->{588.47265625, Automatic},
+  Method->{},
+  PlotLabel->FormBox[
+    RowBox[{"{", 
+      RowBox[{
+        StyleBox[
+         FrameBox["\"\[Bullet] --Euler\"", StripOnInput -> False], 
+         RGBColor[0, 
+          Rational[2, 3], 0], StripOnInput -> False], ",", 
+        StyleBox[
+         FrameBox["\"\[Phi] --Corrected\"", StripOnInput -> False], 
+         RGBColor[0.5, 0, 0.5], StripOnInput -> False], ",", 
+        StyleBox[
+         FrameBox["\"\[Theta] --Taylor\"", StripOnInput -> False], 
+         RGBColor[
+          Rational[2, 3], 0, 0], StripOnInput -> False], ",", 
+        StyleBox[
+         FrameBox["\"\[Psi] --Runge\"", StripOnInput -> False], 
+         RGBColor[1, 0.5, 0], StripOnInput -> False]}], "}"}], 
+    TraditionalForm],
+  PlotRange->{{0, 20.}, {0, 0.9939533824}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0.4, 0.4}, {0.019879067648, 0.019879067648}}]], "Output",\
+
+ CellChangeTimes->{
+  3.608742396097354*^9, {3.608742467548979*^9, 3.60874249367371*^9}, 
+   3.608742549103917*^9, {3.608742618772195*^9, 3.608742639675349*^9}, 
+   3.608743021237047*^9, 3.6087430618220787`*^9, 3.608743103695817*^9, {
+   3.608743173843399*^9, 3.608743202920985*^9}, {3.608743296122015*^9, 
+   3.60874340475846*^9}, {3.6087434480419197`*^9, 3.608743452598963*^9}, {
+   3.608743494712893*^9, 3.6087435038089123`*^9}, {3.608743540026011*^9, 
+   3.608743587709651*^9}, {3.608743673771418*^9, 3.608743690898735*^9}, 
+   3.608743819707982*^9, {3.608743862372861*^9, 3.608743889741884*^9}, 
+   3.608743949185218*^9, {3.6087442178336573`*^9, 3.608744237222581*^9}, 
+   3.608744310650234*^9, 3.608751369008321*^9, 3.6087521885963173`*^9, 
+   3.6087524382584143`*^9, 3.608752605064756*^9, {3.608752711674884*^9, 
+   3.608752729072061*^9}, {3.6087527731343737`*^9, 3.6087528081317987`*^9}, 
+   3.608752870237722*^9, 3.608752913059902*^9}]
+}, Open  ]],
+
+Cell["\<\
+Just as expected the most accurate methods were Runge\[CloseCurlyQuote]s and \
+the second order Taylor, followed by the corrected Euler method. The least \
+accurate approximation is the latter without the correction. \
+\>", "Text",
+ CellChangeTimes->{{3.6087524554534073`*^9, 3.6087525464074306`*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16]
+}, Open  ]]
+},
+WindowSize->{740, 612},
+WindowMargins->{{261, Automatic}, {Automatic, 1}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 100, 1, 92, "Title"],
+Cell[682, 25, 157, 2, 51, "Subtitle"],
+Cell[842, 29, 4587, 156, 359, "Text"],
+Cell[5432, 187, 2022, 41, 157, "Input"],
+Cell[7457, 230, 6360, 214, 437, "Text"],
+Cell[13820, 446, 1875, 43, 220, "Input"],
+Cell[15698, 491, 4659, 163, 190, "Text"],
+Cell[20360, 656, 1272, 32, 157, "Input"],
+Cell[21635, 690, 6937, 234, 506, "Text"],
+Cell[28575, 926, 1171, 31, 157, "Input"],
+Cell[29749, 959, 565, 14, 55, "Text"],
+Cell[CellGroupData[{
+Cell[30339, 977, 3637, 100, 277, "Input"],
+Cell[33979, 1079, 5972, 115, 412, "Output"]
+}, Open  ]],
+Cell[39966, 1197, 354, 7, 77, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,610 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     22686,        601]
+NotebookOptionsPosition[     21348,        551]
+NotebookOutlinePosition[     21724,        568]
+CellTagsIndexPosition[     21681,        565]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Math 385 HW # 3", "Title",
+ CellChangeTimes->{{3.601205627320822*^9, 3.6012056321016293`*^9}}],
+
+Cell["Mario L. Gutierrez Abed", "Subtitle",
+ CellChangeTimes->{{3.601205636310336*^9, 3.601205641156048*^9}, {
+  3.617144354885516*^9, 3.617144356587659*^9}}],
+
+Cell[TextData[{
+ StyleBox["(1)",
+  FontColor->RGBColor[1., 0.14912642099641413`, 0.]],
+ " Define ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{"sin", "(", "x", ")"}], 
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"-", "x"}]]}]}], TraditionalForm]]],
+ ".  \n",
+ StyleBox["(2)",
+  FontColor->RGBColor[1., 0.15214770733196, 0.]],
+ " Plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"f", 
+    RowBox[{"(", "x", ")"}], " ", 
+    RowBox[{"on", " ", "[", 
+     RowBox[{"2", " ", ",", "4"}], "]"}]}], TraditionalForm]]],
+ ".  \n",
+ StyleBox["(3)",
+  FontColor->RGBColor[1., 0.149233234149691, 0.]],
+ " Write a program using the secant method to find a root near \[Pi] . Make \
+sure that the loop is conditioned on nearness exit (tolerance) and iteration \
+limit (1000) . \n",
+ StyleBox["(4)",
+  FontColor->RGBColor[1., 0.14934004730296788`, 0.]],
+ " Compare with FindRoot (for a secant method using the two seeds) using \
+absolute error. \n",
+ StyleBox["(5)",
+  FontColor->RGBColor[1., 0.15892271305409322`, 0.]],
+ " Compare with final answer from Newton\[CloseCurlyQuote]s method using \
+absolute error. \n"
+}], "Text",
+ CellChangeTimes->{{3.601058053908165*^9, 3.6010581993197727`*^9}, {
+   3.6010582313417673`*^9, 3.6010583506312313`*^9}, {3.60105841537862*^9, 
+   3.60105859323578*^9}, {3.601058645716824*^9, 3.601058693280422*^9}, {
+   3.6012056900355043`*^9, 3.6012057650074873`*^9}, {3.601291944105566*^9, 
+   3.601291944105652*^9}, {3.601292914957327*^9, 3.601292918164461*^9}, {
+   3.601391457756255*^9, 3.601391474901498*^9}, {3.604835211372237*^9, 
+   3.604835223232142*^9}, 3.617144368018005*^9},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "2", ",", "4"}], "}"}], ",", 
+   RowBox[{"PlotLabel", "\[Rule]", 
+    RowBox[{"Style", "[", 
+     RowBox[{
+     "\"\<f(x)= \!\(TraditionalForm\`\(sin(x)\) \*SuperscriptBox[\(\
+\[ExponentialE]\), \(-x\)]\)\>\"", ",", 
+      RowBox[{"FontSize", "\[Rule]", "15"}], ",", 
+      RowBox[{"FontColor", "\[Rule]", "Purple"}]}], "]"}]}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6007324436035633`*^9, 3.600732547634781*^9}, {
+   3.600732585162306*^9, 3.600732611169286*^9}, {3.600890547087606*^9, 
+   3.600890569113132*^9}, 3.60089061529327*^9, {3.600890931072625*^9, 
+   3.6008910336942053`*^9}, {3.6008910669184637`*^9, 3.600891143075055*^9}, {
+   3.601205838324567*^9, 3.601205840844987*^9}, {3.601205873600588*^9, 
+   3.6012058891140013`*^9}, {3.617144383765575*^9, 3.6171443852263937`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
+    1.], LineBox[CompressedData["
+1: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
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{
+    FormBox["x", TraditionalForm], 
+    FormBox["y", TraditionalForm]},
+  AxesOrigin->{2., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{"DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None},
+  PlotLabel->FormBox[
+    StyleBox[
+    "\"f(x)= \\!\\(TraditionalForm\\`\\(sin(x)\\) \\*SuperscriptBox[\\(\
+\[ExponentialE]\\), \\(-x\\)]\\)\"", FontSize -> 15, FontColor -> 
+     RGBColor[0.5, 0, 0.5], StripOnInput -> False], TraditionalForm],
+  PlotRange->{{2, 4}, {-0.013932034662158643`, 0.12306001748416973`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.60120583225493*^9, 3.601205841377317*^9}, 
+   3.617144390778738*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Now we find the root of our function between ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", "2"}], TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{" ", 
+    RowBox[{"x", "=", "4"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "  by programming the secant method:"
+}], "Text",
+ CellChangeTimes->{{3.6012918614380302`*^9, 3.601291907609769*^9}, {
+  3.601392230142818*^9, 3.601392235718587*^9}, {3.6048353313788033`*^9, 
+  3.604835341003395*^9}, {3.617144411772376*^9, 3.617144419637176*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], "=", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "1"], "=", "2.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "2"], " ", "=", "4.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "new"], " ", "=", " ", 
+   RowBox[{
+    SubscriptBox["x", "1"], " ", "-", " ", 
+    RowBox[{
+     RowBox[{"f", "[", 
+      SubscriptBox["x", "1"], "]"}], "*", 
+     FractionBox[
+      RowBox[{"(", 
+       RowBox[{
+        SubscriptBox["x", "2"], "-", 
+        SubscriptBox["x", "1"]}], ")"}], 
+      RowBox[{
+       RowBox[{"f", "[", 
+        SubscriptBox["x", "2"], "]"}], "-", " ", 
+       RowBox[{"f", "[", 
+        SubscriptBox["x", "1"], "]"}]}]]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"iterationcount", " ", "=", " ", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Abs", "[", 
+       RowBox[{"f", "[", 
+        SubscriptBox["x", "new"], "]"}], "]"}], ">", " ", 
+      SuperscriptBox["10", 
+       RowBox[{"-", "5"}]]}], " ", "&&", " ", 
+     RowBox[{"iterationcount", " ", "<", " ", "1000"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", "new"], "=", " ", 
+      RowBox[{
+       SubscriptBox["x", "1"], " ", "-", " ", 
+       RowBox[{
+        RowBox[{"f", "[", 
+         SubscriptBox["x", "1"], "]"}], "*", 
+        FractionBox[
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["x", "2"], "-", 
+           SubscriptBox["x", "1"]}], ")"}], 
+         RowBox[{
+          RowBox[{"f", "[", 
+           SubscriptBox["x", "2"], "]"}], "-", " ", 
+          RowBox[{"f", "[", 
+           SubscriptBox["x", "1"], "]"}]}]]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"f", "[", 
+          SubscriptBox["x", "1"], "]"}], "*", 
+         RowBox[{"f", "[", 
+          SubscriptBox["x", "new"], "]"}]}], ">", "0"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["x", "1"], "=", " ", 
+        SubscriptBox["x", "new"]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        SubscriptBox["x", "2"], " ", "=", " ", 
+        SubscriptBox["x", "new"]}]}], "\[IndentingNewLine]", "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"iterationcount", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ SubscriptBox["x", "new"], "\[IndentingNewLine]", "iterationcount"}], "Input",\
+
+ CellChangeTimes->{{3.60120591277597*^9, 3.601205974380115*^9}, {
+   3.601206009069553*^9, 3.601206057651924*^9}, {3.6012061205157213`*^9, 
+   3.6012061840970182`*^9}, {3.601248911607823*^9, 3.6012489792550697`*^9}, {
+   3.601249023253234*^9, 3.601249057517111*^9}, {3.60124932657681*^9, 
+   3.601249402670339*^9}, {3.601249461025709*^9, 3.601249481114552*^9}, {
+   3.601249539852944*^9, 3.601249597944756*^9}, 3.601249632546479*^9, {
+   3.601249772376027*^9, 3.601249773934566*^9}, {3.6012498066827393`*^9, 
+   3.601249823143765*^9}, {3.601249870216107*^9, 3.601249893774918*^9}, {
+   3.601250030927829*^9, 3.6012500478057547`*^9}, {3.6012913380032883`*^9, 
+   3.601291343311102*^9}, {3.6012917561462917`*^9, 3.601291789956011*^9}, {
+   3.601292025290532*^9, 3.601292045994316*^9}, {3.60129256785772*^9, 
+   3.601292568666483*^9}, 3.601292610049877*^9, 3.6012926527364063`*^9, {
+   3.601292946931492*^9, 3.601292949906308*^9}, {3.601914423777831*^9, 
+   3.601914425110922*^9}}],
+
+Cell[BoxData["3.1417934739378`"], "Output",
+ CellChangeTimes->{
+  3.601249774724464*^9, 3.6012498254109583`*^9, {3.60124987973693*^9, 
+   3.601249912618774*^9}, 3.6012500596398087`*^9, 3.6012917747566643`*^9, 
+   3.601291824710664*^9, 3.6012920371304493`*^9, 3.601292526125969*^9, 
+   3.601292582609597*^9, {3.6012926248681183`*^9, 3.601292637952409*^9}, 
+   3.6012926807752657`*^9, 3.601292864885054*^9, 3.6012929516615467`*^9, 
+   3.601391497871299*^9},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData["18"], "Output",
+ CellChangeTimes->{
+  3.601249774724464*^9, 3.6012498254109583`*^9, {3.60124987973693*^9, 
+   3.601249912618774*^9}, 3.6012500596398087`*^9, 3.6012917747566643`*^9, 
+   3.601291824710664*^9, 3.6012920371304493`*^9, 3.601292526125969*^9, 
+   3.601292582609597*^9, {3.6012926248681183`*^9, 3.601292637952409*^9}, 
+   3.6012926807752657`*^9, 3.601292864885054*^9, 3.6012929516615467`*^9, 
+   3.601391497873012*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+Now we find our root using the built-in function FindRoot (for the secant \
+method):\
+\>", "Text",
+ CellChangeTimes->{{3.601392185208455*^9, 3.601392215102962*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"secroot", " ", "=", " ", 
+   RowBox[{"FindRoot", "[", 
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "2.0", ",", "4.0"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"secroot", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"secroot", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+   "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}]}], "Input",
+ CellChangeTimes->{{3.6012496529862013`*^9, 3.601249726204431*^9}}],
+
+Cell[BoxData["3.141592653589793`"], "Output",
+ CellChangeTimes->{3.601249730820135*^9, 3.6013915011287413`*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+Now we compare the value of our root obtained by programming the secant \
+method with the value given by the built-in function FindRoot (for the secant \
+method):\
+\>", "Text",
+ CellChangeTimes->{{3.601391810665263*^9, 3.601391933618311*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Abs", "[", 
+   RowBox[{
+    SubscriptBox["x", "new"], "-", "secroot"}], "]"}], "//", 
+  "ScientificForm"}]], "Input",
+ CellChangeTimes->{{3.601391518848967*^9, 3.601391531735361*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   RowBox[{"\<\"2.0082\"\>", "\[Times]", 
+    SuperscriptBox["10", "\<\"-4\"\>"]}],
+   0.00020082034800683601`,
+   AutoDelete->True],
+  ScientificForm]], "Output",
+ CellChangeTimes->{3.601391532301313*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[TextData[{
+ "Lastly we compare the value of our root obtained by programming the secant \
+method with the value obtained by programming Newton\[CloseCurlyQuote]s \
+method (from the previous homework). First we run Newton\[CloseCurlyQuote]s \
+method to obtain the root ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "0"], TraditionalForm]]],
+ " and then we look at the absolute-value error associated between this value \
+and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["x", "new"], TraditionalForm]]],
+ ": "
+}], "Text",
+ CellChangeTimes->{{3.6013919883424683`*^9, 3.601392126473853*^9}, {
+  3.601392317833514*^9, 3.601392350958959*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"newt", "[", "x_", "]"}], "=", 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"-", "x"}]], " ", 
+    RowBox[{"Sin", "[", "x", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"g", "[", "x_", "]"}], "=", " ", 
+   RowBox[{"D", "[", 
+    RowBox[{
+     RowBox[{"newt", "[", "x", "]"}], ",", "x"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["x", "0"], "=", "2.0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"count", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"While", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Abs", "[", 
+      RowBox[{"newt", "[", 
+       SubscriptBox["x", "0"], "]"}], "]"}], ">", " ", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "5"}]]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", "0"], " ", "=", " ", 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"g", "[", 
+          SubscriptBox["x", "0"], "]"}], "*", 
+         SubscriptBox["x", "0"]}], " ", "-", " ", 
+        RowBox[{"newt", "[", 
+         SubscriptBox["x", "0"], "]"}]}], 
+       RowBox[{"g", "[", 
+        SubscriptBox["x", "0"], "]"}]]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"count", "++"}]}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ SubscriptBox["x", "0"], "\[IndentingNewLine]", "count"}], "Input",
+ CellChangeTimes->{{3.600770791322282*^9, 3.6007708719973993`*^9}, {
+  3.600770915654789*^9, 3.600770968056202*^9}, {3.6007710017850122`*^9, 
+  3.600771012137628*^9}, {3.600771074518887*^9, 3.600771082580657*^9}, {
+  3.600771207948813*^9, 3.600771208123168*^9}, {3.6007712593153067`*^9, 
+  3.60077127448907*^9}, {3.6007713336411343`*^9, 3.600771333799062*^9}, {
+  3.600771370095222*^9, 3.6007713702621403`*^9}, {3.6007714053119907`*^9, 
+  3.6007714072625847`*^9}, {3.600789468715393*^9, 3.600789498262924*^9}, {
+  3.600789670006089*^9, 3.6007897195212708`*^9}, {3.600791429631628*^9, 
+  3.600791485707995*^9}, {3.600794087532981*^9, 3.6007941124570627`*^9}, {
+  3.6008623652005997`*^9, 3.60086240131909*^9}, {3.6013916112264547`*^9, 
+  3.601391640760055*^9}}],
+
+Cell[BoxData["3.1414078813388593`"], "Output",
+ CellChangeTimes->{3.601391645683593*^9},
+ Background->RGBColor[0.88, 1, 0.88]],
+
+Cell[BoxData["4"], "Output",
+ CellChangeTimes->{3.601391645684466*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Abs", "[", 
+   RowBox[{
+    SubscriptBox["x", "new"], "-", " ", 
+    SubscriptBox["x", "0"]}], "]"}], "//", "ScientificForm"}]], "Input",
+ CellChangeTimes->{{3.601391655421853*^9, 3.601391679449265*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   RowBox[{"\<\"3.85593\"\>", "\[Times]", 
+    SuperscriptBox["10", "\<\"-4\"\>"]}],
+   0.000385592598940665,
+   AutoDelete->True],
+  ScientificForm]], "Output",
+ CellChangeTimes->{3.601391679830514*^9},
+ Background->RGBColor[0.88, 1, 0.88]]
+}, Open  ]],
+
+Cell["\<\
+This value is the upper bound for errors. In other words, even when the value \
+of the actual root that we\[CloseCurlyQuote]re looking for is still unknown, \
+we know that the absolute value of the difference between the Newton\
+\[CloseCurlyQuote]s method approximation and the secant method approximation \
+is the largest error we can possibly have (i.e. the actual root MUST lie \
+between the root values given by the secant method and Newton\
+\[CloseCurlyQuote]s method. )\
+\>", "Text",
+ CellChangeTimes->{{3.601392449328597*^9, 3.60139250754812*^9}, {
+  3.601392680003927*^9, 3.601392929791731*^9}},
+ FontFamily->"Baskerville",
+ FontSize->16]
+}, Open  ]]
+},
+WindowSize->{740, 612},
+WindowMargins->{{212, Automatic}, {69, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 100, 1, 92, "Title"],
+Cell[682, 25, 158, 2, 51, "Subtitle"],
+Cell[843, 29, 1709, 45, 169, "Text"],
+Cell[CellGroupData[{
+Cell[2577, 78, 1228, 28, 95, "Input"],
+Cell[3808, 108, 6025, 111, 259, "Output"]
+}, Open  ]],
+Cell[9848, 222, 584, 17, 56, "Text"],
+Cell[CellGroupData[{
+Cell[10457, 243, 3714, 99, 340, "Input"],
+Cell[14174, 344, 493, 8, 44, "Output"],
+Cell[14670, 354, 479, 8, 44, "Output"]
+}, Open  ]],
+Cell[15164, 365, 217, 6, 33, "Text"],
+Cell[CellGroupData[{
+Cell[15406, 375, 526, 13, 46, "Input"],
+Cell[15935, 390, 149, 2, 44, "Output"]
+}, Open  ]],
+Cell[16099, 395, 295, 7, 55, "Text"],
+Cell[CellGroupData[{
+Cell[16419, 406, 218, 6, 28, "Input"],
+Cell[16640, 414, 287, 9, 48, "Output"]
+}, Open  ]],
+Cell[16942, 426, 688, 18, 103, "Text"],
+Cell[CellGroupData[{
+Cell[17655, 448, 2203, 55, 231, "Input"],
+Cell[19861, 505, 126, 2, 44, "Output"],
+Cell[19990, 509, 108, 2, 44, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20135, 516, 238, 6, 28, "Input"],
+Cell[20376, 524, 285, 9, 48, "Output"]
+}, Open  ]],
+Cell[20676, 536, 656, 12, 121, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
